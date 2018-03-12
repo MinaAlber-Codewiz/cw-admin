@@ -1,0 +1,20 @@
+/* FONTS */
+$font-extraLight: 'Cairo-ExtraLight';
+$font-light: 'Cairo-Light';
+$font-regular: 'Cairo-Regular';
+$font-semiBold: 'Cairo-SemiBold';
+$font-bold: 'Cairo-Bold';
+$font-black: 'Cairo-Black';
+
+/* MIXINS */
+@mixin whb{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@mixin whi{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}

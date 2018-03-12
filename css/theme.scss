@@ -1,0 +1,7 @@
+@import 'base';
+
+html, body{
+    @include whb;
+    font-family: $font-regular;
+    font-size: 10px;
+}
