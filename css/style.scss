@@ -1,0 +1,32 @@
+@import 'base';
+
+/* ----------------------------------------------------------------------------------
+   ------------------------------------- NAVBAR -------------------------------------
+   ---------------------------------------------------------------------------------- */
+.navbar{
+    @include whd($display: inline-block);
+    background: $primary-color;
+    padding: 20px 0px;
+    @include transition(0.3s);
+}
+
+.navbar-left{
+    @include whd(auto);
+    float: left;
+}
+
+.navbar-logo{
+    @include whd(270px, $display: inline-block);
+    float: left;
+    @include transition(0.3s);
+}
+
+.navbar-logo img{
+    @include whd(100px);
+    margin: auto;
+}
+
+.navbar-hamburger-menu{
+    display: inline-block;
+    float: left;
+}

@@ -5,16 +5,27 @@ $font-regular: 'Cairo-Regular';
 $font-semiBold: 'Cairo-SemiBold';
 $font-bold: 'Cairo-Bold';
 $font-black: 'Cairo-Black';
+$font-icon: 'Icons';
 
-/* MIXINS */
-@mixin whb{
-    width: 100%;
-    height: auto;
-    display: block;
+/* THEME COLORS */
+$primary-color: #2d3f57;
+$secondary-color: #2b3645;
+$divider-color: #364a66;
+$helper-color: #00cdff;
+$icons-color: #f1f1f1;
+
+/* TRANSITIONS */
+@mixin transition($seconds){
+    -webkit-transition: $seconds linear;
+    -moz-transition: $seconds linear;
+    -ms-transition: $seconds linear;
+    -o-transition: $seconds linear;
+    transition: $seconds linear;
 }
 
-@mixin whi{
-    width: 100%;
-    height: auto;
-    display: inline-block;
+/* MIXINS */
+@mixin whd($width: 100%, $height: auto, $display: block){
+    width: $width;
+    height: $height;
+    display: $display;
 }

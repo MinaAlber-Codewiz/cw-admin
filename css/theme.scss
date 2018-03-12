@@ -1,7 +1,8 @@
 @import 'base';
 
 html, body{
-    @include whb;
+    @include whd;
     font-family: $font-regular;
     font-size: 10px;
+    color: $primary-color;
 }
