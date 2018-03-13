@@ -7,7 +7,7 @@
     @include whd($display: inline-block);
     background: $primary-color;
     @include transition(0.3s);
-    line-height: 80px;
+    line-height: 60px;
     @include box-shadow;
 
     .navbar-left{
@@ -25,10 +25,10 @@
     @include whd(270px, $display: inline-block);
     float: left;
     @include transition(0.3s);
-    padding: 20px 0px;
+    padding: 10px 0px;
 
     img{
-        @include whd(auto, 40px, block);
+        @include whd(auto, 42px, block);
         margin: auto;
     }
 }
@@ -132,7 +132,7 @@
         overflow: hidden;
         position: absolute;
         right: 0;
-        top: 81px;
+        top: 60px;
         background: $divider-color;
         line-height: normal;
         @include box-shadow;
@@ -241,7 +241,7 @@
         overflow: hidden;
         position: absolute;
         right: 0;
-        top: 81px;
+        top: 60px;
         background: $divider-color;
         line-height: normal;
         @include box-shadow;
