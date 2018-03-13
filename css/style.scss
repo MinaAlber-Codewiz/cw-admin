@@ -135,7 +135,6 @@
         top: 81px;
         background: $divider-color;
         line-height: normal;
-        @include transition(0.7s);
         @include box-shadow;
 
         &::before{
@@ -211,6 +210,115 @@
             }
         }
         .email-notification-popup-box-show-all{
+            @include whd;
+            font-family: $font-extraLight;
+            font-size: 1.4em;
+            color: $icons-color;
+            background: $secondary-color;
+            text-align: center;
+            padding: 10px 10px;
+            @include transition(0.3s);
+
+            &:hover{
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+}
+
+.navbar-notifications{
+    &:hover{
+        .notifications-popup-box{
+            max-height: 2000px;
+            @include whd(300px, auto, block);
+            @include transition(1s);
+        }
+    }
+
+    .notifications-popup-box{
+        @include whd(300px, auto, block);
+        max-height: 0px;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 81px;
+        background: $divider-color;
+        line-height: normal;
+        @include box-shadow;
+
+        &::before{
+            content: '';
+            @include whd($height: 2px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            background: $helper-color;
+        }
+        .notifications-popup-box-heading{
+            font-family: $font-semiBold;
+            @include whd;
+            padding: 10px 20px 10px 20px;
+            font-size: 1.4em;
+            color: $helper-color;
+            text-align: left;
+        }
+        .notifications-popup-box-container{
+            .notification-popup-box{
+                @include whd;
+                clear: both;
+                overflow: hidden;
+                padding: 10px 20px 12px 20px;
+                border-bottom: 1.5px solid rgba(255,255,255,0.1);
+                @include transition(0.3s);
+
+                &:last-child{
+                    border-bottom: 0px;
+                }
+
+                &:hover{
+                    background: rgba(0,0,0,0.1);
+                }
+
+                .notification-popup-box-avatar{
+                    @include whd(40px, 40px, inline-block);
+                    float: left;
+
+                    img{
+                        @include whd(100%, 100%, inline-block);
+                    }
+                }
+                .notification-popup-box-message{
+                    width: calc(100% - 60px);
+                    float: right;
+
+                    div{
+                        @include whd;
+                        clear: both;
+                        overflow: hidden;
+                    }
+                    div span:nth-child(1){
+                        font-family: $font-semiBold;
+                        font-size: 1.5em;
+                        color: $icons-color;
+                        float: left;
+                    }
+                    div span:nth-child(2){
+                        font-family: $font-extraLight;
+                        font-size: 1.2em;
+                        color: $icons-color;
+                        float: right;
+                    }
+                    p:nth-child(2){
+                        font-family: $font-light;
+                        font-size: 1.3em;
+                        color: $icons-color;
+                        line-height: 15px;
+                    }
+                }
+            }
+        }
+        .notification-popup-box-show-all{
             @include whd;
             font-family: $font-extraLight;
             font-size: 1.4em;
