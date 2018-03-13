@@ -8,12 +8,12 @@
     background: $primary-color;
     @include transition(0.3s);
     line-height: 80px;
+    @include box-shadow;
 
     .navbar-left{
         @include whd(auto);
         float: left;
     }
-
     .navbar-right{
         @include whd(auto);
         float: right;
@@ -56,7 +56,6 @@
         font-family: $font-light;
         font-size: 1.5em;
         color: $icons-color;
-        text-decoration: none;
     }
 }
 
@@ -83,11 +82,28 @@
             top: 13px;
         }
     }
+    img{
+        @include whd(40px, 40px, none);
+        position: relative;
+        top: 15px;
+        @include border-radius(50%);
+    }
     span:last-child{
         font-family: $font-light;
         font-size: 1.5em;
         color: $icons-color;
         padding-left: 15px;
+    }
+}
+
+.registered-user{
+    span:first-child{
+        &::before{
+            display: none;
+        }
+    }
+    img{
+        @include whd(40px, 40px, inline-block);
     }
 }
 
@@ -102,16 +118,16 @@
 }
 
 .navbar-mail-notifications{
-
     &:hover{
         .email-notifications-popup-box{
             max-height: 2000px;
             @include whd(300px, auto, block);
+            @include transition(1s);
         }
     }
 
     .email-notifications-popup-box{
-        @include whd(300px, 0px, block);
+        @include whd(300px, auto, block);
         max-height: 0px;
         overflow: hidden;
         position: absolute;
@@ -119,7 +135,8 @@
         top: 81px;
         background: $divider-color;
         line-height: normal;
-        @include transition(0.3s);
+        @include transition(0.7s);
+        @include box-shadow;
 
         &::before{
             content: '';
@@ -130,20 +147,82 @@
             z-index: 5;
             background: $helper-color;
         }
-
         .email-notifications-popup-box-heading{
             font-family: $font-semiBold;
             @include whd;
-            padding: 10px 30px 20px 30px;
+            padding: 10px 20px 10px 20px;
             font-size: 1.4em;
             color: $helper-color;
             text-align: left;
         }
+        .email-notifications-popup-box-container{
+            .email-notification-popup-box{
+                @include whd;
+                clear: both;
+                overflow: hidden;
+                padding: 10px 20px 12px 20px;
+                border-bottom: 1.5px solid rgba(255,255,255,0.1);
+                @include transition(0.3s);
 
-        .email-notification-popup-box{
+                &:last-child{
+                    border-bottom: 0px;
+                }
+
+                &:hover{
+                    background: rgba(0,0,0,0.1);
+                }
+
+                .email-notification-popup-box-avatar{
+                    @include whd(40px, 40px, inline-block);
+                    float: left;
+
+                    img{
+                        @include whd(100%, 100%, inline-block);
+                    }
+                }
+                .email-notification-popup-box-message{
+                    width: calc(100% - 60px);
+                    float: right;
+
+                    div{
+                        @include whd;
+                        clear: both;
+                        overflow: hidden;
+                    }
+                    div span:nth-child(1){
+                        font-family: $font-semiBold;
+                        font-size: 1.5em;
+                        color: $icons-color;
+                        float: left;
+                    }
+                    div span:nth-child(2){
+                        font-family: $font-extraLight;
+                        font-size: 1.2em;
+                        color: $icons-color;
+                        float: right;
+                    }
+                    p:nth-child(2){
+                        font-family: $font-light;
+                        font-size: 1.3em;
+                        color: $icons-color;
+                        line-height: 15px;
+                    }
+                }
+            }
+        }
+        .email-notification-popup-box-show-all{
             @include whd;
-            padding: 20px;
-            border-bottom: 1.5px solid rgba(255,255,255,0.1);
+            font-family: $font-extraLight;
+            font-size: 1.4em;
+            color: $icons-color;
+            background: $secondary-color;
+            text-align: center;
+            padding: 10px 10px;
+            @include transition(0.3s);
+
+            &:hover{
+                letter-spacing: 0.5px;
+            }
         }
     }
 }

@@ -39,3 +39,12 @@ $notification-color: #ee2323;
     -o-border-radius: $border-radius;
     border-radius: $border-radius;
 }
+
+/* BOX SHADOW MIXIN */
+@mixin box-shadow{
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(133,133,133,1);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(133,133,133,1);
+    -ms-box-shadow: 0px 0px 10px 1px rgba(133,133,133,1);
+    -o-box-shadow: 0px 0px 10px 1px rgba(133,133,133,1);
+    box-shadow: 0px 0px 10px 1px rgba(133,133,133,1);
+}

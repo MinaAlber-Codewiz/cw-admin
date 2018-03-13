@@ -7,6 +7,10 @@ html, body{
     color: $primary-color;
 }
 
+a{
+    text-decoration: none;
+}
+
 .new-notifications::after{
     content: '';
     @include whd(12px, 12px, block);
