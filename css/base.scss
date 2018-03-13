@@ -12,7 +12,7 @@ $primary-color: #2d3f57;
 $secondary-color: #2b3645;
 $divider-color: #364a66;
 $helper-color: #00cdff;
-$icons-color: #f1f1f1;
+$icons-color: #ffffff;
 $notification-color: #ee2323;
 
 /* TRANSITION MIXIN */
@@ -42,9 +42,36 @@ $notification-color: #ee2323;
 
 /* BOX SHADOW MIXIN */
 @mixin box-shadow{
-    -webkit-box-shadow: 0px 0px 10px 1px rgba(133,133,133,1);
-    -moz-box-shadow: 0px 0px 10px 1px rgba(133,133,133,1);
-    -ms-box-shadow: 0px 0px 10px 1px rgba(133,133,133,1);
-    -o-box-shadow: 0px 0px 10px 1px rgba(133,133,133,1);
-    box-shadow: 0px 0px 10px 1px rgba(133,133,133,1);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
+    -ms-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
+    -o-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
+}
+
+/* TRANSFORM TRANSLATE Y AXIS MIXIN */
+@mixin translateY($value){
+    -webkit-transform: translateY($value);
+    -moz-transform: translateY($value);
+    -ms-transform: translateY($value);
+    -o-transform: translateY($value);
+    transform: translateY($value);
+}
+
+/* TRANSFORM TRANSLATE X AXIS MIXIN */
+@mixin translateX($value){
+    -webkit-transform: translateY($value);
+    -moz-transform: translateY($value);
+    -ms-transform: translateY($value);
+    -o-transform: translateY($value);
+    transform: translateY($value);
+}
+
+/* TRANSFORM ROTATE MIXIN */
+@mixin rotate($value){
+    -webkit-transform: rotate($value);
+    -moz-transform: rotate($value);
+    -ms-transform: rotate($value);
+    -o-transform: rotate($value);
+    transform: rotate($value);
 }

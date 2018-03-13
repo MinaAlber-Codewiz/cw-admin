@@ -9,16 +9,18 @@
     @include transition(0.3s);
     line-height: 60px;
     @include box-shadow;
+    position: relative;
+    z-index: 99;
 
     .navbar-left{
         @include whd(auto);
         float: left;
     }
+
     .navbar-right{
         @include whd(auto);
         float: right;
     }
-
 }
 
 .navbar-logo{
@@ -76,54 +78,71 @@
 }
 
 .navbar-user-avatar{
+
     span:first-child{
+
         &::before{
             position: relative;
             top: 13px;
         }
+
     }
+
     img{
         @include whd(40px, 40px, none);
         position: relative;
         top: 15px;
         @include border-radius(50%);
     }
+
     span:last-child{
         font-family: $font-light;
         font-size: 1.5em;
         color: $icons-color;
         padding-left: 15px;
     }
+
 }
 
 .registered-user{
+
     span:first-child{
+
         &::before{
             display: none;
         }
+
     }
+
     img{
         @include whd(40px, 40px, inline-block);
     }
+
 }
 
 .navbar-notifications,.navbar-mail-notifications{
+
     .new-notifications{
+
         &::after{
-            top: 25px;
+            top: 15px;
             right: 15px;
             z-index: 5;
         }
+
     }
+
 }
 
 .navbar-mail-notifications{
     &:hover{
+
         .email-notifications-popup-box{
             max-height: 2000px;
             @include whd(300px, auto, block);
             @include transition(1s);
         }
+
     }
 
     .email-notifications-popup-box{
@@ -146,6 +165,7 @@
             z-index: 5;
             background: $helper-color;
         }
+
         .email-notifications-popup-box-heading{
             font-family: $font-semiBold;
             @include whd;
@@ -154,7 +174,9 @@
             color: $helper-color;
             text-align: left;
         }
+
         .email-notifications-popup-box-container{
+
             .email-notification-popup-box{
                 @include whd;
                 clear: both;
@@ -179,6 +201,7 @@
                         @include whd(100%, 100%, inline-block);
                     }
                 }
+
                 .email-notification-popup-box-message{
                     width: calc(100% - 60px);
                     float: right;
@@ -188,27 +211,34 @@
                         clear: both;
                         overflow: hidden;
                     }
+
                     div span:nth-child(1){
                         font-family: $font-semiBold;
                         font-size: 1.5em;
                         color: $icons-color;
                         float: left;
                     }
+
                     div span:nth-child(2){
                         font-family: $font-extraLight;
                         font-size: 1.2em;
                         color: $icons-color;
                         float: right;
                     }
+
                     p:nth-child(2){
                         font-family: $font-light;
                         font-size: 1.3em;
                         color: $icons-color;
                         line-height: 15px;
                     }
+
                 }
+
             }
+
         }
+
         .email-notification-popup-box-show-all{
             @include whd;
             font-family: $font-extraLight;
@@ -228,11 +258,13 @@
 
 .navbar-notifications{
     &:hover{
+
         .notifications-popup-box{
             max-height: 2000px;
             @include whd(300px, auto, block);
             @include transition(1s);
         }
+
     }
 
     .notifications-popup-box{
@@ -255,6 +287,7 @@
             z-index: 5;
             background: $helper-color;
         }
+
         .notifications-popup-box-heading{
             font-family: $font-semiBold;
             @include whd;
@@ -263,6 +296,7 @@
             color: $helper-color;
             text-align: left;
         }
+
         .notifications-popup-box-container{
             .notification-popup-box{
                 @include whd;
@@ -287,7 +321,9 @@
                     img{
                         @include whd(100%, 100%, inline-block);
                     }
+
                 }
+
                 .notification-popup-box-message{
                     width: calc(100% - 60px);
                     float: right;
@@ -297,27 +333,32 @@
                         clear: both;
                         overflow: hidden;
                     }
+
                     div span:nth-child(1){
                         font-family: $font-semiBold;
                         font-size: 1.5em;
                         color: $icons-color;
                         float: left;
                     }
+
                     div span:nth-child(2){
                         font-family: $font-extraLight;
                         font-size: 1.2em;
                         color: $icons-color;
                         float: right;
                     }
+
                     p:nth-child(2){
                         font-family: $font-light;
                         font-size: 1.3em;
                         color: $icons-color;
                         line-height: 15px;
                     }
+
                 }
             }
         }
+
         .notification-popup-box-show-all{
             @include whd;
             font-family: $font-extraLight;
@@ -331,6 +372,98 @@
             &:hover{
                 letter-spacing: 0.5px;
             }
+
         }
     }
+}
+
+/* ----------------------------------------------------------------------------------
+   -------------------------------- MODULES SIDEBAR ---------------------------------
+   ---------------------------------------------------------------------------------- */
+.modules-sidebar{
+    @include whd(272px, calc(100% - 60px), block);
+    position: absolute;
+    background: $secondary-color;
+    top: 60px;
+    left: 0px;
+    z-index: 98;
+    @include box-shadow;
+
+    .module-box{
+        @include whd;
+        max-height: 62px;
+        cursor: pointer;
+        @include border-radius(4px);
+        position: relative;
+        overflow: hidden;
+        @include transition(0.7s);
+
+        &:hover{
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        a{
+            padding: 20px 20px 15px 20px;
+            display: block;
+
+            span{
+                @include whd(auto, auto, inline-block);
+            }
+
+            p{
+                @include whd(auto, auto, inline-block);
+                color: $icons-color;
+                text-indent: 15px;
+                font-size: 1.5em;
+                position: relative;
+                top: -4px;
+            }
+
+        }
+
+    }
+
+    .module-box-dropdown{
+
+        .module-box{
+
+            &:hover{
+
+                .module-box-line{
+                    @include whd(25px, 1px, inline-block);
+                    background: $helper-color;
+                }
+
+            }
+
+            .module-box-line{
+                @include whd(15px, 1px, inline-block);
+                background: $icons-color;
+                position: relative;
+                top: -8px;
+                @include transition(0.3s);
+            }
+
+            p{
+                font-family: $font-extraLight;
+            }
+
+        }
+
+    }
+
+    .module-box-dropdown-expanded{
+        max-height: 2000px !important;
+        @include transition(5s);
+        background: rgba(29, 29, 29, 0.3);
+
+        &::after{
+            top: 20px;
+            right: 26px;
+            @include translateY(-25%);
+            @include rotate(180deg);
+        }
+
+    }
+
 }
