@@ -1,1 +1,1 @@
-html,body{width:100%;height:auto;display:block;font-family:"Cairo-Regular";font-size:10px;color:#2d3f57}
+html,body{width:100%;height:auto;display:block;font-family:"Cairo-Regular";font-size:10px;color:#2d3f57}.new-notifications::after{content:'';width:12px;height:12px;display:block;position:absolute;background:#ee2323;-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%;border-radius:50%}

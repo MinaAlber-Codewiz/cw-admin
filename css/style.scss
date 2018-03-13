@@ -6,27 +6,144 @@
 .navbar{
     @include whd($display: inline-block);
     background: $primary-color;
-    padding: 20px 0px;
     @include transition(0.3s);
-}
+    line-height: 80px;
 
-.navbar-left{
-    @include whd(auto);
-    float: left;
+    .navbar-left{
+        @include whd(auto);
+        float: left;
+    }
+
+    .navbar-right{
+        @include whd(auto);
+        float: right;
+    }
+
 }
 
 .navbar-logo{
     @include whd(270px, $display: inline-block);
     float: left;
     @include transition(0.3s);
+    padding: 20px 0px;
+
+    img{
+        @include whd(auto, 40px, block);
+        margin: auto;
+    }
 }
 
-.navbar-logo img{
-    @include whd(100px);
-    margin: auto;
-}
-
-.navbar-hamburger-menu{
-    display: inline-block;
+.navbar-hamburger-menu, .navbar-settings-btn{
+    @include whd(auto, auto, inline-block);
     float: left;
+    padding: 0px 22px;
+    border-right: 1.5px solid rgba(255,255,255,0.1);
+    border-left: 1.5px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+
+    span::before{
+        position: relative;
+        top: 9px;
+    }
+}
+
+.navbar-links{
+    @include whd(auto, auto, inline-block);
+    float: left;
+
+    a{
+        padding-left: 50px;
+        font-family: $font-light;
+        font-size: 1.5em;
+        color: $icons-color;
+        text-decoration: none;
+    }
+}
+
+.navbar-mail-notifications, .navbar-notifications, .navbar-user-avatar{
+    @include whd(auto, auto, inline-block);
+    float: left;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+.navbar-mail-notifications, .navbar-notifications{
+    position: relative;
+
+    span:before, span:before{
+        position: relative;
+        top: 10px;
+    }
+}
+
+.navbar-user-avatar{
+    span:first-child{
+        &::before{
+            position: relative;
+            top: 13px;
+        }
+    }
+    span:last-child{
+        font-family: $font-light;
+        font-size: 1.5em;
+        color: $icons-color;
+        padding-left: 15px;
+    }
+}
+
+.navbar-notifications,.navbar-mail-notifications{
+    .new-notifications{
+        &::after{
+            top: 25px;
+            right: 15px;
+            z-index: 5;
+        }
+    }
+}
+
+.navbar-mail-notifications{
+
+    &:hover{
+        .email-notifications-popup-box{
+            max-height: 2000px;
+            @include whd(300px, auto, block);
+        }
+    }
+
+    .email-notifications-popup-box{
+        @include whd(300px, 0px, block);
+        max-height: 0px;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 81px;
+        background: $divider-color;
+        line-height: normal;
+        @include transition(0.3s);
+
+        &::before{
+            content: '';
+            @include whd($height: 2px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            background: $helper-color;
+        }
+
+        .email-notifications-popup-box-heading{
+            font-family: $font-semiBold;
+            @include whd;
+            padding: 10px 30px 20px 30px;
+            font-size: 1.4em;
+            color: $helper-color;
+            text-align: left;
+        }
+
+        .email-notification-popup-box{
+            @include whd;
+            padding: 20px;
+            border-bottom: 1.5px solid rgba(255,255,255,0.1);
+        }
+    }
 }

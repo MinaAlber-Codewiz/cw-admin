@@ -6,3 +6,11 @@ html, body{
     font-size: 10px;
     color: $primary-color;
 }
+
+.new-notifications::after{
+    content: '';
+    @include whd(12px, 12px, block);
+    position: absolute;
+    background: $notification-color;
+    @include border-radius(50%);
+}

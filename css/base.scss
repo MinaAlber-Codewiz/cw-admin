@@ -13,8 +13,9 @@ $secondary-color: #2b3645;
 $divider-color: #364a66;
 $helper-color: #00cdff;
 $icons-color: #f1f1f1;
+$notification-color: #ee2323;
 
-/* TRANSITIONS */
+/* TRANSITION MIXIN */
 @mixin transition($seconds){
     -webkit-transition: $seconds linear;
     -moz-transition: $seconds linear;
@@ -23,9 +24,18 @@ $icons-color: #f1f1f1;
     transition: $seconds linear;
 }
 
-/* MIXINS */
+/* WIDTH HEIGHT DISPLAY MIXIN */
 @mixin whd($width: 100%, $height: auto, $display: block){
     width: $width;
     height: $height;
     display: $display;
+}
+
+/* BORDER RADIUS MIXIN */
+@mixin border-radius($border-radius){
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+    border-radius: $border-radius;
 }
