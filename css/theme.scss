@@ -1,10 +1,18 @@
 @import 'base';
 
-html, body{
+html{
     @include whd;
     font-family: $font-regular;
     font-size: 10px;
     color: $primary-color;
+}
+
+body{
+    @include whd;
+    font-family: $font-regular;
+    font-size: 10px;
+    color: $primary-color;
+    overflow-x: hidden;
 }
 
 a{
@@ -34,5 +42,5 @@ a{
         font-size: 1.4em;
         @include transition(0.3s);
     }
-    
+
 }

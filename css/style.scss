@@ -24,7 +24,7 @@
 }
 
 .navbar-logo{
-    @include whd(300px, $display: inline-block);
+    @include whd(270px, $display: inline-block);
     float: left;
     @include transition(0.5s);
     padding: 10px 0px;
@@ -497,7 +497,7 @@
    -------------------------------- MODULES SIDEBAR ---------------------------------
    ---------------------------------------------------------------------------------- */
 .modules-sidebar{
-    @include whd(300px, calc(100% - 60px), block);
+    @include whd(270px, calc(100% - 60px), block);
     position: absolute;
     background: $secondary-color;
     top: 60px;
@@ -623,5 +623,27 @@
 }
 
 .close-siderbar-modules{
+    @include translateX(-300px);
+}
+
+/* ----------------------------------------------------------------------------------
+   ---------------------------- QUICK SETTINGS SIDEBAR ------------------------------
+   ---------------------------------------------------------------------------------- */
+.quick-settings-sidebar{
+    @include whd(300px, calc(100% - 60px), block);
+    position: absolute;
+    background: $divider-color;
+    top: 60px;
+    right: -320px;
+    bottom: 0px;
+    z-index: 98;
+    @include box-shadow;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 20px 20px;
+    @include transition(0.5s);
+}
+
+.close-quick-settings-modules{
     @include translateX(-320px);
 }

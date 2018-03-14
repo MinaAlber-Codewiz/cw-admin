@@ -4,16 +4,23 @@ $(document).ready(function(){
     // CACHE DOM ELEMENTS
     var navbarLogo = $('.navbar-logo');
     var navbarHamburgerMenu = $('.navbar-hamburger-menu');
+    var navbarSettingsBtn = $('.navbar-settings-btn');
     var modulesSidebar = $('.modules-sidebar');
     var moduleBox = $('.module-box:not(.module-box-dropdown)');
     var moduleBoxDropdown = $('.module-box-dropdown .module-box-head');
     var moduleBoxHead = $('.module-box-head');
     var subModuleBox = $('.sub-module-box');
+    var quickSettingsSidebar = $('.quick-settings-sidebar');
 
     // WHEN NAVBAR HAMBURGER MENU IS CLICKED
     navbarHamburgerMenu.click(function(){
         modulesSidebar.toggleClass('close-siderbar-modules');
         navbarLogo.toggleClass('close-navbar-logo');
+    });
+
+    // WHEN NAVBAR QUICK SETTINGS BUTTON IS CLICKED
+    navbarSettingsBtn.click(function(){
+        quickSettingsSidebar.toggleClass('close-quick-settings-modules');
     });
 
     // WHEN MODULE BOX IS CLICKED
