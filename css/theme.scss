@@ -20,15 +20,19 @@ a{
     @include border-radius(50%);
 }
 
-.module-box-dropdown::after{
-    content: '\004e';
-    font-family: $font-icon;
-    @include whd(20px, 20px, block);
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    @include translateY(-25%);
-    color: $icons-color;
-    font-size: 1.4em;
-    @include transition(0.3s);
+.module-box-dropdown{
+
+    .module-box-head::after{
+        content: '\004e';
+        font-family: $font-icon;
+        @include whd(20px, 20px, block);
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        @include translateY(-25%);
+        color: $icons-color;
+        font-size: 1.4em;
+        @include transition(0.3s);
+    }
+    
 }

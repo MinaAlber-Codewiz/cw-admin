@@ -26,13 +26,18 @@
 .navbar-logo{
     @include whd(300px, $display: inline-block);
     float: left;
-    @include transition(0.3s);
+    @include transition(0.5s);
     padding: 10px 0px;
 
     img{
         @include whd(auto, 42px, block);
         margin: auto;
     }
+}
+
+.close-navbar-logo{
+    @include translateX(-320px);
+    width: 0px;
 }
 
 .navbar-hamburger-menu, .navbar-settings-btn{
@@ -391,7 +396,8 @@
     @include box-shadow;
     overflow-y: scroll;
     overflow-x: hidden;
-    padding: 10px 10px;
+    padding: 0px 10px;
+    @include transition(0.5s);
 
     .module-box{
         @include whd;
@@ -400,6 +406,7 @@
         position: relative;
         overflow: hidden;
         @include transition(0.7s);
+        margin: 15px 0px;
 
         &:hover{
             background: rgba(0, 0, 0, 0.2);
@@ -429,7 +436,7 @@
 
     .module-box-dropdown{
 
-        .module-box{
+        .sub-module-box{
             padding-left: 20px;
 
             &:hover{
@@ -466,7 +473,7 @@
         @include transition(5s);
         background: rgba(29, 29, 29, 0.3);
 
-        &::after{
+        .module-box-head::after{
             top: 20px;
             right: 26px;
             @include translateY(-25%);
@@ -502,4 +509,8 @@
 
     }
 
+}
+
+.close-siderbar-modules{
+    @include translateX(-320px);
 }
