@@ -24,7 +24,7 @@
 }
 
 .navbar-logo{
-    @include whd(270px, $display: inline-block);
+    @include whd(300px, $display: inline-block);
     float: left;
     @include transition(0.3s);
     padding: 10px 0px;
@@ -381,19 +381,22 @@
    -------------------------------- MODULES SIDEBAR ---------------------------------
    ---------------------------------------------------------------------------------- */
 .modules-sidebar{
-    @include whd(272px, calc(100% - 60px), block);
+    @include whd(300px, calc(100% - 60px), block);
     position: absolute;
     background: $secondary-color;
     top: 60px;
     left: 0px;
+    bottom: 0px;
     z-index: 98;
     @include box-shadow;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px 10px;
 
     .module-box{
         @include whd;
         max-height: 62px;
         cursor: pointer;
-        @include border-radius(4px);
         position: relative;
         overflow: hidden;
         @include transition(0.7s);
@@ -411,10 +414,11 @@
             }
 
             p{
+                font-family: $font-extraLight;
                 @include whd(auto, auto, inline-block);
                 color: $icons-color;
                 text-indent: 15px;
-                font-size: 1.5em;
+                font-size: 1.4em;
                 position: relative;
                 top: -4px;
             }
@@ -426,12 +430,17 @@
     .module-box-dropdown{
 
         .module-box{
+            padding-left: 20px;
 
             &:hover{
 
                 .module-box-line{
                     @include whd(25px, 1px, inline-block);
                     background: $helper-color;
+                }
+
+                p{
+                    color: $helper-color;
                 }
 
             }
@@ -445,7 +454,7 @@
             }
 
             p{
-                font-family: $font-extraLight;
+                @include transition(0.3s);
             }
 
         }
@@ -462,6 +471,33 @@
             right: 26px;
             @include translateY(-25%);
             @include rotate(180deg);
+        }
+
+    }
+
+    .module-box-active{
+
+        .module-box-head{
+            background: $helper-color;
+
+            p{
+                font-family: $font-semiBold;
+            }
+
+        }
+
+        .sub-module-active{
+
+            .module-box-line{
+                @include whd(25px, 1px, inline-block);
+                background: $helper-color;
+            }
+
+            p{
+                font-family: $font-regular;
+                color: $helper-color;
+            }
+
         }
 
     }
