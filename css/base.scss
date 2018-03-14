@@ -60,11 +60,11 @@ $notification-color: #ee2323;
 
 /* TRANSFORM TRANSLATE X AXIS MIXIN */
 @mixin translateX($value){
-    -webkit-transform: translateY($value);
-    -moz-transform: translateY($value);
-    -ms-transform: translateY($value);
-    -o-transform: translateY($value);
-    transform: translateY($value);
+    -webkit-transform: translateX($value);
+    -moz-transform: translateX($value);
+    -ms-transform: translateX($value);
+    -o-transform: translateX($value);
+    transform: translateX($value);
 }
 
 /* TRANSFORM ROTATE MIXIN */

@@ -24,15 +24,20 @@
 }
 
 .navbar-logo{
-    @include whd(270px, $display: inline-block);
+    @include whd(300px, $display: inline-block);
     float: left;
-    @include transition(0.3s);
+    @include transition(0.5s);
     padding: 10px 0px;
 
     img{
         @include whd(auto, 42px, block);
         margin: auto;
     }
+}
+
+.close-navbar-logo{
+    @include translateX(-320px);
+    width: 0px;
 }
 
 .navbar-hamburger-menu, .navbar-settings-btn{
@@ -381,22 +386,27 @@
    -------------------------------- MODULES SIDEBAR ---------------------------------
    ---------------------------------------------------------------------------------- */
 .modules-sidebar{
-    @include whd(272px, calc(100% - 60px), block);
+    @include whd(300px, calc(100% - 60px), block);
     position: absolute;
     background: $secondary-color;
     top: 60px;
     left: 0px;
+    bottom: 0px;
     z-index: 98;
     @include box-shadow;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0px 10px;
+    @include transition(0.5s);
 
     .module-box{
         @include whd;
         max-height: 62px;
         cursor: pointer;
-        @include border-radius(4px);
         position: relative;
         overflow: hidden;
         @include transition(0.7s);
+        margin: 15px 0px;
 
         &:hover{
             background: rgba(0, 0, 0, 0.2);
@@ -411,10 +421,11 @@
             }
 
             p{
+                font-family: $font-extraLight;
                 @include whd(auto, auto, inline-block);
                 color: $icons-color;
                 text-indent: 15px;
-                font-size: 1.5em;
+                font-size: 1.4em;
                 position: relative;
                 top: -4px;
             }
@@ -425,13 +436,18 @@
 
     .module-box-dropdown{
 
-        .module-box{
+        .sub-module-box{
+            padding-left: 20px;
 
             &:hover{
 
                 .module-box-line{
                     @include whd(25px, 1px, inline-block);
                     background: $helper-color;
+                }
+
+                p{
+                    color: $helper-color;
                 }
 
             }
@@ -445,7 +461,7 @@
             }
 
             p{
-                font-family: $font-extraLight;
+                @include transition(0.3s);
             }
 
         }
@@ -457,7 +473,7 @@
         @include transition(5s);
         background: rgba(29, 29, 29, 0.3);
 
-        &::after{
+        .module-box-head::after{
             top: 20px;
             right: 26px;
             @include translateY(-25%);
@@ -466,4 +482,35 @@
 
     }
 
+    .module-box-active{
+
+        .module-box-head{
+            background: $helper-color;
+
+            p{
+                font-family: $font-semiBold;
+            }
+
+        }
+
+        .sub-module-active{
+
+            .module-box-line{
+                @include whd(25px, 1px, inline-block);
+                background: $helper-color;
+            }
+
+            p{
+                font-family: $font-regular;
+                color: $helper-color;
+            }
+
+        }
+
+    }
+
+}
+
+.close-siderbar-modules{
+    @include translateX(-320px);
 }
