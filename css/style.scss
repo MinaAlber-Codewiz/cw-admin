@@ -83,8 +83,9 @@
 }
 
 .navbar-user-avatar{
+    position: relative;
 
-    span:first-child{
+    span:nth-child(1){
 
         &::before{
             position: relative;
@@ -93,25 +94,60 @@
 
     }
 
-    img{
+    img:nth-child(2){
         @include whd(40px, 40px, none);
         position: relative;
         top: 15px;
         @include border-radius(50%);
     }
 
-    span:last-child{
+    span:nth-child(3){
         font-family: $font-light;
         font-size: 1.5em;
         color: $icons-color;
         padding-left: 15px;
     }
 
+    &:hover{
+
+        .avatar-popup-box{
+            max-height: 2000px;
+            @include whd(300px, auto, block);
+            @include transition(1s);
+        }
+
+    }
+
+    .avatar-popup-box{
+        @include whd(300px, auto, block);
+        max-height: 0px;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background: $divider-color;
+        line-height: normal;
+        @include box-shadow;
+
+        &::before{
+            content: '';
+            @include whd($height: 2px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            background: $helper-color;
+        }
+
+
+
+    }
+
 }
 
 .registered-user{
 
-    span:first-child{
+    span:nth-child(1){
 
         &::before{
             display: none;
@@ -119,7 +155,7 @@
 
     }
 
-    img{
+    img:nth-child(2){
         @include whd(40px, 40px, inline-block);
     }
 
