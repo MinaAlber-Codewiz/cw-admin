@@ -512,7 +512,7 @@
 
     .module-box{
         @include whd;
-        max-height: 62px;
+        max-height: 47px;
         cursor: pointer;
         position: relative;
         overflow: hidden;
@@ -524,7 +524,7 @@
         }
 
         a{
-            padding: 20px 20px 15px 20px;
+            padding: 10px 20px 10px 20px;
             display: block;
 
             span{
@@ -585,7 +585,7 @@
         background: rgba(29, 29, 29, 0.3);
 
         .module-box-head::after{
-            top: 20px;
+            top: 13px;
             right: 26px;
             @include translateY(-25%);
             @include rotate(180deg);
