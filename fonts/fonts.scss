@@ -103,6 +103,14 @@
     font-size: 3.5em;
 }
 
+.icon-large:before{
+    font-size: 5em;
+}
+
+.icon-xlarge{
+    font-size: 7em;
+}
+
 .icon-gearbox:before{content:'\0041';}
 .icon-user:before{content:'\0042';}
 .icon-logout:before{content:'\0043';}
