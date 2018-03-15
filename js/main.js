@@ -11,16 +11,41 @@ $(document).ready(function(){
     var moduleBoxHead = $('.module-box-head');
     var subModuleBox = $('.sub-module-box');
     var quickSettingsSidebar = $('.quick-settings-sidebar');
+    var contentContainer = $('.content-container');
+
+    function adjustContentContainer(){
+        if(modulesSidebar.hasClass('close-siderbar-modules')){
+            contentContainer.addClass('content-container-condition-1');
+            contentContainer.removeClass('content-container-condition-3');
+        } else if(!modulesSidebar.hasClass('close-siderbar-modules')){
+            contentContainer.removeClass('content-container-condition-1');
+        }
+
+        if(quickSettingsSidebar.hasClass('close-quick-settings-modules')){
+            contentContainer.addClass('content-container-condition-2');
+        } else if(!quickSettingsSidebar.hasClass('close-quick-settings-modules')){
+            contentContainer.removeClass('content-container-condition-2');
+            contentContainer.removeClass('content-container-condition-3');
+        }
+
+        if(!modulesSidebar.hasClass('close-siderbar-modules') && quickSettingsSidebar.hasClass('close-quick-settings-modules')){
+            contentContainer.addClass('content-container-condition-3');
+        } else if(modulesSidebar.hasClass('close-siderbar-modules') && !quickSettingsSidebar.hasClass('close-quick-settings-modules')){
+            contentContainer.removeClass('content-container-condition-3');
+        }
+    }
 
     // WHEN NAVBAR HAMBURGER MENU IS CLICKED
     navbarHamburgerMenu.click(function(){
         modulesSidebar.toggleClass('close-siderbar-modules');
         navbarLogo.toggleClass('close-navbar-logo');
+        adjustContentContainer();
     });
 
     // WHEN NAVBAR QUICK SETTINGS BUTTON IS CLICKED
     navbarSettingsBtn.click(function(){
         quickSettingsSidebar.toggleClass('close-quick-settings-modules');
+        adjustContentContainer();
     });
 
     // WHEN MODULE BOX IS CLICKED
