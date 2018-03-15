@@ -75,3 +75,11 @@ $notification-color: #ee2323;
     -o-transform: rotate($value);
     transform: rotate($value);
 }
+
+/* COLUMNS MIXIN */
+@mixin col{
+    padding: 20px 30px;
+    margin: 20px 0px;
+    float: left;
+    border: 1px dashed #000000;
+}

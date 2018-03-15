@@ -1,18 +1,10 @@
 @import 'base';
 
-html{
-    @include whd;
-    font-family: $font-regular;
-    font-size: 10px;
-    color: $primary-color;
-}
-
 body{
     @include whd;
     font-family: $font-regular;
     font-size: 10px;
     color: $primary-color;
-    overflow-x: hidden;
 }
 
 a{
