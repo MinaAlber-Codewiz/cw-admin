@@ -83,3 +83,15 @@ $notification-color: #ee2323;
     float: left;
     border: 1px dashed #000000;
 }
+
+/* HEADINGS MIXIN */
+@mixin heading{
+    @include whd;
+    font-family: $font-bold;
+}
+
+/* SUB HEADINGS MIXIN */
+@mixin sub-heading{
+    @include whd;
+    font-family: $font-semiBold;
+}
