@@ -12,21 +12,6 @@ a{
     cursor: pointer;
 }
 
-.sm-heading{
-    @include heading;
-    font-size: 1.4em;
-}
-
-.md-heading{
-    @include heading;
-    font-size: 2em;
-}
-
-.lg-heading{
-    @include heading;
-    font-size: 2.5em;
-}
-
 .new-notifications::after{
     content: '';
     @include whd(12px, 12px, block);
@@ -48,6 +33,31 @@ a{
         color: $icons-color;
         font-size: 1.4em;
         @include transition(0.3s);
+    }
+
+}
+
+pre{
+    @include code-block;
+
+    .tag-name{
+        color: #ff3131;
+    }
+
+    .tag, .operator{
+        color: #f1f1f1;
+    }
+
+    .attribute{
+        color: #ff873f;
+    }
+
+    .quote, .value{
+        color: #abff3f;
+    }
+
+    .comment{
+        color: #737373;
     }
 
 }

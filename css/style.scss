@@ -684,36 +684,63 @@
    ---------------------------------------------------------------------------------- */
 .cw-container{
     @include whd;
-    background: #f1f1f1;
     padding: 50px 10px;
 }
 
 .cw-row{
     @include whd($display: inline-block);
-    background: #dedede;
     padding: 5px;
 }
 
-.cw-col-4{
+.cw-col-6{
     @include whd;
     @include col;
-    background: #ffffff;
-}
-
-.cw-col-3{
-    @include whd($width: 33.33333%);
-    @include col;
-    background: #ffffff;
 }
 
 .cw-col-2{
+    @include whd($width: 33.33333%);
+    @include col;
+}
+
+.cw-col-3{
     @include whd($width: 50%);
     @include col;
-    background: #ffffff;
 }
 
 .cw-col-1{
     @include whd($width: 25%);
     @include col;
-    background: #ffffff;
+}
+
+/* ----------------------------------------------------------------------------------
+   ----------------------------------- HEADINGS -------------------------------------
+   ---------------------------------------------------------------------------------- */
+.sm-heading{
+    @include heading;
+    font-size: 1.4em;
+}
+
+.md-heading{
+    @include heading;
+    font-size: 2em;
+}
+
+.lg-heading{
+    @include heading;
+    font-size: 2.5em;
+}
+
+.sm-sub-heading{
+    @include sub-heading;
+    font-size: 1.4em;
+}
+
+.md-sub-heading{
+    @include sub-heading;
+    font-size: 2em;
+}
+
+.lg-sub-heading{
+    @include sub-heading;
+    font-size: 2.5em;
 }
