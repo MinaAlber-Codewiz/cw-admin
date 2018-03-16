@@ -295,6 +295,9 @@
         }
 
         .email-notifications-popup-box-container{
+            @include whd($height: 390px);
+            position: relative;
+            overflow: auto;
 
             .email-notification-popup-box{
                 @include whd;
@@ -417,6 +420,10 @@
         }
 
         .notifications-popup-box-container{
+            @include whd($height: 388.5px);
+            position: relative;
+            overflow: auto;
+
             .notification-popup-box{
                 @include whd;
                 clear: both;
@@ -508,8 +515,7 @@
     bottom: 0px;
     z-index: 98;
     @include box-shadow;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: auto;
     padding: 0px 10px;
     @include transition(0.5s);
     line-height: normal;
@@ -643,8 +649,7 @@
     bottom: 0px;
     z-index: 98;
     @include box-shadow;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: auto;
     padding: 20px 20px;
     @include transition(0.5s);
     line-height: normal;

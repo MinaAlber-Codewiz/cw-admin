@@ -69,4 +69,10 @@ $(document).ready(function(){
         $(this).parent().parent().addClass('module-box-active');
     });
 
+    // ACTIVATE SCROLLBARS
+    new PerfectScrollbar('.email-notifications-popup-box-container');
+    new PerfectScrollbar('.notifications-popup-box-container');
+    new PerfectScrollbar('.modules-sidebar');
+    new PerfectScrollbar('.quick-settings-sidebar');
+
 });

@@ -98,11 +98,12 @@ $notification-color: #ee2323;
 
 /* CODE BLOCKS MIXIN */
 @mixin code-block{
-    @include whd($height: 300px);
+    @include whd;
+    max-height: 300px;
     background: #333333;
     clear: both;
     font-size: 1.4em;
-    overflow: scroll;
+    overflow: auto;
 
     code{
         @include whd(auto, auto, inline-block);
