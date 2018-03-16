@@ -59,7 +59,7 @@
     float: left;
 
     a{
-        padding-left: 50px;
+        margin-left: 50px;
         font-family: $font-light;
         font-size: 1.5em;
         color: $icons-color;
@@ -295,7 +295,8 @@
         }
 
         .email-notifications-popup-box-container{
-            @include whd($height: 390px);
+            @include whd;
+            max-height: 390px;
             position: relative;
             overflow: auto;
 
@@ -420,7 +421,8 @@
         }
 
         .notifications-popup-box-container{
-            @include whd($height: 388.5px);
+            @include whd;
+            max-height: 388.5px;
             position: relative;
             overflow: auto;
 

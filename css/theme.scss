@@ -22,6 +22,15 @@ a{
     @include border-radius(50%);
 }
 
+.notifications-empty{
+    @include whd;
+    text-align: center;
+    color: $icons-color;
+    font-family: $font-regular;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
 .module-box-dropdown{
 
     .module-box-head::after{
