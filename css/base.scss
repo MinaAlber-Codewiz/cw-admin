@@ -106,7 +106,7 @@ $notification-color: #ee2323;
 
     code{
         @include whd(auto, auto, inline-block);
-        padding-right: 30px;
+        padding: 20px 30px 40px 0px;
         line-height: 25px;
     }
 }
