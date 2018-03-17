@@ -87,6 +87,16 @@
     position: relative;
     z-index: 99;
 
+    &:hover{
+
+        .avatar-popup-box{
+            max-height: 2000px;
+            @include whd(300px, auto, block);
+            @include transition(1s);
+        }
+
+    }
+
     .navbar-avatar-icon{
 
         &::before{
@@ -108,16 +118,6 @@
         font-size: 1.5em;
         color: $icons-color;
         padding-left: 15px;
-    }
-
-    &:hover{
-
-        .avatar-popup-box{
-            max-height: 2000px;
-            @include whd(300px, auto, block);
-            @include transition(1s);
-        }
-
     }
 
     .avatar-popup-box{
