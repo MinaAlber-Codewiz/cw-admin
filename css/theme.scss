@@ -49,7 +49,7 @@ a{
 }
 
 pre{
-    // @include code-block;
+    @include code-block;
 
     .tag-name{
         color: #ff3131;
