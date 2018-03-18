@@ -13,6 +13,7 @@ $(document).ready(function(){
     var quickSettingsSidebar = $('.quick-settings-sidebar');
     var contentContainer = $('.content-container');
     var copyCodeBlock = $('pre button');
+    var floatingLabel = $('.style-float-label input');
 
     // FUNCTION TO ADJUST CONTENT CONTAINER WIDTH SIZE
     function adjustContentContainer(){
@@ -93,6 +94,18 @@ $(document).ready(function(){
             document.selection.empty()
         };
     })
+
+    floatingLabel.focus(function(){
+        var label = this.previousElementSibling;
+        label.classList.add('normal-label');
+    });
+
+    floatingLabel.focusout(function(){
+        if(this.value === ''){
+            var label = this.previousElementSibling;
+            label.classList.remove('normal-label');
+        }
+    });
 
     // ACTIVATE SCROLLBARS
     new PerfectScrollbar('.email-notifications-popup-box-container');

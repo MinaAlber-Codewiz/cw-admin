@@ -761,3 +761,68 @@
     @include paragraph;
     font-size: 2.5em;
 }
+
+/* ----------------------------------------------------------------------------------
+   -------------------------------- INPUT TEXT FIELD --------------------------------
+   ---------------------------------------------------------------------------------- */
+.style-block{
+   label{
+       @include sub-heading;
+       font-size: 1.8em;
+   }
+
+   input[type="text"]{
+       @include whd;
+       @include form-input-text;
+       @include placeholder($primary-color);
+   }
+}
+
+.style-inline-block{
+   label{
+       @include sub-heading;
+       @include whd($width: 300px, $display: inline-block);
+       font-size: 1.8em;
+       float: left;
+       line-height: 53px;
+   }
+
+   input[type="text"]{
+       @include whd($width: calc(100% - 300px), $display: inline-block);
+       float: left;
+       @include form-input-text;
+       @include placeholder($primary-color);
+   }
+}
+
+.style-float-label{
+    position: relative;
+
+    label{
+        @include sub-heading;
+        font-family: $font-extraLight;
+        font-size: 1.8em;
+        position: absolute;
+        @include translateY(6px);
+        z-index: 0;
+        opacity: 0.7;
+        text-indent: 20px;
+        @include transition(0.3s);
+    }
+
+    input[type="text"]{
+        @include whd;
+        @include form-input-text;
+        @include placeholder($primary-color);
+        position: relative;
+        z-index: 1;
+    }
+
+    .normal-label{
+        text-indent: 0px;
+        font-family: $font-semiBold !important;
+        opacity: 1;
+        @include translateY(-40px);
+    }
+
+}

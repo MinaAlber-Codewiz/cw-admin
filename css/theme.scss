@@ -48,6 +48,10 @@ a{
 
 }
 
+.form-field{
+    @include whd($display: inline-block);
+}
+
 pre{
     @include code-block;
     color: #ffffff;

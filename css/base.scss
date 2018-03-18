@@ -49,6 +49,15 @@ $notification-color: #ee2323;
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
 }
 
+/* TRANSFORM TRANSLATE X,Y AXIS MIXIN */
+@mixin translateXY($x, $y){
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
 /* TRANSFORM TRANSLATE Y AXIS MIXIN */
 @mixin translateY($value){
     -webkit-transform: translateY($value);
@@ -87,20 +96,21 @@ $notification-color: #ee2323;
 @mixin heading{
     @include whd;
     font-family: $font-bold;
+    line-height: 40px;
 }
 
 /* SUB HEADINGS MIXIN */
 @mixin sub-heading{
     @include whd;
     font-family: $font-semiBold;
-    margin-top: 10px;
+    line-height: 40px;
 }
 
 /* SUB HEADINGS MIXIN */
 @mixin paragraph{
     @include whd;
     font-family: $font-regular;
-    margin-top: 10px;
+    line-height: 30px;
 }
 
 /* CODE BLOCKS MIXIN */
@@ -135,5 +145,60 @@ $notification-color: #ee2323;
         @include whd(auto, auto, inline-block);
         padding: 20px 30px 40px 0px;
         line-height: 25px;
+    }
+}
+
+/* FORM FIELDS MIXIN */
+@mixin form-input-text{
+    padding: 10px 20px;
+    font-size: 1.6em;
+    font-family: $font-regular;
+    border: 1px solid $primary-color;
+    outline: none;
+    background: transparent;
+}
+
+/* FORMS PLACEHOLDER MIXING */
+@mixin placeholder($color){
+    &::-webkit-input-placeholder {
+        font-family: $font-extraLight;
+        @include transition(0.3s);
+        color: $color;
+    }
+
+    &:-moz-placeholder {
+        opacity: 1;
+        font-family: $font-extraLight;
+        @include transition(0.3s);
+        color: $color;
+    }
+
+    &::-moz-placeholder {
+        opacity: 1;
+        font-family: $font-extraLight;
+        @include transition(0.3s);
+        color: $color;
+    }
+
+    &:-ms-input-placeholder {
+        font-family: $font-extraLight;
+        @include transition(0.3s);
+        color: $color;
+    }
+
+    &:focus::-webkit-input-placeholder {
+        color: transparent !important;
+    }
+
+    &:focus:-moz-placeholder {
+        color: transparent !important;
+    }
+
+    &:focus::-moz-placeholder {
+        color: transparent !important;
+    }
+
+    &:focus:-ms-input-placeholder {
+        color: transparent !important;
     }
 }
