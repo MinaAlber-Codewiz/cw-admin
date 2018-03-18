@@ -95,11 +95,13 @@ $(document).ready(function(){
         };
     })
 
+    // IF INPUT FIELD IS FOCUSED
     floatingLabel.focus(function(){
         var label = this.previousElementSibling;
         label.classList.add('normal-label');
     });
 
+    // IF INPUT FIELD IS NOT FOCUSED
     floatingLabel.focusout(function(){
         if(this.value === ''){
             var label = this.previousElementSibling;
