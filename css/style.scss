@@ -699,23 +699,18 @@
     padding: 5px;
 }
 
-.cw-col-6{
+.cw-col-12{
     @include whd;
     @include col;
 }
 
-.cw-col-2{
+.cw-col-4{
     @include whd($width: 33.33333%);
     @include col;
 }
 
-.cw-col-3{
+.cw-col-6{
     @include whd($width: 50%);
-    @include col;
-}
-
-.cw-col-1{
-    @include whd($width: 25%);
     @include col;
 }
 
