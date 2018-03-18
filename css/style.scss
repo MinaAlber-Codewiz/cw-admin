@@ -778,17 +778,33 @@
    }
 }
 
+.style-block-border-bottom{
+   label{
+       @include sub-heading;
+       font-size: 1.8em;
+   }
+
+   input[type="text"]{
+       @include whd;
+       @include form-input-text;
+       @include placeholder($primary-color);
+       border: 0px;
+       border-bottom: 1px solid $primary-color;
+       padding: 0px 0px 5px 0px;
+   }
+}
+
 .style-inline-block{
    label{
        @include sub-heading;
-       @include whd($width: 300px, $display: inline-block);
+       @include whd($width: 200px, $display: inline-block);
        font-size: 1.8em;
        float: left;
        line-height: 53px;
    }
 
    input[type="text"]{
-       @include whd($width: calc(100% - 300px), $display: inline-block);
+       @include whd($width: calc(100% - 200px), $display: inline-block);
        float: left;
        @include form-input-text;
        @include placeholder($primary-color);
@@ -822,6 +838,46 @@
         text-indent: 0px;
         font-family: $font-semiBold !important;
         opacity: 1;
+        @include translateY(-40px);
+    }
+
+}
+
+.float-label-legend{
+    position: relative;
+
+    label{
+        @include whd($width: auto);
+        @include translateY(6px);
+        background: #ffffff;
+        text-indent: 0px;
+        margin-left: 10px;
+        padding: 0px 10px;
+    }
+
+    .normal-label{
+        z-index: 2;
+        @include translateY(-10px);
+        text-indent: 0px;
+        line-height: 18px;
+    }
+
+}
+
+.float-label-border-bottom{
+
+    label{
+        @include translateY(-5px);
+        text-indent: 0px;
+    }
+
+    input[type="text"]{
+        border: none;
+        border-bottom: 1px solid $primary-color;
+        padding: 0px 0px 5px 0px;
+    }
+
+    .normal-label{
         @include translateY(-40px);
     }
 
