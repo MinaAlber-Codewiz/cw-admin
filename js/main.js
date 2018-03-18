@@ -12,7 +12,9 @@ $(document).ready(function(){
     var subModuleBox = $('.sub-module-box');
     var quickSettingsSidebar = $('.quick-settings-sidebar');
     var contentContainer = $('.content-container');
+    var copyCodeBlock = $('pre button');
 
+    // FUNCTION TO ADJUST CONTENT CONTAINER WIDTH SIZE
     function adjustContentContainer(){
         if(modulesSidebar.hasClass('close-siderbar-modules')){
             contentContainer.addClass('content-container-condition-1');
@@ -68,6 +70,29 @@ $(document).ready(function(){
         $(this).addClass('sub-module-active');
         $(this).parent().parent().addClass('module-box-active');
     });
+
+    // WHEN COPY CODEBLOCK BUTTON IS CLICKED
+    copyCodeBlock.click(function(){
+        var codeBlock = this.nextElementSibling;
+        codeBlock.contentEditable = true;
+        codeBlock.focus();
+        document.execCommand('selectAll');
+        document.execCommand('copy');
+        codeBlock.contentEditable = false;
+        this.innerHTML = "Copied to Clipboard";
+
+        setTimeout(function(){
+            this.innerHTML = "Copy";
+        }.bind(this),500);
+
+        // IF CONDITION TO DESELECT COPIED TEXT
+        if(window.getSelection){
+            window.getSelection().removeAllRanges();
+        }
+        else if(document.selection){
+            document.selection.empty()
+        };
+    })
 
     // ACTIVATE SCROLLBARS
     new PerfectScrollbar('.email-notifications-popup-box-container');

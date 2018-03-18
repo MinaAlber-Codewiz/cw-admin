@@ -104,6 +104,25 @@ $notification-color: #ee2323;
     clear: both;
     font-size: 1.4em;
     overflow: auto;
+    position: relative;
+
+    button{
+        font-family: $font-extraLight;
+        position: absolute;
+        top: 0;
+        right: 0;
+        outline: none;
+        border: none;
+        background: rgba(0,0,0,0.17);
+        color: #ffffff;
+        padding: 10px 20px;
+        cursor: pointer;
+        @include transition(0.3s);
+
+        &:hover{
+            background: rgba(144,144,144,0.17);
+        }
+    }
 
     code{
         @include whd(auto, auto, inline-block);
