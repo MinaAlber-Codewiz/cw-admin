@@ -715,7 +715,7 @@
 }
 
 /* ----------------------------------------------------------------------------------
-   ----------------------------------- HEADINGS -------------------------------------
+   ----------------------------------- TYPOGRAPHY -----------------------------------
    ---------------------------------------------------------------------------------- */
 .sm-heading{
     @include heading;
@@ -744,5 +744,20 @@
 
 .lg-sub-heading{
     @include sub-heading;
+    font-size: 2.5em;
+}
+
+.sm-paragraph{
+    @include paragraph;
+    font-size: 1.4em;
+}
+
+.md-paragraph{
+    @include paragraph;
+    font-size: 2em;
+}
+
+.lg-paragraph{
+    @include paragraph;
     font-size: 2.5em;
 }

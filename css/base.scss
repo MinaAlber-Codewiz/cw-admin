@@ -96,6 +96,13 @@ $notification-color: #ee2323;
     margin-top: 10px;
 }
 
+/* SUB HEADINGS MIXIN */
+@mixin paragraph{
+    @include whd;
+    font-family: $font-regular;
+    margin-top: 10px;
+}
+
 /* CODE BLOCKS MIXIN */
 @mixin code-block{
     @include whd;
