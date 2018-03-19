@@ -56,10 +56,13 @@ a{
 
 .field-pass{
     .input-success{
+        @include whd($display: inline-block);
         margin-top: 15px;
         font-size: 1.6em;
         font-family: $font-semiBold;
         color: #2ecc71 !important;
+        clear: both;
+        overflow: hidden;
     }
     label{
         color: #2ecc71 !important;
@@ -82,16 +85,19 @@ a{
 .field-pass.fix-icon.icon{
     &::before{
         background: #2ecc71 !important;
-        bottom: calc(0px + 35px) !important;
+        bottom: calc(0px + 38px) !important;
     }
 }
 
 .field-error{
     .input-error{
+        @include whd($display: inline-block);
         margin-top: 15px;
         font-size: 1.6em;
         font-family: $font-semiBold;
         color: #c0392b !important;
+        clear: both;
+        overflow: hidden;
     }
     label{
         color: #c0392b !important;
@@ -107,7 +113,7 @@ a{
 .field-error.icon{
     &::before{
         background: #c0392b !important;
-        bottom: calc(0px + 35px) !important;
+        bottom: calc(0px + 38px) !important;
     }
 }
 
