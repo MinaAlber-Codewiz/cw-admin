@@ -784,6 +784,22 @@
    }
 }
 
+.style-block.icon{
+    &::before{
+        background: $primary-color;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        font-size: 2em;
+        padding: 10px;
+    }
+
+    textarea{
+        padding-left: 55px;
+        padding-top: 6px;
+    }
+}
+
 .style-block-border-bottom{
    label{
        @include sub-heading;
@@ -809,6 +825,22 @@
    }
 }
 
+.style-block-border-bottom.icon{
+    &::before{
+        background: $primary-color;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        font-size: 2em;
+        padding: 10px;
+    }
+
+    textarea{
+        padding-left: 55px;
+        padding-top: 6px;
+    }
+}
+
 .style-inline-block{
    label{
        @include sub-heading;
@@ -831,6 +863,22 @@
        @include form-input-text;
        @include placeholder($primary-color);
    }
+}
+
+.style-inline-block.icon{
+    &::before{
+        background: $primary-color;
+        position: absolute;
+        top: 0px;
+        left: 200px;
+        font-size: 2em;
+        padding: 10px;
+    }
+
+    textarea{
+        padding-left: 50px;
+        padding-top: 6px;
+    }
 }
 
 .style-float-label{
@@ -873,6 +921,31 @@
 
 }
 
+.style-float-label.icon{
+    &::before{
+        background: $primary-color;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        font-size: 2em;
+        padding: 10px;
+    }
+
+    label{
+        text-indent: 50px;
+        line-height: 32px;
+    }
+
+    .normal-label{
+        text-indent: 0px;
+    }
+
+    textarea{
+        padding-left: 50px;
+        padding-top: 6px;
+    }
+}
+
 .float-label-legend{
     position: relative;
 
@@ -892,6 +965,32 @@
         line-height: 18px;
     }
 
+}
+
+.float-label-legend.icon{
+    &::before{
+        background: $primary-color;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        font-size: 2em;
+        padding: 10px;
+    }
+
+    label{
+        text-indent: 0px;
+        margin-left: 40px;
+    }
+
+    .normal-label{
+        text-indent: 0px;
+        @include translateY(-15px);
+    }
+
+    textarea{
+        padding-left: 50px;
+        padding-top: 6px;
+    }
 }
 
 .float-label-border-bottom{
@@ -917,4 +1016,31 @@
         @include translateY(-40px);
     }
 
+}
+
+.float-label-border-bottom.icon{
+    &::before{
+        background: $primary-color;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        font-size: 2em;
+        padding: 10px;
+    }
+
+    label{
+        text-indent: 50px;
+        line-height: 32px;
+        @include translateY(4px);
+    }
+
+    .normal-label{
+        text-indent: 0px;
+        @include translateY(-40px);
+    }
+
+    textarea{
+        padding-left: 50px;
+        padding-top: 6px;
+    }
 }
