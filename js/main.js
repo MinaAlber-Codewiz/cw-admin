@@ -13,7 +13,8 @@ $(document).ready(function(){
     var quickSettingsSidebar = $('.quick-settings-sidebar');
     var contentContainer = $('.content-container');
     var copyCodeBlock = $('pre button');
-    var floatingLabel = $('.style-float-label input');
+    var floatingLabelText = $('.style-float-label input');
+    var floatingLabelTextarea = $('.style-float-label textarea');
 
     // FUNCTION TO ADJUST CONTENT CONTAINER WIDTH SIZE
     function adjustContentContainer(){
@@ -95,14 +96,28 @@ $(document).ready(function(){
         };
     })
 
-    // IF INPUT FIELD IS FOCUSED
-    floatingLabel.focus(function(){
+    // IF INPUT TEXT FIELD IS FOCUSED
+    floatingLabelText.focus(function(){
         var label = this.previousElementSibling;
         label.classList.add('normal-label');
     });
 
-    // IF INPUT FIELD IS NOT FOCUSED
-    floatingLabel.focusout(function(){
+    // IF INPUT TEXT FIELD IS NOT FOCUSED
+    floatingLabelText.focusout(function(){
+        if(this.value === ''){
+            var label = this.previousElementSibling;
+            label.classList.remove('normal-label');
+        }
+    });
+
+    // IF INPUT TEXTAREA FIELD IS FOCUSED
+    floatingLabelTextarea.focus(function(){
+        var label = this.previousElementSibling;
+        label.classList.add('normal-label');
+    });
+
+    // IF INPUT TEXTAREA FIELD IS NOT FOCUSED
+    floatingLabelTextarea.focusout(function(){
         if(this.value === ''){
             var label = this.previousElementSibling;
             label.classList.remove('normal-label');

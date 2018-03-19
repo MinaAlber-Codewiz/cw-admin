@@ -66,6 +66,9 @@ a{
     input[type="text"]{
         border-color: #2ecc71 !important;
     }
+    textarea{
+        border-color: #2ecc71 !important;
+    }
 }
 
 .field-error{
@@ -79,6 +82,9 @@ a{
         color: #c0392b !important;
     }
     input[type="text"]{
+        border-color: #c0392b !important;
+    }
+    textarea{
         border-color: #c0392b !important;
     }
 }
