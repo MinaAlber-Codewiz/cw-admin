@@ -763,7 +763,7 @@
 }
 
 /* ----------------------------------------------------------------------------------
-   -------------------------------- INPUT TEXT FIELD --------------------------------
+   ---------------------------------- INPUT FIELDS ----------------------------------
    ---------------------------------------------------------------------------------- */
 .style-block{
    label{
@@ -773,6 +773,12 @@
 
    input[type="text"]{
        @include whd;
+       @include form-input-text;
+       @include placeholder($primary-color);
+   }
+
+   textarea{
+       @include whd($height: 150px);
        @include form-input-text;
        @include placeholder($primary-color);
    }
@@ -786,6 +792,15 @@
 
    input[type="text"]{
        @include whd;
+       @include form-input-text;
+       @include placeholder($primary-color);
+       border: 0px;
+       border-bottom: 1px solid $primary-color;
+       padding: 0px 0px 5px 0px;
+   }
+
+   textarea{
+       @include whd($height: 150px);
        @include form-input-text;
        @include placeholder($primary-color);
        border: 0px;
@@ -809,6 +824,13 @@
        @include form-input-text;
        @include placeholder($primary-color);
    }
+
+   textarea{
+       @include whd($width: calc(100% - 200px), $height: 150px, $display: inline-block);
+       float: left;
+       @include form-input-text;
+       @include placeholder($primary-color);
+   }
 }
 
 .style-float-label{
@@ -828,6 +850,14 @@
 
     input[type="text"]{
         @include whd;
+        @include form-input-text;
+        @include placeholder($primary-color);
+        position: relative;
+        z-index: 1;
+    }
+
+    textarea{
+        @include whd($height: 150px);
         @include form-input-text;
         @include placeholder($primary-color);
         position: relative;
@@ -872,6 +902,12 @@
     }
 
     input[type="text"]{
+        border: none;
+        border-bottom: 1px solid $primary-color;
+        padding: 0px 0px 5px 0px;
+    }
+
+    textarea{
         border: none;
         border-bottom: 1px solid $primary-color;
         padding: 0px 0px 5px 0px;
