@@ -72,6 +72,20 @@ a{
     }
 }
 
+.field-pass.icon{
+    &::before{
+        background: #2ecc71 !important;
+        bottom: 0px !important;
+    }
+}
+
+.field-pass.fix-icon.icon{
+    &::before{
+        background: #2ecc71 !important;
+        bottom: calc(0px + 35px) !important;
+    }
+}
+
 .field-error{
     .input-error{
         margin-top: 15px;
@@ -87,6 +101,13 @@ a{
     }
     textarea{
         border-color: #c0392b !important;
+    }
+}
+
+.field-error.icon{
+    &::before{
+        background: #c0392b !important;
+        bottom: calc(0px + 35px) !important;
     }
 }
 
