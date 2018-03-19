@@ -111,6 +111,13 @@ a{
     }
 }
 
+.field-error.fix-icon.icon{
+    &::before{
+        background: #c0392b !important;
+        bottom: 0px !important;
+    }
+}
+
 pre{
     @include code-block;
     color: #ffffff;
