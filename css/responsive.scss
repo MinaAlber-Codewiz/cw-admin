@@ -11,7 +11,7 @@
 }
 
 /* ----------------------------------------------------------------------------------
-   -------------------------------- INPUT TEXT FIELD --------------------------------
+   ---------------------------------- INPUT FIELDS ----------------------------------
    ---------------------------------------------------------------------------------- */
    @media only screen and (max-width: 1300px){
        .style-inline-block{
@@ -24,6 +24,21 @@
            input[type="text"]{
                @include whd;
                float: none;
+           }
+
+           textarea{
+               width: 100%;
+           }
+       }
+
+       .style-inline-block.icon{
+           &::before{
+               background: $primary-color;
+               position: absolute;
+               top: 40px;
+               left: 0px;
+               font-size: 2em;
+               padding: 10px;
            }
        }
    }
