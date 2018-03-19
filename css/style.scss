@@ -792,12 +792,16 @@
         left: 0px;
         bottom: 0px;
         font-size: 2em;
-        padding: 10px;
+        padding: 15px 10px 10px 10px;
     }
 
     textarea{
         padding-left: 55px;
         padding-top: 6px;
+    }
+
+    input[type="text"]{
+        padding-left: 55px;
     }
 }
 
@@ -813,7 +817,7 @@
        @include placeholder($primary-color);
        border: 0px;
        border-bottom: 1px solid $primary-color;
-       padding: 0px 0px 5px 0px;
+       padding: 10px 0px 10px 0px;
    }
 
    textarea{
@@ -834,12 +838,16 @@
         bottom: 0px;
         left: 0px;
         font-size: 2em;
-        padding: 10px;
+        padding: 15px 10px 10px 10px;
     }
 
     textarea{
         padding-left: 55px;
         padding-top: 6px;
+    }
+
+    input[type="text"]{
+        padding-left: 55px;
     }
 }
 
@@ -875,12 +883,16 @@
         bottom: 0px;
         left: 200px;
         font-size: 2em;
-        padding: 10px;
+        padding: 15px 10px 10px 10px;
     }
 
     textarea{
         padding-left: 50px;
         padding-top: 6px;
+    }
+
+    input[type="text"]{
+        padding-left: 55px;
     }
 }
 
@@ -932,12 +944,11 @@
         bottom: 0px;
         left: 0px;
         font-size: 2em;
-        padding: 10px;
+        padding: 15px 10px 10px 10px;
     }
 
     label{
         text-indent: 50px;
-        line-height: 32px;
     }
 
     .normal-label{
@@ -947,6 +958,10 @@
     textarea{
         padding-left: 50px;
         padding-top: 6px;
+    }
+
+    input[type="text"]{
+        padding-left: 50px;
     }
 }
 
@@ -979,7 +994,7 @@
         bottom: 0px;
         left: 0px;
         font-size: 2em;
-        padding: 10px;
+        padding: 15px 10px 10px 10px;
     }
 
     label{
@@ -989,13 +1004,14 @@
 
     .normal-label{
         text-indent: 0px;
-        @include translateY(-15px);
+        @include translateY(-11px);
     }
 
     textarea{
         padding-left: 50px;
         padding-top: 6px;
     }
+
 }
 
 .float-label-border-bottom{
@@ -1008,13 +1024,13 @@
     input[type="text"]{
         border: none;
         border-bottom: 1px solid $primary-color;
-        padding: 0px 0px 5px 0px;
+        padding: 10px 0px 10px 0px;
     }
 
     textarea{
         border: none;
         border-bottom: 1px solid $primary-color;
-        padding: 0px 0px 5px 0px;
+        padding: 10px 0px 10px 0px;
     }
 
     .normal-label{
@@ -1031,12 +1047,11 @@
         bottom: 0px;
         left: 0px;
         font-size: 2em;
-        padding: 10px;
+        padding: 15px 10px 10px 10px;
     }
 
     label{
         text-indent: 50px;
-        line-height: 32px;
         @include translateY(4px);
     }
 
@@ -1048,5 +1063,9 @@
     textarea{
         padding-left: 50px;
         padding-top: 6px;
+    }
+
+    input[type="text"]{
+        padding-left: 50px;
     }
 }
