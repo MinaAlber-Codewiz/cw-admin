@@ -50,6 +50,37 @@ a{
 
 .form-field{
     @include whd($display: inline-block);
+    margin-bottom: 40px;
+}
+
+.field-pass{
+    .input-success{
+        margin-top: 15px;
+        font-size: 1.6em;
+        font-family: $font-semiBold;
+        color: #2ecc71 !important;
+    }
+    label{
+        color: #2ecc71 !important;
+    }
+    input[type="text"]{
+        border-color: #2ecc71 !important;
+    }
+}
+
+.field-error{
+    .input-error{
+        margin-top: 15px;
+        font-size: 1.6em;
+        font-family: $font-semiBold;
+        color: #c0392b !important;
+    }
+    label{
+        color: #c0392b !important;
+    }
+    input[type="text"]{
+        border-color: #c0392b !important;
+    }
 }
 
 pre{
