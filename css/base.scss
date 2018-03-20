@@ -154,8 +154,23 @@ $notification-color: #ee2323;
     font-size: 1.6em;
     font-family: $font-regular;
     border: 1px solid $primary-color;
+    color: $primary-color;
     outline: none;
     background: transparent;
+}
+
+/* FORM FIELDS MIXIN */
+@mixin form-input-select{
+    padding: 10px 20px;
+    font-size: 1.6em;
+    font-family: $font-regular;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    outline: none;
+    background: url('../img/arrow-down.svg');
+    background-repeat: no-repeat !important;
+    background-position: calc(100% - 20px) center !important;
+    background-size: 20px !important;
 }
 
 /* FORMS PLACEHOLDER MIXING */
@@ -201,4 +216,18 @@ $notification-color: #ee2323;
     &:focus:-ms-input-placeholder {
         color: transparent !important;
     }
+}
+
+/* APPEARANCE MIXING */
+@mixin appearance{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
 }

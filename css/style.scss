@@ -765,6 +765,10 @@
 /* ----------------------------------------------------------------------------------
    ---------------------------------- INPUT FIELDS ----------------------------------
    ---------------------------------------------------------------------------------- */
+input[type="text"], textarea, select{
+    @include appearance;
+}
+
 .style-block{
    label{
        @include sub-heading;
@@ -781,6 +785,11 @@
        @include whd($height: 150px);
        @include form-input-text;
        @include placeholder($primary-color);
+   }
+
+   select{
+       @include whd;
+       @include form-input-select;
    }
 }
 
@@ -801,6 +810,10 @@
     }
 
     input[type="text"]{
+        padding-left: 55px;
+    }
+
+    select{
         padding-left: 55px;
     }
 }
@@ -828,6 +841,15 @@
        border-bottom: 1px solid $primary-color;
        padding: 0px 0px 5px 0px;
    }
+
+   select{
+       @include whd;
+       @include form-input-select;
+       border: 0px;
+       border-bottom: 1px solid $primary-color;
+       padding: 10px 0px 10px 0px;
+       background-position: 100% center !important;
+   }
 }
 
 .style-block-border-bottom.icon{
@@ -847,6 +869,10 @@
     }
 
     input[type="text"]{
+        padding-left: 55px;
+    }
+
+    select{
         padding-left: 55px;
     }
 }
@@ -873,6 +899,12 @@
        @include form-input-text;
        @include placeholder($primary-color);
    }
+
+   select{
+       @include whd($width: calc(100% - 200px), $display: inline-block);
+       float: left;
+       @include form-input-select;
+   }
 }
 
 .style-inline-block.icon{
@@ -892,6 +924,10 @@
     }
 
     input[type="text"]{
+        padding-left: 55px;
+    }
+
+    select{
         padding-left: 55px;
     }
 }
@@ -923,6 +959,13 @@
         @include whd($height: 150px);
         @include form-input-text;
         @include placeholder($primary-color);
+        position: relative;
+        z-index: 1;
+    }
+
+    select{
+        @include whd;
+        @include form-input-select;
         position: relative;
         z-index: 1;
     }
@@ -961,6 +1004,10 @@
     }
 
     input[type="text"]{
+        padding-left: 50px;
+    }
+
+    select{
         padding-left: 50px;
     }
 }
@@ -1031,6 +1078,15 @@
         border: none;
         border-bottom: 1px solid $primary-color;
         padding: 10px 0px 10px 0px;
+    }
+
+    select{
+        @include whd;
+        @include form-input-select;
+        border: 0px;
+        border-bottom: 1px solid $primary-color;
+        padding: 10px 0px 10px 0px;
+        background-position: 100% center !important;
     }
 
     .normal-label{

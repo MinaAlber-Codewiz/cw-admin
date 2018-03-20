@@ -1,5 +1,9 @@
 @import 'base';
 
+*{
+    @include transition(0.5s);
+}
+
 html, body{
     @include whd;
     font-family: $font-regular;
@@ -77,6 +81,11 @@ a{
     textarea{
         border-color: #2ecc71 !important;
     }
+    select{
+        border-color: #2ecc71 !important;
+        color: #2ecc71 !important;
+        background: url('../img/arrow-down-pass.svg') !important;
+    }
 }
 
 .field-pass.icon{
@@ -111,6 +120,11 @@ a{
     }
     textarea{
         border-color: #c0392b !important;
+    }
+    select{
+        border-color: #c0392b !important;
+        color: #c0392b !important;
+        background: url('../img/arrow-down-error.svg') !important;
     }
 }
 

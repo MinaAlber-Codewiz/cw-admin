@@ -15,6 +15,7 @@ $(document).ready(function(){
     var copyCodeBlock = $('pre button');
     var floatingLabelText = $('.style-float-label input');
     var floatingLabelTextarea = $('.style-float-label textarea');
+    var floatingLabelSelect = $('.style-float-label select');
 
     // FUNCTION TO ADJUST CONTENT CONTAINER WIDTH SIZE
     function adjustContentContainer(){
@@ -118,6 +119,20 @@ $(document).ready(function(){
 
     // IF INPUT TEXTAREA FIELD IS NOT FOCUSED
     floatingLabelTextarea.focusout(function(){
+        if(this.value === ''){
+            var label = this.previousElementSibling;
+            label.classList.remove('normal-label');
+        }
+    });
+
+    // IF INPUT SELECT FIELD IS FOCUSED
+    floatingLabelSelect.focus(function(){
+        var label = this.previousElementSibling;
+        label.classList.add('normal-label');
+    });
+
+    // IF INPUT SELECT FIELD IS NOT FOCUSED
+    floatingLabelSelect.focusout(function(){
         if(this.value === ''){
             var label = this.previousElementSibling;
             label.classList.remove('normal-label');
