@@ -707,7 +707,29 @@
                         <div class="cw-col-12">
                             <span class="md-heading">Checkbox Input Fields</span>
                             <span class="sm-sub-heading">Checkbox Input Fields has different styles to choose from, check the below examples.</span>
-                            <span class="sm-sub-heading">Checkbox Input Fields must be wrapped inside a div with the class <span class="class-indicator">"form-field"</span> followed by the helper class for the style of the input Checkbox field needed.</span>
+                            <span class="sm-sub-heading">A Checkbox Input Field along with its label must be wrapped in a div with the class <span class="class-indicator">"checkbox-input"</span>.</span>
+                            <span class="sm-sub-heading">The Div containing the checkbox input field and its label must be wrapped inside a div with the class <span class="class-indicator">"form-field"</span> followed by the helper class for the style of the input Checkbox field needed.</span>
+
+                            <div class="form-field">
+                                <div class="checkbox-input">
+                                    <input type="checkbox" />
+                                    <span>Label</span>
+                                </div>
+                            </div>
+
+<!-- CODE DOCUMENTATION START -->
+<pre>
+<button>Copy</button>
+<code data-language="html">
+    <div class="form-field">
+        <div class="checkbox-input">
+            <input type="checkbox" />
+            <span>Label</span>
+        </div>
+    </div>
+</code>
+</pre>
+<!-- CODE DOCUMENTATION END -->
                         </div>
                     </div>
 
@@ -768,6 +790,81 @@
 <button>Copy</button>
 <code data-language="html">
     <div class="form-field style-inline-block">
+        <label>Label</label>
+        <div class="checkbox-input">
+            <input type="checkbox" />
+            <span>Checkbox Label 1</span>
+        </div>
+        <div class="checkbox-input">
+            <input type="checkbox" />
+            <span>Checkbox Label 2</span>
+        </div>
+    </div>
+</code>
+</pre>
+<!-- CODE DOCUMENTATION END -->
+
+                        </div>
+
+                    </div>
+
+                    <div class="cw-row">
+                        <div class="cw-col-6">
+                            <span class="md-heading">Checkmark Animation Block Level Style</span>
+                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block"</span> in addition to the following class <span class="class-indicator">"checkmark-animation"</span> to create Block Level Style Checkbox Input Fields with Animation.</span>
+                            <div class="form-field style-block checkmark-animation">
+                                <label>Label</label>
+                                <div class="checkbox-input">
+                                    <input type="checkbox" />
+                                    <span>Checkbox Label 1</span>
+                                </div>
+                                <div class="checkbox-input">
+                                    <input type="checkbox" />
+                                    <span>Checkbox Label 2</span>
+                                </div>
+                            </div>
+
+<!-- CODE DOCUMENTATION START -->
+<pre>
+<button>Copy</button>
+<code data-language="html">
+    <div class="form-field style-block checkmark-animation">
+        <label>Label</label>
+        <div class="checkbox-input">
+            <input type="checkbox" />
+            <span>Checkbox Label 1</span>
+        </div>
+        <div class="checkbox-input">
+            <input type="checkbox" />
+            <span>Checkbox Label 2</span>
+        </div>
+    </div>
+</code>
+</pre>
+<!-- CODE DOCUMENTATION END -->
+
+                        </div>
+
+                        <div class="cw-col-6">
+                            <span class="md-heading">Inline Block Level Style</span>
+                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-inline-block"</span> in addition to the following class <span class="class-indicator">"checkmark-animation"</span> to create Inline Block Level Style Checkbox Input Fields with Animation.</span>
+                            <div class="form-field style-inline-block checkmark-animation">
+                                <label>Label</label>
+                                <div class="checkbox-input">
+                                    <input type="checkbox" />
+                                    <span>Checkbox Label 1</span>
+                                </div>
+                                <div class="checkbox-input">
+                                    <input type="checkbox" />
+                                    <span>Checkbox Label 2</span>
+                                </div>
+                            </div>
+
+<!-- CODE DOCUMENTATION START -->
+<pre>
+<button>Copy</button>
+<code data-language="html">
+    <div class="form-field style-inline-block checkmark-animation">
         <label>Label</label>
         <div class="checkbox-input">
             <input type="checkbox" />

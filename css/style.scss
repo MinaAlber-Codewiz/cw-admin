@@ -765,7 +765,7 @@
 /* ----------------------------------------------------------------------------------
    ---------------------------------- INPUT FIELDS ----------------------------------
    ---------------------------------------------------------------------------------- */
-input[type="text"], textarea, select{
+input[type="text"], textarea, select, input[type="checkbox"]{
     @include appearance;
 }
 
@@ -776,10 +776,55 @@ input[type="text"], textarea, select{
 
     input[type="checkbox"]{
         @include form-input-checkbox;
+
+        &::after{
+            display: none;
+        }
+
+        &:checked{
+            background: $primary-color;
+
+            &::before{
+                opacity: 1;
+            }
+        }
     }
 
     span{
         @include whd($width: calc(100% - 33px), $display: inline-block);
+    }
+}
+
+.checkmark-animation{
+    .checkbox-input{
+
+        input[type="checkbox"]{
+            border: 0px;
+
+            &::after{
+                display: block;
+            }
+
+            &:checked{
+                background: transparent;
+
+                &::after{
+                    @include whd($width: 21px, $height: 8px, $display: inline-block);
+                    @include rotate(-45deg);
+                    border: 2px solid $primary-color;
+                    border-top-color: transparent;
+                    border-right-color: transparent;
+                    position: relative;
+                    top: -1px;
+                }
+            }
+
+            &::before{
+                display: none;
+            }
+
+        }
+
     }
 }
 

@@ -85,6 +85,15 @@ $notification-color: #ee2323;
     transform: rotate($value);
 }
 
+/* TRANSFORM SCALE MIXIN */
+@mixin scale($value){
+    -webkit-transform: scale($value);
+    -moz-transform: scale($value);
+    -ms-transform: scale($value);
+    -o-transform: scale($value);
+    transform: scale($value);
+}
+
 /* COLUMNS MIXIN */
 @mixin col{
     padding: 20px 30px;
@@ -178,6 +187,29 @@ $notification-color: #ee2323;
     @include whd($width: 23px, $height: 23px, $display: inline-block);
     margin-right: 10px;
     float: left;
+    border: 1px solid $primary-color;
+    outline: none;
+    background: transparent;
+
+    &::before{
+        content: '';
+        @include whd($width: 5px, $height: 13px, $display: inline-block);
+        border: 0px;
+        border-right: 2px solid $icons-color;
+        border-bottom: 2px solid $icons-color;
+        @include rotate(40deg);
+        position: relative;
+        left: 6.5px;
+        top: 1px;
+        opacity: 0;
+    }
+
+    &::after{
+        content: '';
+        @include whd($width: 21px, $height: 21px, $display: inline-block);
+        border: 1px solid $primary-color;
+        @include transition(0.3s);
+    }
 }
 
 /* FORMS PLACEHOLDER MIXING */
