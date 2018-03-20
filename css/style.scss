@@ -519,7 +519,7 @@
     @include box-shadow;
     overflow: auto;
     padding: 0px 10px;
-    @include transition(0.5s);
+    @include transition(0.2s);
     line-height: normal;
 
     .module-box{
@@ -551,6 +551,13 @@
                 font-size: 1.4em;
                 position: relative;
                 top: -4px;
+                opacity: 0;
+                visibility: hidden;
+                -webkit-animation: showModuleLinks 0.5s forwards;
+                -moz-animation: showModuleLinks 0.5s forwards;
+                -ms-animation: showModuleLinks 0.5s forwards;
+                -o-animation: showModuleLinks 0.5s forwards;
+                animation: showModuleLinks 0.5s forwards;
             }
 
         }
@@ -645,6 +652,11 @@
             p{
                 opacity: 0;
                 visibility: hidden;
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                -o-animation: none;
+                animation: none;
             }
 
         }
@@ -675,11 +687,11 @@
                 padding: 10px 20px 10px 20px;
 
                 p{
-                    -webkit-animation: showModuleLinks 1s forwards;
-                    -moz-animation: showModuleLinks 1s forwards;
-                    -ms-animation: showModuleLinks 1s forwards;
-                    -o-animation: showModuleLinks 1s forwards;
-                    animation: showModuleLinks 1s forwards;
+                    -webkit-animation: showModuleLinks 0.5s forwards;
+                    -moz-animation: showModuleLinks 0.5s forwards;
+                    -ms-animation: showModuleLinks 0.5s forwards;
+                    -o-animation: showModuleLinks 0.5s forwards;
+                    animation: showModuleLinks 0.5s forwards;
                 }
 
                 @-webkit-keyframes showModuleLinks{
