@@ -190,6 +190,7 @@ $notification-color: #ee2323;
     border: 1px solid $primary-color;
     outline: none;
     background: transparent;
+    @include transition(0.3s);
 
     &::before{
         content: '';
