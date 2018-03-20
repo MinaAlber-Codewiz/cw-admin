@@ -173,6 +173,13 @@ $notification-color: #ee2323;
     background-size: 20px !important;
 }
 
+/* FORM FIELDS MIXIN */
+@mixin form-input-checkbox{
+    @include whd($width: 23px, $height: 23px, $display: inline-block);
+    margin-right: 10px;
+    float: left;
+}
+
 /* FORMS PLACEHOLDER MIXING */
 @mixin placeholder($color){
     &::-webkit-input-placeholder {

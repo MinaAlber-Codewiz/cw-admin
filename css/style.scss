@@ -769,6 +769,20 @@ input[type="text"], textarea, select{
     @include appearance;
 }
 
+.checkbox-input{
+    line-height: 23px;
+    font-size: 1.6em;
+    margin-top: 20px;
+
+    input[type="checkbox"]{
+        @include form-input-checkbox;
+    }
+
+    span{
+        @include whd($width: calc(100% - 33px), $display: inline-block);
+    }
+}
+
 .style-block{
    label{
        @include sub-heading;
@@ -790,6 +804,10 @@ input[type="text"], textarea, select{
    select{
        @include whd;
        @include form-input-select;
+   }
+
+   .checkbox-input{
+       @include whd($display: inline-block);
    }
 }
 
@@ -904,6 +922,11 @@ input[type="text"], textarea, select{
        @include whd($width: calc(100% - 200px), $display: inline-block);
        float: left;
        @include form-input-select;
+   }
+
+   .checkbox-input{
+       @include whd($width: calc(100% - 200px), $display: inline-block);
+       float: left;
    }
 }
 
