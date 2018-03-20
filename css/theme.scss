@@ -1,9 +1,5 @@
 @import 'base';
 
-*{
-    @include transition(0.5s);
-}
-
 html, body{
     @include whd;
     font-family: $font-regular;

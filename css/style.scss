@@ -512,7 +512,7 @@
     @include whd(270px, calc(100% - 60px), block);
     position: fixed;
     background: $secondary-color;
-    top: 60px;
+    top: 62px;
     left: 0px;
     bottom: 0px;
     z-index: 98;
@@ -636,7 +636,124 @@
 }
 
 .close-siderbar-modules{
-    @include translateX(-300px);
+    @include whd($width: 70px, $height: calc(100% - 60px));
+
+    .module-box{
+        a{
+            padding: 10px 20px 10px 15px;
+
+            p{
+                opacity: 0;
+                visibility: hidden;
+            }
+
+        }
+
+    }
+
+    .module-box-dropdown{
+        ul{
+            display: none;
+        }
+
+        .module-box-head{
+            height: 47px;
+            overflow: hidden;
+
+            &::after{
+                display: none;
+            }
+        }
+    }
+
+    &:hover{
+        @include whd($width: 270px, $height: calc(100% - 60px));
+        @include transition(0.2s);
+
+        .module-box{
+            a{
+                padding: 10px 20px 10px 20px;
+
+                p{
+                    -webkit-animation: showModuleLinks 1s forwards;
+                    -moz-animation: showModuleLinks 1s forwards;
+                    -ms-animation: showModuleLinks 1s forwards;
+                    -o-animation: showModuleLinks 1s forwards;
+                    animation: showModuleLinks 1s forwards;
+                }
+
+                @-webkit-keyframes showModuleLinks{
+                    30%{
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    100%{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                @-moz-keyframes showModuleLinks{
+                    30%{
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    100%{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                @-ms-keyframes showModuleLinks{
+                    30%{
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    100%{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                @-o-keyframes showModuleLinks{
+                    30%{
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    100%{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                @keyframes showModuleLinks{
+                    30%{
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    100%{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+            }
+
+        }
+
+        .module-box-dropdown{
+            ul{
+                display: block;
+            }
+
+            .module-box-head{
+                &::after{
+                    display: block;
+                }
+            }
+        }
+    }
+
 }
 
 /* ----------------------------------------------------------------------------------
@@ -672,13 +789,13 @@
 }
 
 .content-container-condition-1{
-    @include whd(calc(100%));
-    margin-left: 0px;
+    @include whd(calc(100% - 70px));
+    margin-left: 70px;
 }
 
 .content-container-condition-2{
-    @include whd(calc(100% - 300px));
-    margin-left: 0px;
+    @include whd(calc(100% - 370px));
+    margin-left: 70px;
 }
 
 .content-container-condition-3{
