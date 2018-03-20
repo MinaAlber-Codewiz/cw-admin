@@ -1261,7 +1261,6 @@ input[type="text"], textarea, select, input[type="checkbox"]{
 .float-label-border-bottom{
 
     label{
-        @include translateY(-5px);
         text-indent: 0px;
     }
 
