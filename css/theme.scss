@@ -48,6 +48,10 @@ a{
 
 }
 
+.class-indicator{
+    color: #d20f0f;
+}
+
 .form-field{
     @include whd($display: inline-block);
     margin-bottom: 60px;
