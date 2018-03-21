@@ -888,10 +888,10 @@
                             <span class="md-heading">Checkbox Input Passed Validation</span>
                             <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-pass"</span> with the form-field div to change label and input fields to color green.</span>
                             <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-success-msg"</span> to show the Success Message if needed.</span>
-                            <div class="form-field style-block">
+                            <div class="form-field style-block field-pass">
                                 <label>Label</label>
                                 <div class="checkbox-input">
-                                    <input type="checkbox" />
+                                    <input type="checkbox" checked="true" />
                                     <span>Checkbox Label 1</span>
                                 </div>
                                 <div class="checkbox-input">
@@ -907,12 +907,14 @@
 <code data-language="html">
     <div class="form-field style-block field-pass">
         <label>Label</label>
-        <select>
-            <option>Select your option</option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <div class="checkbox-input">
+            <input type="checkbox" />
+            <span>Checkbox Label 1</span>
+        </div>
+        <div class="checkbox-input">
+            <input type="checkbox" />
+            <span>Checkbox Label 2</span>
+        </div>
         <div class="input-success">Success Message if needed!</div>
     </div>
 </code>
@@ -925,10 +927,10 @@
                             <span class="md-heading">Checkbox Input Failed Validation</span>
                             <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-error"</span> with the form-field div to change label and input fields to color red.</span>
                             <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-error"</span> to show the Validation Error.</span>
-                            <div class="form-field style-block">
+                            <div class="form-field style-block checkmark-animation field-error">
                                 <label>Label</label>
-                                <div class="checkbox-input checkmark-animation">
-                                    <input type="checkbox" />
+                                <div class="checkbox-input">
+                                    <input type="checkbox" checked="true" />
                                     <span>Checkbox Label 1</span>
                                 </div>
                                 <div class="checkbox-input">
@@ -944,12 +946,14 @@
 <code data-language="html">
     <div class="form-field style-block field-error">
         <label>Label</label>
-        <select>
-            <option>Select your option</option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <div class="checkbox-input">
+            <input type="checkbox" />
+            <span>Checkbox Label 1</span>
+        </div>
+        <div class="checkbox-input">
+            <input type="checkbox" />
+            <span>Checkbox Label 2</span>
+        </div>
         <div class="input-error">Error Message!</div>
     </div>
 </code>

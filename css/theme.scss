@@ -82,6 +82,43 @@ a{
         color: #2ecc71 !important;
         background: url('../img/arrow-down-pass.svg') !important;
     }
+    .checkbox-input{
+        input[type="checkbox"]{
+            border-color: #2ecc71 !important;
+
+            &:checked{
+                background: #2ecc71 !important;
+            }
+        }
+
+        span{
+            color: #2ecc71 !important;
+        }
+    }
+}
+
+.field-pass.checkmark-animation{
+    .checkbox-input{
+        input[type="checkbox"]{
+            background: transparent !important;
+
+            &::after{
+                border: 1px solid #2ecc71;
+            }
+
+            &:checked{
+                &::after{
+                    border: 2px solid #2ecc71;
+                    border-top-color: transparent;
+                    border-right-color: transparent;
+                }
+            }
+        }
+
+        span{
+            color: #2ecc71 !important;
+        }
+    }
 }
 
 .field-pass.icon{
@@ -121,6 +158,43 @@ a{
         border-color: #c0392b !important;
         color: #c0392b !important;
         background: url('../img/arrow-down-error.svg') !important;
+    }
+    .checkbox-input{
+        input[type="checkbox"]{
+            border-color: #c0392b !important;
+
+            &:checked{
+                background: #c0392b !important;
+            }
+        }
+
+        span{
+            color: #c0392b !important;
+        }
+    }
+}
+
+.field-error.checkmark-animation{
+    .checkbox-input{
+        input[type="checkbox"]{
+            background: transparent !important;
+
+            &::after{
+                border: 1px solid #c0392b;
+            }
+
+            &:checked{
+                &::after{
+                    border: 2px solid #c0392b;
+                    border-top-color: transparent;
+                    border-right-color: transparent;
+                }
+            }
+        }
+
+        span{
+            color: #c0392b !important;
+        }
     }
 }
 
