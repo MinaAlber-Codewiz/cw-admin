@@ -911,8 +911,6 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         }
 
         &:checked{
-            background: $primary-color;
-
             &::before{
                 opacity: 1;
             }
@@ -937,57 +935,9 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
 
                 &::after{
                     opacity: 1;
-                    -webkit-animation: radioCircle 0.5s forwards;
-                    -moz-animation: radioCircle 0.5s forwards;
-                    -ms-animation: radioCircle 0.5s forwards;
-                    -o-animation: radioCircle 0.5s forwards;
-                    animation: radioCircle 0.5s forwards;
+                    @include scale(1);
                 }
 
-                @-webkit-keyframes radioCircle{
-                    30%{
-                        @include scale(0);
-                    }
-                    100%{
-                        @include scale(1);
-                    }
-                }
-
-                @-moz-keyframes radioCircle{
-                    30%{
-                        @include scale(0);
-                    }
-                    100%{
-                        @include scale(1);
-                    }
-                }
-
-                @-ms-keyframes radioCircle{
-                    30%{
-                        @include scale(0);
-                    }
-                    100%{
-                        @include scale(1);
-                    }
-                }
-
-                @-o-keyframes radioCircle{
-                    30%{
-                        @include scale(0);
-                    }
-                    100%{
-                        @include scale(1);
-                    }
-                }
-
-                @keyframes radioCircle{
-                    30%{
-                        @include scale(0);
-                    }
-                    100%{
-                        @include scale(1);
-                    }
-                }
             }
 
             &::before{

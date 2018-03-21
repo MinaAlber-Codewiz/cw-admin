@@ -227,24 +227,26 @@ $notification-color: #ee2323;
     &::before{
         content: '';
         @include whd($width: 11px, $height: 11px, $display: inline-block);
-        background: #ffffff;
+        background: $primary-color;
         position: relative;
         opacity: 0;
         @include border-radius(50%);
         top: 1.5px;
         left: 5px;
+        @include transition(0.3s);
     }
 
     &::after{
         content: '';
         @include whd($width: 11px, $height: 11px, $display: inline-block);
-        background: #ffffff;
+        background: $primary-color;
         position: relative;
         opacity: 0;
         @include border-radius(50%);
         top: 4.5px;
         left: 5px;
         @include scale(0);
+        @include transition(0.3s);
     }
 }
 
