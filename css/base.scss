@@ -213,6 +213,41 @@ $notification-color: #ee2323;
     }
 }
 
+/* FORM FIELDS MIXIN */
+@mixin form-input-radio{
+    @include whd($width: 23px, $height: 23px, $display: inline-block);
+    margin-right: 10px;
+    float: left;
+    border: 1px solid $primary-color;
+    outline: none;
+    background: transparent;
+    @include transition(0.3s);
+    @include border-radius(50%);
+
+    &::before{
+        content: '';
+        @include whd($width: 11px, $height: 11px, $display: inline-block);
+        background: #ffffff;
+        position: relative;
+        opacity: 0;
+        @include border-radius(50%);
+        top: 1.5px;
+        left: 5px;
+    }
+
+    &::after{
+        content: '';
+        @include whd($width: 11px, $height: 11px, $display: inline-block);
+        background: #ffffff;
+        position: relative;
+        opacity: 0;
+        @include border-radius(50%);
+        top: 4.5px;
+        left: 5px;
+        @include scale(0);
+    }
+}
+
 /* FORMS PLACEHOLDER MIXING */
 @mixin placeholder($color){
     &::-webkit-input-placeholder {

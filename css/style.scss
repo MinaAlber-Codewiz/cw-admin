@@ -894,8 +894,109 @@
 /* ----------------------------------------------------------------------------------
    ---------------------------------- INPUT FIELDS ----------------------------------
    ---------------------------------------------------------------------------------- */
-input[type="text"], textarea, select, input[type="checkbox"]{
+input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"]{
     @include appearance;
+}
+
+.radio-input{
+    line-height: 23px;
+    font-size: 1.6em;
+    margin-top: 20px;
+
+    input[type="radio"]{
+        @include form-input-radio;
+
+        &::after{
+            display: none;
+        }
+
+        &:checked{
+            background: $primary-color;
+
+            &::before{
+                opacity: 1;
+            }
+        }
+    }
+
+    span{
+        @include whd($width: calc(100% - 33px), $display: inline-block);
+    }
+}
+
+.radio-circle-animation{
+    .radio-input{
+
+        input[type="radio"]{
+
+            &::after{
+                display: block;
+            }
+
+            &:checked{
+
+                &::after{
+                    opacity: 1;
+                    -webkit-animation: radioCircle 0.5s forwards;
+                    -moz-animation: radioCircle 0.5s forwards;
+                    -ms-animation: radioCircle 0.5s forwards;
+                    -o-animation: radioCircle 0.5s forwards;
+                    animation: radioCircle 0.5s forwards;
+                }
+
+                @-webkit-keyframes radioCircle{
+                    30%{
+                        @include scale(0);
+                    }
+                    100%{
+                        @include scale(1);
+                    }
+                }
+
+                @-moz-keyframes radioCircle{
+                    30%{
+                        @include scale(0);
+                    }
+                    100%{
+                        @include scale(1);
+                    }
+                }
+
+                @-ms-keyframes radioCircle{
+                    30%{
+                        @include scale(0);
+                    }
+                    100%{
+                        @include scale(1);
+                    }
+                }
+
+                @-o-keyframes radioCircle{
+                    30%{
+                        @include scale(0);
+                    }
+                    100%{
+                        @include scale(1);
+                    }
+                }
+
+                @keyframes radioCircle{
+                    30%{
+                        @include scale(0);
+                    }
+                    100%{
+                        @include scale(1);
+                    }
+                }
+            }
+
+            &::before{
+                display: none;
+            }
+
+        }
+
+    }
 }
 
 .checkbox-input{
@@ -981,6 +1082,10 @@ input[type="text"], textarea, select, input[type="checkbox"]{
    }
 
    .checkbox-input{
+       @include whd($display: inline-block);
+   }
+
+   .radio-input{
        @include whd($display: inline-block);
    }
 }
@@ -1099,6 +1204,11 @@ input[type="text"], textarea, select, input[type="checkbox"]{
    }
 
    .checkbox-input{
+       @include whd($width: calc(100% - 200px), $display: inline-block);
+       float: left;
+   }
+
+   .radio-input{
        @include whd($width: calc(100% - 200px), $display: inline-block);
        float: left;
    }

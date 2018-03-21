@@ -97,6 +97,19 @@ a{
             color: #2ecc71 !important;
         }
     }
+    .radio-input{
+        input[type="radio"]{
+            border-color: #2ecc71 !important;
+
+            &:checked{
+                background: #2ecc71 !important;
+            }
+        }
+
+        span{
+            color: #2ecc71 !important;
+        }
+    }
 }
 
 .field-pass.checkmark-animation{
@@ -165,6 +178,19 @@ a{
     }
     .checkbox-input{
         input[type="checkbox"]{
+            border-color: #c0392b !important;
+
+            &:checked{
+                background: #c0392b !important;
+            }
+        }
+
+        span{
+            color: #c0392b !important;
+        }
+    }
+    .radio-input{
+        input[type="radio"]{
             border-color: #c0392b !important;
 
             &:checked{

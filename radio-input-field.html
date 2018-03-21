@@ -711,14 +711,18 @@
 
                     <div class="cw-row">
                         <div class="cw-col-12">
-                            <span class="md-heading">Checkbox Input Fields</span>
-                            <span class="sm-sub-heading">Checkbox Input Fields has different styles to choose from, check the below examples.</span>
-                            <span class="sm-sub-heading">A Checkbox Input Field along with its label must be wrapped in a div with the class <span class="class-indicator">"checkbox-input"</span>.</span>
-                            <span class="sm-sub-heading">The Div containing the checkbox input field and its label must be wrapped inside a div with the class <span class="class-indicator">"form-field"</span> followed by the helper class for the style of the input Checkbox field needed.</span>
+                            <span class="md-heading">Radio Input Fields</span>
+                            <span class="sm-sub-heading">Radio Input Fields has different styles to choose from, check the below examples.</span>
+                            <span class="sm-sub-heading">A Radio Input Field along with its label must be wrapped in a div with the class <span class="class-indicator">"radio-input"</span>.</span>
+                            <span class="sm-sub-heading">The Div containing the radio input field and its label must be wrapped inside a div with the class <span class="class-indicator">"form-field"</span> followed by the helper class for the style of the input Radio field needed.</span>
 
                             <div class="form-field">
-                                <div class="checkbox-input">
-                                    <input type="checkbox" />
+                                <div class="radio-input">
+                                    <input type="radio" name="group1" />
+                                    <span>Label</span>
+                                </div>
+                                <div class="radio-input">
+                                    <input type="radio" name="group1" />
                                     <span>Label</span>
                                 </div>
                             </div>
@@ -728,8 +732,8 @@
 <button>Copy</button>
 <code data-language="html">
     <div class="form-field">
-        <div class="checkbox-input">
-            <input type="checkbox" />
+        <div class="radio-input">
+            <input type="radio" />
             <span>Label</span>
         </div>
     </div>
@@ -742,16 +746,16 @@
                     <div class="cw-row">
                         <div class="cw-col-6">
                             <span class="md-heading">Block Level Style</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block"</span> to create Block Level Style Checkbox Input Fields.</span>
+                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block"</span> to create Block Level Style Radio Input Fields.</span>
                             <div class="form-field style-block">
                                 <label>Label</label>
-                                <div class="checkbox-input">
-                                    <input type="checkbox" />
-                                    <span>Checkbox Label 1</span>
+                                <div class="radio-input">
+                                    <input type="radio" name="group2" />
+                                    <span>Radio Label 1</span>
                                 </div>
-                                <div class="checkbox-input">
-                                    <input type="checkbox" />
-                                    <span>Checkbox Label 2</span>
+                                <div class="radio-input">
+                                    <input type="radio" name="group2" />
+                                    <span>Radio Label 2</span>
                                 </div>
                             </div>
 
@@ -761,13 +765,13 @@
 <code data-language="html">
     <div class="form-field style-block">
         <label>Label</label>
-        <div class="checkbox-input">
-            <input type="checkbox" />
-            <span>Checkbox Label 1</span>
+        <div class="radio-input">
+            <input type="radio" />
+            <span>Radio Label 1</span>
         </div>
-        <div class="checkbox-input">
-            <input type="checkbox" />
-            <span>Checkbox Label 2</span>
+        <div class="radio-input">
+            <input type="radio" />
+            <span>Radio Label 2</span>
         </div>
     </div>
 </code>
@@ -778,16 +782,16 @@
 
                         <div class="cw-col-6">
                             <span class="md-heading">Inline Block Level Style</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-inline-block"</span> to create Inline Block Level Style Checkbox Input Fields.</span>
+                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-inline-block"</span> to create Inline Block Level Style Radio Input Fields.</span>
                             <div class="form-field style-inline-block">
                                 <label>Label</label>
-                                <div class="checkbox-input">
-                                    <input type="checkbox" />
-                                    <span>Checkbox Label 1</span>
+                                <div class="radio-input">
+                                    <input type="radio" name="group3" />
+                                    <span>Radio Label 1</span>
                                 </div>
-                                <div class="checkbox-input">
-                                    <input type="checkbox" />
-                                    <span>Checkbox Label 2</span>
+                                <div class="radio-input">
+                                    <input type="radio" name="group3" />
+                                    <span>Radio Label 2</span>
                                 </div>
                             </div>
 
@@ -797,13 +801,13 @@
 <code data-language="html">
     <div class="form-field style-inline-block">
         <label>Label</label>
-        <div class="checkbox-input">
-            <input type="checkbox" />
-            <span>Checkbox Label 1</span>
+        <div class="radio-input">
+            <input type="radio" />
+            <span>Radio Label 1</span>
         </div>
-        <div class="checkbox-input">
-            <input type="checkbox" />
-            <span>Checkbox Label 2</span>
+        <div class="radio-input">
+            <input type="radio" />
+            <span>Radio Label 2</span>
         </div>
     </div>
 </code>
@@ -817,16 +821,16 @@
                     <div class="cw-row">
                         <div class="cw-col-6">
                             <span class="md-heading">Checkmark Animation Block Level Style</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block"</span> in addition to the following class <span class="class-indicator">"checkmark-animation"</span> to create Block Level Style Checkbox Input Fields with Animation.</span>
-                            <div class="form-field style-block checkmark-animation">
+                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block"</span> in addition to the following class <span class="class-indicator">"radio-circle-animation"</span> to create Block Level Style Radio Input Fields with Animation.</span>
+                            <div class="form-field style-block radio-circle-animation">
                                 <label>Label</label>
-                                <div class="checkbox-input">
-                                    <input type="checkbox" />
-                                    <span>Checkbox Label 1</span>
+                                <div class="radio-input">
+                                    <input type="radio" name="group4" />
+                                    <span>Radio Label 1</span>
                                 </div>
-                                <div class="checkbox-input">
-                                    <input type="checkbox" />
-                                    <span>Checkbox Label 2</span>
+                                <div class="radio-input">
+                                    <input type="radio" name="group4" />
+                                    <span>Radio Label 2</span>
                                 </div>
                             </div>
 
@@ -834,15 +838,15 @@
 <pre>
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-block checkmark-animation">
+    <div class="form-field style-block radio-circle-animation">
         <label>Label</label>
-        <div class="checkbox-input">
-            <input type="checkbox" />
-            <span>Checkbox Label 1</span>
+        <div class="radio-input">
+            <input type="radio" />
+            <span>Radio Label 1</span>
         </div>
-        <div class="checkbox-input">
-            <input type="checkbox" />
-            <span>Checkbox Label 2</span>
+        <div class="radio-input">
+            <input type="radio" />
+            <span>Radio Label 2</span>
         </div>
     </div>
 </code>
@@ -853,16 +857,16 @@
 
                         <div class="cw-col-6">
                             <span class="md-heading">Inline Block Level Style</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-inline-block"</span> in addition to the following class <span class="class-indicator">"checkmark-animation"</span> to create Inline Block Level Style Checkbox Input Fields with Animation.</span>
-                            <div class="form-field style-inline-block checkmark-animation">
+                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-inline-block"</span> in addition to the following class <span class="class-indicator">"radio-circle-animation"</span> to create Inline Block Level Style Radio Input Fields with Animation.</span>
+                            <div class="form-field style-inline-block radio-circle-animation">
                                 <label>Label</label>
-                                <div class="checkbox-input">
-                                    <input type="checkbox" />
-                                    <span>Checkbox Label 1</span>
+                                <div class="radio-input">
+                                    <input type="radio" name="group5" />
+                                    <span>Radio Label 1</span>
                                 </div>
-                                <div class="checkbox-input">
-                                    <input type="checkbox" />
-                                    <span>Checkbox Label 2</span>
+                                <div class="radio-input">
+                                    <input type="radio" name="group5" />
+                                    <span>Radio Label 2</span>
                                 </div>
                             </div>
 
@@ -870,15 +874,15 @@
 <pre>
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-inline-block checkmark-animation">
+    <div class="form-field style-inline-block radio-circle-animation">
         <label>Label</label>
-        <div class="checkbox-input">
-            <input type="checkbox" />
-            <span>Checkbox Label 1</span>
+        <div class="radio-input">
+            <input type="radio" />
+            <span>Radio Label 1</span>
         </div>
-        <div class="checkbox-input">
-            <input type="checkbox" />
-            <span>Checkbox Label 2</span>
+        <div class="radio-input">
+            <input type="radio" />
+            <span>Radio Label 2</span>
         </div>
     </div>
 </code>
@@ -891,18 +895,18 @@
 
                     <div class="cw-row">
                         <div class="cw-col-6">
-                            <span class="md-heading">Checkbox Input Passed Validation</span>
+                            <span class="md-heading">Radio Input Passed Validation</span>
                             <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-pass"</span> with the form-field div to change label and input fields to color green.</span>
                             <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-success-msg"</span> to show the Success Message if needed.</span>
                             <div class="form-field style-block field-pass">
                                 <label>Label</label>
-                                <div class="checkbox-input">
-                                    <input type="checkbox" checked="true" />
-                                    <span>Checkbox Label 1</span>
+                                <div class="radio-input">
+                                    <input type="radio" checked="true" name="group6" />
+                                    <span>Radio Label 1</span>
                                 </div>
-                                <div class="checkbox-input">
-                                    <input type="checkbox" />
-                                    <span>Checkbox Label 2</span>
+                                <div class="radio-input">
+                                    <input type="radio" name="group6" />
+                                    <span>Radio Label 2</span>
                                 </div>
                                 <div class="input-success">Success Message if needed!</div>
                             </div>
@@ -913,13 +917,13 @@
 <code data-language="html">
     <div class="form-field style-block field-pass">
         <label>Label</label>
-        <div class="checkbox-input">
-            <input type="checkbox" />
-            <span>Checkbox Label 1</span>
+        <div class="radio-input">
+            <input type="radio" />
+            <span>Radio Label 1</span>
         </div>
-        <div class="checkbox-input">
-            <input type="checkbox" />
-            <span>Checkbox Label 2</span>
+        <div class="radio-input">
+            <input type="radio" />
+            <span>Radio Label 2</span>
         </div>
         <div class="input-success">Success Message if needed!</div>
     </div>
@@ -930,18 +934,18 @@
                         </div>
 
                         <div class="cw-col-6">
-                            <span class="md-heading">Checkbox Input Failed Validation</span>
+                            <span class="md-heading">Radio Input Failed Validation</span>
                             <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-error"</span> with the form-field div to change label and input fields to color red.</span>
                             <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-error"</span> to show the Validation Error.</span>
-                            <div class="form-field style-block checkmark-animation field-error">
+                            <div class="form-field style-block radio-circle-animation field-error">
                                 <label>Label</label>
-                                <div class="checkbox-input">
-                                    <input type="checkbox" checked="true" />
-                                    <span>Checkbox Label 1</span>
+                                <div class="radio-input">
+                                    <input type="radio" checked="true" name="group7" />
+                                    <span>Radio Label 1</span>
                                 </div>
-                                <div class="checkbox-input">
-                                    <input type="checkbox" />
-                                    <span>Checkbox Label 2</span>
+                                <div class="radio-input">
+                                    <input type="radio" name="group7" />
+                                    <span>Radio Label 2</span>
                                 </div>
                                 <div class="input-error">Error with validation message!</div>
                             </div>
@@ -952,13 +956,13 @@
 <code data-language="html">
     <div class="form-field style-block field-error">
         <label>Label</label>
-        <div class="checkbox-input">
-            <input type="checkbox" />
-            <span>Checkbox Label 1</span>
+        <div class="radio-input">
+            <input type="radio" />
+            <span>Radio Label 1</span>
         </div>
-        <div class="checkbox-input">
-            <input type="checkbox" />
-            <span>Checkbox Label 2</span>
+        <div class="radio-input">
+            <input type="radio" />
+            <span>Radio Label 2</span>
         </div>
         <div class="input-error">Error Message!</div>
     </div>
