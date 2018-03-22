@@ -34,7 +34,7 @@ a{
 .module-box-dropdown{
 
     .module-box-head::after{
-        content: '\004e';
+        content: '\002a';
         font-family: $font-icon;
         @include whd(20px, 20px, block);
         position: absolute;
