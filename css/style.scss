@@ -1115,6 +1115,21 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
     }
 }
 
+.group-icon-dollar{
+    &::after{
+        content: '\006a';
+        font-family: $font-icon;
+        background: $primary-color;
+        color: $icons-color;
+        position: absolute;
+        top: 40px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 2em;
+        padding: 15px 10px 10px 10px;
+    }
+}
+
 .style-block-border-bottom{
    label{
        @include sub-heading;
