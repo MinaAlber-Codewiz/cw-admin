@@ -95,7 +95,7 @@ $(document).ready(function(){
         else if(document.selection){
             document.selection.empty()
         };
-    })
+    });
 
     // IF INPUT TEXT FIELD IS FOCUSED
     floatingLabelText.focus(function(){

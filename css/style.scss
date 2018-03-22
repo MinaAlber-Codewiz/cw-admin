@@ -40,7 +40,7 @@
     width: 0px;
 }
 
-.navbar-hamburger-menu, .navbar-settings-btn{
+.navbar-hamburger-menu, .navbar-settings-btn, .navbar-help-btn{
     @include whd(auto, auto, inline-block);
     float: left;
     padding: 0px 22px;
@@ -54,16 +54,57 @@
     }
 }
 
-.navbar-links{
-    @include whd(auto, auto, inline-block);
-    float: left;
+ .navbar-search-form{
+     @include whd($width: 255px, $height: 60px, $display: inline-block);
+     float: left;
+     padding-left: 25px;
+     @include transition(0.5s);
 
-    a{
-        margin-left: 50px;
-        font-family: $font-light;
-        font-size: 1.5em;
-        color: $icons-color;
-    }
+     form{
+         input{
+             @include whd($width: 200px, $display: inline-block);
+             border: 0px;
+             border-bottom: 1px solid $icons-color;
+             background: transparent;
+             outline: none;
+             color: $icons-color;
+             font-family: $font-light;
+             font-size: 1.4em;
+             @include placeholder($icons-color);
+             border-right: 0px;
+             padding-right: 5px;
+         }
+     }
+
+     .search-submit-btn{
+         position:relative;
+         left: -3px;
+
+         &::before{
+             @include whd($width: 22px, $height: 22px, $display: inline-block);
+             font-size: 1.8em;
+             position: relative;
+             top: 4px;
+             z-index: 5;
+             color: $icons-color;
+             border: 0px;
+             border-bottom: 1px solid $icons-color;
+         }
+
+         input{
+             @include whd($display: inline-block);
+             position: absolute;
+             top: -10px;
+             left: 0;
+             opacity: 0;
+             z-index: 6;
+             cursor: pointer;
+         }
+     }
+ }
+
+.navbar-help-btn{
+    border-left: 0px;
 }
 
 .navbar-mail-notifications, .navbar-notifications, .navbar-user-avatar{
@@ -118,6 +159,7 @@
         font-size: 1.5em;
         color: $icons-color;
         padding-left: 15px;
+        display: none;
     }
 
     .avatar-popup-box{
@@ -126,7 +168,7 @@
         overflow: hidden;
         position: absolute;
         right: 0;
-        top: 60px;
+        top: 62px;
         background: $divider-color;
         line-height: normal;
         @include box-shadow;
@@ -270,7 +312,7 @@
         overflow: hidden;
         position: absolute;
         right: 0;
-        top: 60px;
+        top: 62px;
         background: $divider-color;
         line-height: normal;
         @include box-shadow;
@@ -396,7 +438,7 @@
         overflow: hidden;
         position: absolute;
         right: 0;
-        top: 60px;
+        top: 62px;
         background: $divider-color;
         line-height: normal;
         @include box-shadow;
@@ -422,7 +464,7 @@
 
         .notifications-popup-box-container{
             @include whd;
-            max-height: 388.5px;
+            max-height: 370.5px;
             position: relative;
             overflow: auto;
 
@@ -474,6 +516,13 @@
                         font-size: 1.2em;
                         color: $icons-color;
                         float: right;
+                    }
+
+                    div span:nth-child(3){
+                        @include whd;
+                        font-size: 1.4em;
+                        color: $icons-color;
+                        clear: both;
                     }
 
                     p:nth-child(2){
@@ -775,7 +824,7 @@
     @include whd(300px, calc(100% - 60px), block);
     position: fixed;
     background: $divider-color;
-    top: 60px;
+    top: 62px;
     right: -320px;
     bottom: 0px;
     z-index: 98;
@@ -896,6 +945,7 @@
    ---------------------------------------------------------------------------------- */
 input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"]{
     @include appearance;
+    resize: none;
 }
 
 .radio-input{
