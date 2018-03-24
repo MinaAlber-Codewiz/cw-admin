@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 
     <!-- START HTML DOCUMENT -->
-    <html lang="en">
+    <html lang="en" ng-app="cwAdmin">
 
         <!-- START HEAD -->
         <head>
@@ -632,7 +632,7 @@
 
                         <!-- MODULE -->
                         <li class="module-box module-box-active">
-                            <a href="index.html" class="module-box-head">
+                            <a href="/" class="module-box-head">
                                 <span class="icon-small icon-puzzle"></span>
                                 <p>Dashboard</p>
                             </a>
@@ -640,7 +640,7 @@
 
                         <!-- MODULE -->
                         <li class="module-box">
-                            <a href="typography.html" class="module-box-head">
+                            <a href="#typography" class="module-box-head">
                                 <span class="icon-small icon-puzzle"></span>
                                 <p>Typography</p>
                             </a>
@@ -655,13 +655,13 @@
 
                             <ul>
                                 <li class="sub-module-box">
-                                    <a href="container-rows.html">
+                                    <a href="#container-rows">
                                         <span class="module-box-line"></span>
                                         <p>Container & Rows</p>
                                     </a>
                                 </li>
                                 <li class="sub-module-box">
-                                    <a href="columns.html">
+                                    <a href="#columns">
                                         <span class="module-box-line"></span>
                                         <p>Columns</p>
                                     </a>
@@ -678,37 +678,37 @@
 
                             <ul>
                                 <li class="sub-module-box">
-                                    <a href="text-input-fields.html">
+                                    <a href="#text-input-fields">
                                         <span class="module-box-line"></span>
                                         <p>Text Input Field</p>
                                     </a>
                                 </li>
                                 <li class="sub-module-box">
-                                    <a href="textarea-input-fields.html">
+                                    <a href="#textarea-input-fields">
                                         <span class="module-box-line"></span>
                                         <p>Textarea Input Field</p>
                                     </a>
                                 </li>
                                 <li class="sub-module-box">
-                                    <a href="select-input-fields.html">
+                                    <a href="#select-input-fields">
                                         <span class="module-box-line"></span>
                                         <p>Select Input Field</p>
                                     </a>
                                 </li>
                                 <li class="sub-module-box">
-                                    <a href="checkbox-input-field.html">
+                                    <a href="#checkbox-input-field">
                                         <span class="module-box-line"></span>
                                         <p>Checkbox Input Field</p>
                                     </a>
                                 </li>
                                 <li class="sub-module-box">
-                                    <a href="radio-input-field.html">
+                                    <a href="#radio-input-field">
                                         <span class="module-box-line"></span>
                                         <p>Radio Input Field</p>
                                     </a>
                                 </li>
                                 <li class="sub-module-box">
-                                    <a href="file-input-field.html">
+                                    <a href="#file-input-field">
                                         <span class="module-box-line"></span>
                                         <p>File Input Field</p>
                                     </a>
@@ -730,18 +730,13 @@
             <!-- END NAVBAR -->
 
             <!-- START CONTENT CONTAINER -->
-            <div class="content-container wow fadeIn">
-
-                <div class="cw-container">
-                    <div class="cw-row">
-
-                    </div>
-                </div>
-
-            </div>
+            <div ng-view></div>
             <!-- END CONTENT CONTAINER -->
 
             <!-- JS FILES -->
+            <script src="angular/angular.min.js"></script>
+            <script src="angular/angular-route.min.js"></script>
+            <script src="angular/app.js"></script>
             <script src="plugins/jquery/jquery-3.3.1.min.js"></script> <!-- JQUERY -->
             <script src="plugins/jquery-ui/jquery-ui-1.12.1.min.js"></script> <!-- JQUERY UI -->
             <script src="plugins/wow-animate/wow-animate.min.js"></script> <!-- WOW ANIMATE LIBRARY -->
