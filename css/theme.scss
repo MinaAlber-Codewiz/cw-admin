@@ -287,7 +287,7 @@ a{
 
 pre{
     @include code-block;
-    color: #ffffff;
+    color: $icons-color;
 
     .tag-name{
         color: #ff3131;
@@ -313,7 +313,7 @@ pre{
 
 .ui-datepicker{
     font-size: 1.5em;
-    color: #ffffff;
+    color: $icons-color;
     right: 0;
     background: transparent;
     border: 0px;
@@ -335,10 +335,12 @@ pre{
 }
 
 .ui-datepicker .ui-datepicker-header {
-    color: #ffffff;
+    color: $icons-color;
     background: transparent;
     border: 0px;
-    border-bottom: 0.5px solid #ffffff;
+    border-bottom: 0.5px solid $icons-color;
+    @include border-radius(0px);
+    padding: 0px 0px 10px 0px;
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
@@ -346,7 +348,7 @@ pre{
     background: transparent;
     font-family: $font-light;
     font-weight: 300;
-    color: #ffffff;
+    color: $icons-color;
 }
 
 .ui-datepicker td:hover {
@@ -357,5 +359,25 @@ pre{
     border: 0px;
     background: transparent;
     font-weight: normal;
-    color: #ffffff;
+    color: $icons-color;
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year{
+    padding: 2px 4px;
+    background: transparent;
+    color: $icons-color;
+    border: 0px;
+    border: 1px solid $icons-color;
+    outline: none;
+    margin: 0px 2.5%;
+    -webkit-appearance: menulist;
+    -moz-appearance: menulist;
+    -ms-appearance: menulist;
+    -o-appearance: menulist;
+    appearance: menulist;
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year option{
+    background: $primary-color;
+    outline: none;
 }
