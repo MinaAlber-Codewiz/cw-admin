@@ -1115,7 +1115,7 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
     }
 }
 
-.group-icon-dollar{
+.style-block.group-icon-dollar{
     &::after{
         content: '\006a';
         font-family: $font-icon;
@@ -1127,6 +1127,21 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         bottom: 0px;
         font-size: 2em;
         padding: 15px 10px 10px 10px;
+    }
+}
+
+.style-block.group-icon-percentage{
+    &::after{
+        content: '%';
+        font-family: $font-semiBold;
+        background: $primary-color;
+        color: $icons-color;
+        position: absolute;
+        top: 41px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 2.5em;
+        padding: 11px 13px 11px 13px;
     }
 }
 
@@ -1186,6 +1201,36 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
 
     select{
         padding-left: 55px;
+    }
+}
+
+.style-block-border-bottom.group-icon-dollar{
+    &::after{
+        content: '\006a';
+        font-family: $font-icon;
+        background: $primary-color;
+        color: $icons-color;
+        position: absolute;
+        top: 40px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 2em;
+        padding: 15px 10px 10px 10px;
+    }
+}
+
+.style-block-border-bottom.group-icon-percentage{
+    &::after{
+        content: '%';
+        font-family: $font-semiBold;
+        background: $primary-color;
+        color: $icons-color;
+        position: absolute;
+        top: 41px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 2.5em;
+        padding: 11px 13px 11px 13px;
     }
 }
 
@@ -1251,6 +1296,36 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
 
     select{
         padding-left: 55px;
+    }
+}
+
+.style-inline-block.group-icon-dollar{
+    &::after{
+        content: '\006a';
+        font-family: $font-icon;
+        background: $primary-color;
+        color: $icons-color;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 2em;
+        padding: 15px 10px 10px 10px;
+    }
+}
+
+.style-inline-block.group-icon-percentage{
+    &::after{
+        content: '%';
+        font-family: $font-semiBold;
+        background: $primary-color;
+        color: $icons-color;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 2.5em;
+        padding: 11px 13px 11px 13px;
     }
 }
 
@@ -1334,6 +1409,36 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
     }
 }
 
+.style-float-label.group-icon-dollar{
+    &::after{
+        content: '\006a';
+        font-family: $font-icon;
+        background: $primary-color;
+        color: $icons-color;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 2em;
+        padding: 15px 10px 10px 10px;
+    }
+}
+
+.style-float-label.group-icon-percentage{
+    &::after{
+        content: '%';
+        font-family: $font-semiBold;
+        background: $primary-color;
+        color: $icons-color;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 2.5em;
+        padding: 11px 13px 11px 13px;
+    }
+}
+
 .float-label-legend{
     position: relative;
 
@@ -1381,6 +1486,37 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         padding-top: 6px;
     }
 
+}
+
+.float-label-legend.group-icon-dollar{
+    &::after{
+        content: '\006a';
+        font-family: $font-icon;
+        background: $primary-color;
+        color: $icons-color;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 2em;
+        padding: 15px 10px 10px 10px;
+    }
+}
+
+
+.float-label-legend.group-icon-percentage{
+    &::after{
+        content: '%';
+        font-family: $font-semiBold;
+        background: $primary-color;
+        color: $icons-color;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 2.5em;
+        padding: 11px 13px 11px 13px;
+    }
 }
 
 .float-label-border-bottom{
@@ -1444,5 +1580,35 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
 
     input[type="text"]{
         padding-left: 50px;
+    }
+}
+
+.float-label-border-bottom.group-icon-dollar{
+    &::after{
+        content: '\006a';
+        font-family: $font-icon;
+        background: $primary-color;
+        color: $icons-color;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 2em;
+        padding: 15px 10px 10px 10px;
+    }
+}
+
+.float-label-border-bottom.group-icon-percentage{
+    &::after{
+        content: '%';
+        font-family: $font-semiBold;
+        background: $primary-color;
+        color: $icons-color;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        font-size: 2.5em;
+        padding: 11px 13px 11px 13px;
     }
 }

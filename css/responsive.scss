@@ -45,4 +45,9 @@
                padding: 15px 10px 10px 10px;
            }
        }
+
+       .style-inline-block.group-icon-dollar::after,
+       .style-inline-block.group-icon-percentage::after{
+           top: 40px;
+       }
    }

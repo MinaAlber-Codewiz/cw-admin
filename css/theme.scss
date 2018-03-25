@@ -145,8 +145,22 @@ a{
     }
 }
 
+.field-pass.group-icon-dollar, .field-pass.group-icon-percentage{
+    &::after{
+        background: #2ecc71 !important;
+        bottom: 0px !important;
+    }
+}
+
 .field-pass.fix-icon.icon{
     &::before{
+        background: #2ecc71 !important;
+        bottom: calc(0px + 67px) !important;
+    }
+}
+
+.field-pass.fix-icon.group-icon-dollar, .field-pass.fix-icon.group-icon-percentage{
+    &::after{
         background: #2ecc71 !important;
         bottom: calc(0px + 67px) !important;
     }
@@ -239,8 +253,29 @@ a{
     }
 }
 
+.field-error.group-icon-dollar, .field-error.group-icon-percentage{
+    &::after{
+        background: #c0392b !important;
+        bottom: calc(0px + 67px) !important;
+    }
+}
+
 .field-error.fix-icon.icon{
     &::before{
+        background: #c0392b !important;
+        bottom: 0px !important;
+    }
+}
+
+.field-error.icon{
+    &::before{
+        background: #c0392b !important;
+        bottom: calc(0px + 67px) !important;
+    }
+}
+
+.field-error.fix-icon.group-icon-dollar, .field-error.fix-icon.group-icon-percentage{
+    &::after{
         background: #c0392b !important;
         bottom: 0px !important;
     }
