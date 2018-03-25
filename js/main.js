@@ -145,4 +145,12 @@ $(document).ready(function(){
     new PerfectScrollbar('.modules-sidebar');
     new PerfectScrollbar('.quick-settings-sidebar');
 
+    // DATEPICKER
+    $("div.datepicker input").datepicker({dateFormat:"dd-mm-yy", changeMonth: true, changeYear: true, yearRange: "-100:+0"});
+    $("div.datepicker input").datepicker("option", "showAnim", "slideDown");
+    $("pre code .datepicker input").datepicker("destroy").removeAttr("class").removeAttr('id');
+
+    // TIMEPICKER
+    $('.timepicker input').timepicki();
+
 });
