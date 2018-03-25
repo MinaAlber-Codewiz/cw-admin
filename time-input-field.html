@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
             <!-- TITLE -->
-            <title>CW Admin | Input Select Fields</title>
+            <title>CW Admin | Input Time Field</title>
 
             <!-- SEO DESCRIPTION META TAG -->
             <meta name="description" content=""/>
@@ -689,7 +689,7 @@
                                         <p>Textarea Input Field</p>
                                     </a>
                                 </li>
-                                <li class="sub-module-box sub-module-active">
+                                <li class="sub-module-box">
                                     <a href="select-input-fields.html">
                                         <span class="module-box-line"></span>
                                         <p>Select Input Field</p>
@@ -716,10 +716,10 @@
                                 <li class="sub-module-box">
                                     <a href="date-input-field.html">
                                         <span class="module-box-line"></span>
-                                        <p>Date Input Field</p>
+                                        <p>Time Input Field</p>
                                     </a>
                                 </li>
-                                <li class="sub-module-box">
+                                <li class="sub-module-box sub-module-active">
                                     <a href="time-input-field.html">
                                         <span class="module-box-line"></span>
                                         <p>Time Input Field</p>
@@ -748,38 +748,46 @@
 
                     <div class="cw-row">
                         <div class="cw-col-12">
-                            <span class="md-heading">Select Input Fields</span>
-                            <span class="sm-sub-heading">Select Input Fields has different styles to choose from, check the below examples.</span>
-                            <span class="sm-sub-heading">Select Input Fields must be wrapped inside a div with the class <span class="class-indicator">"form-field"</span> followed by the helper class for the style of the input textarea field needed.</span>
+                            <span class="md-heading">Time Input Fields</span>
+                            <span class="sm-sub-heading">Time Input Fields has different styles to choose from, check the below examples.</span>
+                            <span class="sm-sub-heading">Time Input Fields must be wrapped inside a div with the class <span class="class-indicator">"form-field"</span> followed by the helper class for the style of the input date field needed.</span>
+                            <span class="sm-sub-heading">The Input Field must be a Text Type Input in addition to having the class <span class="class-indicator">"timepicker"</span>.</span>
+
+                            <div class="form-field style-block timepicker" style="margin-top: 30px">
+                                <label>Label</label>
+                                <input type="text" placeholder="Placeholder ..." />
+                            </div>
+
+<!-- CODE DOCUMENTATION START -->
+<pre>
+<button>Copy</button>
+<code data-language="html">
+    <div class="form-field style-block timepicker">
+        <label>Label</label>
+        <input type="text" placeholder="Placeholder ..." />
+    </div>
+</code>
+</pre>
+<!-- CODE DOCUMENTATION END -->
                         </div>
                     </div>
 
                     <div class="cw-row">
                         <div class="cw-col-6">
                             <span class="md-heading">Block Level Style</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block"</span> to create Block Level Style Select Input Fields.</span>
-                            <div class="form-field style-block">
+                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block"</span> in addition to the class <span class="class-indicator">"timepicker"</span> to create Block Level Style Time Input Fields.</span>
+                            <div class="form-field style-block timepicker">
                                 <label>Label</label>
-                                <select>
-                                    <option>Select your option</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
+                                <input type="text" placeholder="Placeholder ..." />
                             </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-block">
+    <div class="form-field style-block timepicker">
         <label>Label</label>
-        <select>
-            <option>Select your option</option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <input type="text" placeholder="Placeholder ..." />
     </div>
 </code>
 </pre>
@@ -789,29 +797,19 @@
 
                         <div class="cw-col-6">
                             <span class="md-heading">Block Level Style with Icon</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-puzzle"</span> for Icons.</span>
-                            <div class="form-field style-block icon icon-puzzle">
+                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block"</span> in addition to the class <span class="class-indicator">"timepicker"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-clock"</span> for Icons.</span>
+                            <div class="form-field style-block timepicker icon icon-clock">
                                 <label>Label</label>
-                                <select>
-                                    <option>Select your option</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
+                                <input type="text" placeholder="Placeholder ..." />
                             </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-block icon icon-puzzle">
+    <div class="form-field style-block icon icon-puzzle timepicker">
         <label>Label</label>
-        <select>
-            <option>Select your option</option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <input type="text" placeholder="Placeholder ..." />
     </div>
 </code>
 </pre>
@@ -820,472 +818,340 @@
                         </div>
                     </div>
 
-                    <div class="cw-row">
-                        <div class="cw-col-6">
-                            <span class="md-heading">Block Level Border Bottom Style</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block-border-bottom"</span> to create Block Level Border Bottom Style Select Input Fields.</span>
-                            <div class="form-field style-block-border-bottom">
-                                <label>Label</label>
-                                <select>
-                                    <option>Select your option</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                            </div>
+                </div>
+
+                <div class="cw-row">
+                    <div class="cw-col-6">
+                        <span class="md-heading">Block Level Border Bottom Style</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block-border-bottom"</span> in addition to the class <span class="class-indicator">"timepicker"</span> to create Block Level Border Bottom Style Time Input Fields.</span>
+                        <div class="form-field style-block-border-bottom timepicker">
+                            <label>Label</label>
+                            <input type="text" placeholder="Placeholder ..." />
+                        </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-block-border-bottom">
+    <div class="form-field style-block-border-bottom timepicker">
         <label>Label</label>
-        <select>
-            <option>Select your option</option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <input type="text" placeholder="Placeholder ..." />
     </div>
 </code>
 </pre>
 <!-- CODE DOCUMENTATION END -->
 
-                        </div>
-
-                        <div class="cw-col-6">
-                            <span class="md-heading">Block Level Border Bottom Style with Icon</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block-border-bottom"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-puzzle"</span> for Icons.</span>
-                            <div class="form-field style-block-border-bottom icon icon-puzzle">
-                                <label>Label</label>
-                                <select>
-                                    <option>Select your option</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                            </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-block-border-bottom icon icon-puzzle">
-        <label>Label</label>
-        <select>
-            <option>Select your option</option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                        </div>
                     </div>
 
-                    <div class="cw-row">
-                        <div class="cw-col-12">
-                            <span class="md-heading">Inline Block Level Style</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-inline-block"</span> to create Inline Block Level Select Input Fields.</span>
-                            <div class="form-field style-inline-block">
-                                <label>Label</label>
-                                <select>
-                                    <option>Select your option</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                            </div>
+                    <div class="cw-col-6">
+                        <span class="md-heading">Block Level Border Bottom Style with Icon</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block-border-bottom"</span> in addition to the class <span class="class-indicator">"timepicker"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-clock"</span> for Icons.</span>
+                        <div class="form-field style-block-border-bottom icon icon-clock timepicker">
+                            <label>Label</label>
+                            <input type="text" placeholder="Placeholder ..." />
+                        </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-inline-block">
+    <div class="form-field style-block-border-bottom icon icon-clock timepicker">
         <label>Label</label>
-        <select>
-            <option>Select your option</option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <input type="text" placeholder="Placeholder ..." />
     </div>
 </code>
 </pre>
 <!-- CODE DOCUMENTATION END -->
 
+                    </div>
+                </div>
+
+                <div class="cw-row">
+                    <div class="cw-col-12">
+                        <span class="md-heading">Inline Block Level Style</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-inline-block"</span> in addition to the class <span class="class-indicator">"timepicker"</span> to create Inline Block Level Time Input Fields.</span>
+                        <div class="form-field style-inline-block timepicker">
+                            <label>Label</label>
+                            <input type="text" placeholder="Placeholder ..." />
                         </div>
+
+<!-- CODE DOCUMENTATION START -->
+<pre style="margin-top: 20px;">
+<button>Copy</button>
+<code data-language="html">
+    <div class="form-field style-inline-block timepicker">
+        <label>Label</label>
+        <input type="text" placeholder="Placeholder ..." />
+    </div>
+</code>
+</pre>
+<!-- CODE DOCUMENTATION END -->
+
                     </div>
 
-                    <div class="cw-row">
-                        <div class="cw-col-12">
-                            <span class="md-heading">Inline Block Level Style with Icon</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-inline-block"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-puzzle"</span> to create Inline Block Level Select Input Fields with Icons.</span>
-                            <div class="form-field style-inline-block icon icon-puzzle">
-                                <label>Label</label>
-                                <select>
-                                    <option>Select your option</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                            </div>
+                    <div class="cw-col-12">
+                        <span class="md-heading">Inline Block Level Style with Icon</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-inline-block"</span> in addition to the class <span class="class-indicator">"timepicker"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-clock"</span> for Icons.</span>
+                        <div class="form-field style-inline-block icon icon-clock timepicker">
+                            <label>Label</label>
+                            <input type="text" placeholder="Placeholder ..." />
+                        </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-inline-block icon icon-puzzle">
+    <div class="form-field style-inline-block icon icon-clock timepicker">
         <label>Label</label>
-        <select>
-            <option>Select your option</option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <input type="text" placeholder="Placeholder ..." />
     </div>
 </code>
 </pre>
 <!-- CODE DOCUMENTATION END -->
 
+                    </div>
+                </div>
+
+                <div class="cw-row">
+                    <div class="cw-col-6">
+                        <span class="md-heading">Floating Label Style</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-float-label"</span> in addition to the class <span class="class-indicator">"timepicker"</span> to create Floating Label Time Input Fields.</span>
+                        <div class="form-field style-float-label timepicker">
+                            <label>Label</label>
+                            <input type="text" />
                         </div>
+
+<!-- CODE DOCUMENTATION START -->
+<pre style="margin-top: 20px;">
+<button>Copy</button>
+<code data-language="html">
+    <div class="form-field style-float-label timepicker">
+        <label>Label</label>
+        <input type="text" />
+    </div>
+</code>
+</pre>
+<!-- CODE DOCUMENTATION END -->
+
                     </div>
 
-                    <div class="cw-row">
-                        <div class="cw-col-6">
-                            <span class="md-heading">Floating Label Style</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-float-label"</span> to create Floating Label Select Input Fields.</span>
-                            <div class="form-field style-float-label">
-                                <label>Label</label>
-                                <select>
-                                    <option></option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                            </div>
+                    <div class="cw-col-6">
+                        <span class="md-heading">Floating Label Style with Icon</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-float-label"</span> in addition to the class <span class="class-indicator">"timepicker"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-clock"</span> for Icons.</span>
+                        <div class="form-field style-float-label icon icon-clock timepicker">
+                            <label>Label</label>
+                            <input type="text" />
+                        </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-float-label">
+    <div class="form-field style-float-label icon icon-clock timepicker">
         <label>Label</label>
-        <select>
-            <option></option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <input type="text" />
     </div>
 </code>
 </pre>
 <!-- CODE DOCUMENTATION END -->
 
-                        </div>
+                    </div>
+                </div>
 
-                        <div class="cw-col-6">
-                            <span class="md-heading">Floating Label Style with Icon</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-float-label"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-puzzle"</span> for Icons.</span>
-                            <div class="form-field style-float-label icon icon-puzzle">
-                                <label>Label</label>
-                                <select>
-                                    <option></option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                            </div>
+                <div class="cw-row">
+                    <div class="cw-col-6">
+                        <span class="md-heading">Floating Label Legend Style</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-float-label"</span> in addition to class <span class="class-indicator">"float-label-legend"</span>, and class <span class="class-indicator">"timepicker"</span> to create Floating Label Legend Time Input Fields.</span>
+                        <div class="form-field style-float-label float-label-legend timepicker">
+                            <label>Label</label>
+                            <input type="text" />
+                        </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-float-label icon icon-puzzle">
+    <div class="form-field style-float-label float-label-legend timepicker">
         <label>Label</label>
-        <select>
-            <option></option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <input type="text" />
     </div>
 </code>
 </pre>
 <!-- CODE DOCUMENTATION END -->
 
-                        </div>
                     </div>
 
-                    <div class="cw-row">
-                        <div class="cw-col-6">
-                            <span class="md-heading">Floating Label Legend Style</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-float-label"</span> in addition to class <span class="class-indicator">"float-label-legend"</span> to create Floating Label Legend Select Input Fields.</span>
-                            <div class="form-field style-float-label float-label-legend">
-                                <label>Label</label>
-                                <select>
-                                    <option></option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                            </div>
+                    <div class="cw-col-6">
+                        <span class="md-heading">Floating Label Legend Style with Icon</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-float-label"</span> in addition to class <span class="class-indicator">"float-label-legend"</span>, and class <span class="class-indicator">"timepicker"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-clock"</span> for Icons.</span>
+                        <div class="form-field style-float-label float-label-legend icon icon-clock timepicker">
+                            <label>Label</label>
+                            <input type="text" />
+                        </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-float-label float-label-legend">
+    <div class="form-field style-float-label float-label-legend icon icon-clock timepicker">
         <label>Label</label>
-        <select>
-            <option></option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <input type="text" />
     </div>
 </code>
 </pre>
 <!-- CODE DOCUMENTATION END -->
 
-                        </div>
+                    </div>
+                </div>
 
-                        <div class="cw-col-6">
-                            <span class="md-heading">Floating Label Legend Style with Icon</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-float-label"</span> in addition to class <span class="class-indicator">"float-label-legend"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-puzzle"</span> for Icons.</span>
-                            <div class="form-field style-float-label float-label-legend icon icon-puzzle">
-                                <label>Label</label>
-                                <select>
-                                    <option></option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                            </div>
+                <div class="cw-row">
+                    <div class="cw-col-6">
+                        <span class="md-heading">Floating Label Border Bottom Style</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"float-label-border-bottom"</span> in addition to class <span class="class-indicator">"style-float-label"</span>, and class <span class="class-indicator">"timepicker"</span> to create Floating Label Border Bottom Time Input Fields.</span>
+                        <div class="form-field style-float-label float-label-border-bottom timepicker">
+                            <label>Label</label>
+                            <input type="text" />
+                        </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-float-label float-label-legend icon icon-puzzle">
+    <div class="form-field style-float-label float-label-border-bottom timepicker">
         <label>Label</label>
-        <select>
-            <option></option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <input type="text" />
     </div>
 </code>
 </pre>
 <!-- CODE DOCUMENTATION END -->
 
-                        </div>
                     </div>
 
-                    <div class="cw-row">
-                        <div class="cw-col-6">
-                            <span class="md-heading">Floating Label Border Bottom Style</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"float-label-border-bottom"</span> in addition to class <span class="class-indicator">"style-float-label"</span> to create Floating Label Border Bottom Select Input Fields.</span>
-                            <div class="form-field style-float-label float-label-border-bottom">
-                                <label>Label</label>
-                                <select>
-                                    <option></option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                            </div>
+                    <div class="cw-col-6">
+                        <span class="md-heading">Floating Label Border Bottom Style with Icon</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"float-label-border-bottom"</span> in addition to class <span class="class-indicator">"style-float-label"</span>, and class <span class="class-indicator">"timepicker"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-clock"</span> for Icons.</span>
+                        <div class="form-field style-float-label float-label-border-bottom icon icon-clock timepicker">
+                            <label>Label</label>
+                            <input type="text" />
+                        </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-float-label float-label-border-bottom">
+    <div class="form-field style-float-label float-label-border-bottom icon icon-clock timepicker">
         <label>Label</label>
-        <select>
-            <option></option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <input type="text" />
     </div>
 </code>
 </pre>
 <!-- CODE DOCUMENTATION END -->
 
-                        </div>
-
-                        <div class="cw-col-6">
-                            <span class="md-heading">Floating Label Border Bottom Style with Icon</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"float-label-border-bottom"</span> in addition to class <span class="class-indicator">"style-float-label"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-puzzle"</span> for Icons.</span>
-                            <div class="form-field style-float-label float-label-border-bottom icon icon-puzzle">
-                                <label>Label</label>
-                                <select>
-                                    <option></option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                            </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-float-label float-label-border-bottom icon icon-puzzle">
-        <label>Label</label>
-        <select>
-            <option></option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                        </div>
                     </div>
+                </div>
 
-                    <div class="cw-row">
-                        <div class="cw-col-6">
-                            <span class="md-heading">Select Input Passed Validation</span>
-                            <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-pass"</span> with the form-field div to change label and input fields to color green.</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-success-msg"</span> to show the Success Message if needed.</span>
-                            <div class="form-field style-block field-pass">
-                                <label>Label</label>
-                                <select>
-                                    <option>Select your option</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                                <div class="input-success">Success Message if needed!</div>
-                            </div>
+                <div class="cw-row">
+                    <div class="cw-col-6">
+                        <span class="md-heading">Time Input Passed Validation</span>
+                        <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-pass"</span> with the form-field div to change label and input fields to color green.</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-success-msg"</span> to show the Success Message if needed.</span>
+                        <div class="form-field style-block timepicker field-pass">
+                            <label>Label</label>
+                            <input type="text" />
+                            <div class="input-success">Success Message if needed!</div>
+                        </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-block field-pass">
+    <div class="form-field style-block timepicker field-pass">
         <label>Label</label>
-        <select>
-            <option>Select your option</option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <input type="text" />
         <div class="input-success">Success Message if needed!</div>
     </div>
 </code>
 </pre>
 <!-- CODE DOCUMENTATION END -->
 
-                        </div>
+                    </div>
 
-                        <div class="cw-col-6">
-                            <span class="md-heading">Select Input Failed Validation</span>
-                            <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-error"</span> with the form-field div to change label and input fields to color red.</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-error"</span> to show the Validation Error.</span>
-                            <div class="form-field style-block field-error">
-                                <label>Label</label>
-                                <select>
-                                    <option>Select your option</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                                <div class="input-error">Error with validation message!</div>
-                            </div>
+                    <div class="cw-col-6">
+                        <span class="md-heading">Time Input Failed Validation</span>
+                        <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-error"</span> with the form-field div to change label and input fields to color red.</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-error"</span> to show the Validation Error.</span>
+                        <div class="form-field style-block timepicker field-error">
+                            <label>Label</label>
+                            <input type="text" />
+                            <div class="input-error">Error with validation message!</div>
+                        </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-block field-error">
+    <div class="form-field style-block timepicker field-error">
         <label>Label</label>
-        <select>
-            <option>Select your option</option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-        </select>
+        <input type="text" />
         <div class="input-error">Error Message!</div>
     </div>
 </code>
 </pre>
 <!-- CODE DOCUMENTATION END -->
 
-                        </div>
                     </div>
+                </div>
 
-                    <div class="cw-row">
-                        <div class="cw-col-6">
-                            <span class="md-heading">Select Input Passed Validation with Icon</span>
-                            <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-pass"</span> in addition to <span class="class-indicator">"fix-icon"</span> class with the form-field div to change label and input fields with icon to color green with fixing icon overflow.</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-success-msg"</span> to show the Success Message if needed.</span>
-                            <div class="form-field style-block icon icon-puzzle field-pass fix-icon">
-                                <label>Label</label>
-                                <select>
-                                    <option>Select your option</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                                <div class="input-success">Success Message if needed!</div>
-                            </div>
+                <div class="cw-row">
+                    <div class="cw-col-6">
+                        <span class="md-heading">Time Input Passed Validation with Icon</span>
+                        <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-pass"</span> in addition to <span class="class-indicator">"fix-icon"</span> class with the form-field div to change label and input fields with icon to color green with fixing icon overflow.</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-success-msg"</span> to show the Success Message if needed.</span>
+                        <div class="form-field style-block icon icon-clock timepicker field-pass fix-icon">
+                            <label>Label</label>
+                            <input type="text" />
+                            <div class="input-success">Success Message if needed!</div>
+                        </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-block icon icon-puzzle field-pass fix-icon">
+    <div class="form-field style-block icon icon-clock timepicker field-pass fix-icon">
         <label>Label</label>
-        <textarea></textarea>
+        <input type="text" />
         <div class="input-success">Success Message if needed!</div>
     </div>
 </code>
 </pre>
 <!-- CODE DOCUMENTATION END -->
 
-                        </div>
+                    </div>
 
-                        <div class="cw-col-6">
-                            <span class="md-heading">Select Input Failed Validation with Icon</span>
-                            <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-error"</span> with the form-field div to change label and input fields with icon to color red.</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-error"</span> to show the Validation Error.</span>
-                            <div class="form-field style-block icon icon-puzzle field-error">
-                                <label>Label</label>
-                                <select>
-                                    <option>Select your option</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                </select>
-                                <div class="input-error">Error with validation message!</div>
-                            </div>
+                    <div class="cw-col-6">
+                        <span class="md-heading">Time Input Failed Validation with Icon</span>
+                        <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-error"</span> with the form-field div to change label and input fields to color red.</span>
+                        <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-error"</span> to show the Validation Error.</span>
+                        <div class="form-field style-block icon icon-clock timepicker field-error">
+                            <label>Label</label>
+                            <input type="text" />
+                            <div class="input-error">Error with validation message!</div>
+                        </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 20px;">
 <button>Copy</button>
 <code data-language="html">
-    <div class="form-field style-block icon icon-puzzle field-error">
+    <div class="form-field style-block icon icon-clock timepicker field-error">
         <label>Label</label>
-        <textarea></textarea>
+        <input type="text" />
         <div class="input-error">Error Message!</div>
     </div>
 </code>
 </pre>
 <!-- CODE DOCUMENTATION END -->
 
-                        </div>
                     </div>
-
                 </div>
 
             </div>
