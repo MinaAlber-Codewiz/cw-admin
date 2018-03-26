@@ -159,6 +159,6 @@ $(document).ready(function(){
 
     // TIMEPICKER
     $(".timepicker input").attr('readonly', true);
-    $(".timepicker input").timepicki();
+    $(".timepicker input").timepicki({reset: true});
 
 });
