@@ -146,11 +146,19 @@ $(document).ready(function(){
     new PerfectScrollbar('.quick-settings-sidebar');
 
     // DATEPICKER
-    $("div.datepicker input").datepicker({dateFormat:"dd-mm-yy", changeMonth: true, changeYear: true, yearRange: "-100:+0"});
+    $("div.datepicker input").attr('readonly', true);
+    $("div.datepicker input").datepicker({dateFormat:"dd-mm-yy", changeMonth: true, changeYear: true, yearRange: "-100:+0", showButtonPanel: true});
     $("div.datepicker input").datepicker("option", "showAnim", "slideDown");
     $("pre code .datepicker input").datepicker("destroy").removeAttr("class").removeAttr('id');
+    $.datepicker._gotoToday = function(id) {
+			var target = $(id);
+			var inst = this._getInst(target[0]);
+			var date = new Date();
+			this._setDate(inst,date);
+	}
 
     // TIMEPICKER
-    $('.timepicker input').timepicki();
+    $(".timepicker input").attr('readonly', true);
+    $(".timepicker input").timepicki();
 
 });
