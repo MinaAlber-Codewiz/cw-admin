@@ -381,3 +381,59 @@ pre{
     background: $primary-color;
     outline: none;
 }
+
+.timepicker_wrap{
+    background: -webkit-linear-gradient(120deg, $primary-color 0%, $divider-color 100%);
+    background: -moz-linear-gradient(120deg, $primary-color 0%, $divider-color 100%);
+    background: -ms-linear-gradient(120deg, $primary-color 0%, $divider-color 100%);
+    background: -o-linear-gradient(120deg, $primary-color 0%, $divider-color 100%);
+    background: linear-gradient(120deg, $primary-color 0%, $divider-color 100%);
+    border: 0px;
+    top: 51px !important;
+    border-radius: 0px;
+}
+
+.style-inline-block .timepicker_wrap{
+    left: 200px !important;
+}
+
+.timepicker_wrap .ti_tx, .timepicker_wrap .mi_tx, .timepicker_wrap .mer_tx{
+    margin: 0px;
+}
+
+.timepicker_wrap .ti_tx, .timepicker_wrap .mi_tx, .timepicker_wrap .mer_tx{
+    width: 70%;
+    position: relative;
+    left: 9px;
+    margin: 10px 0px;
+}
+
+.timepicker_wrap .ti_tx input[type="text"], .timepicker_wrap .mi_tx input[type="text"], .timepicker_wrap .mer_tx input[type="text"]{
+    width: 100% !important;
+    float: none !important;
+    padding: 2px !important;
+    font-size: 0.8em !important;
+    border: 1px solid $icons-color !important;
+    color: $icons-color !important;
+}
+
+.timepicker_wrap .arrow_top{
+    display: none;
+}
+
+.timepicker_wrap .prev, .timepicker_wrap .next{
+    padding: 10px;
+    border: none;
+}
+
+.timepicker_wrap .next{
+    background-position: 50% 105%;
+}
+
+.timepicker_wrap .prev{
+    background-position: 50% -10%;
+}
+
+.timepicker_wrap .prev:hover,.timepicker_wrap .next:hover{
+	background-color: transparent;
+}
