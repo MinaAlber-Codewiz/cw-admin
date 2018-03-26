@@ -943,6 +943,12 @@
 /* ----------------------------------------------------------------------------------
    ---------------------------------- INPUT FIELDS ----------------------------------
    ---------------------------------------------------------------------------------- */
+.form-field{
+    @include whd($display: inline-block);
+    margin-bottom: 60px;
+    position: relative;
+}
+
 input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"]{
     @include appearance;
     resize: none;
@@ -1611,4 +1617,260 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         font-size: 2.5em;
         padding: 11px 13px 11px 13px;
     }
+}
+
+.field-pass{
+    .input-success{
+        @include whd($display: inline-block);
+        margin-top: 15px;
+        font-size: 1.6em;
+        font-family: $font-semiBold;
+        color: #2ecc71 !important;
+        clear: both;
+        overflow: hidden;
+        padding: 15px;
+        background: rgba(46, 204, 113, 0.2) !important;
+    }
+    label{
+        color: #2ecc71 !important;
+    }
+    input[type="text"]{
+        border-color: #2ecc71 !important;
+        color: #2ecc71 !important;
+    }
+    textarea{
+        border-color: #2ecc71 !important;
+        color: #2ecc71 !important;
+    }
+    select{
+        border-color: #2ecc71 !important;
+        color: #2ecc71 !important;
+        background: url('../img/arrow-down-pass.svg') !important;
+    }
+    .checkbox-input{
+        input[type="checkbox"]{
+            border-color: #2ecc71 !important;
+
+            &:checked{
+                background: #2ecc71 !important;
+            }
+        }
+
+        span{
+            color: #2ecc71 !important;
+        }
+    }
+    .radio-input{
+        input[type="radio"]{
+            border-color: #2ecc71 !important;
+
+            &:checked{
+                &::before{
+                    background: #2ecc71 !important;
+                }
+            }
+        }
+
+        span{
+            color: #2ecc71 !important;
+        }
+    }
+}
+
+.field-pass.checkmark-animation{
+    .checkbox-input{
+        input[type="checkbox"]{
+            background: transparent !important;
+
+            &::after{
+                border: 1px solid #2ecc71;
+            }
+
+            &:checked{
+                &::after{
+                    border: 2px solid #2ecc71;
+                    border-top-color: transparent;
+                    border-right-color: transparent;
+                }
+            }
+        }
+
+        span{
+            color: #2ecc71 !important;
+        }
+    }
+}
+
+.field-pass.icon{
+    &::before{
+        background: #2ecc71 !important;
+        bottom: 0px !important;
+    }
+}
+
+.field-pass.group-icon-dollar, .field-pass.group-icon-percentage{
+    &::after{
+        background: #2ecc71 !important;
+        bottom: 0px !important;
+    }
+}
+
+.field-pass.fix-icon.icon{
+    &::before{
+        background: #2ecc71 !important;
+        bottom: calc(0px + 67px) !important;
+    }
+}
+
+.field-pass.fix-icon.group-icon-dollar, .field-pass.fix-icon.group-icon-percentage{
+    &::after{
+        background: #2ecc71 !important;
+        bottom: calc(0px + 67px) !important;
+    }
+}
+
+.field-error{
+    .input-error{
+        @include whd($display: inline-block);
+        margin-top: 15px;
+        font-size: 1.6em;
+        font-family: $font-semiBold;
+        color: #c0392b !important;
+        clear: both;
+        overflow: hidden;
+        padding: 15px;
+        background: rgba(192, 57, 43, 0.2);
+    }
+    label{
+        color: #c0392b !important;
+    }
+    input[type="text"]{
+        border-color: #c0392b !important;
+        color: #c0392b !important;
+    }
+    textarea{
+        border-color: #c0392b !important;
+        color: #c0392b !important;
+    }
+    select{
+        border-color: #c0392b !important;
+        color: #c0392b !important;
+        background: url('../img/arrow-down-error.svg') !important;
+    }
+    .checkbox-input{
+        input[type="checkbox"]{
+            border-color: #c0392b !important;
+
+            &:checked{
+                background: #c0392b !important;
+            }
+        }
+
+        span{
+            color: #c0392b !important;
+        }
+    }
+    .radio-input{
+        input[type="radio"]{
+            border-color: #c0392b !important;
+
+            &:checked{
+                &::after{
+                    background: #c0392b !important;
+                }
+            }
+        }
+
+        span{
+            color: #c0392b !important;
+        }
+    }
+}
+
+.field-error.checkmark-animation{
+    .checkbox-input{
+        input[type="checkbox"]{
+            background: transparent !important;
+
+            &::after{
+                border: 1px solid #c0392b;
+            }
+
+            &:checked{
+                &::after{
+                    border: 2px solid #c0392b;
+                    border-top-color: transparent;
+                    border-right-color: transparent;
+                }
+            }
+        }
+
+        span{
+            color: #c0392b !important;
+        }
+    }
+}
+
+.field-error.icon{
+    &::before{
+        background: #c0392b !important;
+        bottom: calc(0px + 67px) !important;
+    }
+}
+
+.field-error.group-icon-dollar, .field-error.group-icon-percentage{
+    &::after{
+        background: #c0392b !important;
+        bottom: calc(0px + 67px) !important;
+    }
+}
+
+.field-error.fix-icon.icon{
+    &::before{
+        background: #c0392b !important;
+        bottom: 0px !important;
+    }
+}
+
+.field-error.icon{
+    &::before{
+        background: #c0392b !important;
+        bottom: calc(0px + 67px) !important;
+    }
+}
+
+.field-error.fix-icon.group-icon-dollar, .field-error.fix-icon.group-icon-percentage{
+    &::after{
+        background: #c0392b !important;
+        bottom: 0px !important;
+    }
+}
+
+/* ----------------------------------------------------------------------------------
+   ------------------------------------ BUTTONS -------------------------------------
+   ---------------------------------------------------------------------------------- */
+.control-buttons{
+    @include whd($display: inline-block);
+}
+
+.control-buttons-center{
+    text-align: center;
+}
+
+.control-buttons-right{
+    text-align: right;
+}
+
+.control-buttons button{
+    padding: 10px 20px;
+    font-size: 1.5em;
+    @include border-radius(3px);
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.control-buttons button:last-child{
+    margin-right: 0px
 }
