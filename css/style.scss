@@ -1855,10 +1855,98 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
 
 .control-buttons-right{
     text-align: right;
+
+    button{
+        margin-right: 0px !important;
+        margin-left: 15px;
+
+        &:last-child{
+            margin-left: 15px !important;
+            margin-right: 15px;
+        }
+    }
 }
 
 .control-buttons [class*="cw-"]{
     @include transition(0.3s);
+}
+
+.control-buttons{
+    button{
+        &::before{
+            @include whd($width: 15px, $height: 15px, $display: inline-block);
+            margin-right: 7px;
+            position: relative;
+            top: 2px;
+            @include transition(0.3s);
+        }
+    }
+
+    .cw-close{
+        &::before{
+            content: url('../img/cancel-icon.svg');
+        }
+    }
+
+    .cw-view-all{
+        &::before{
+            content: url('../img/view-all-icon.svg');
+        }
+    }
+
+    .cw-download{
+        &::before{
+            content: url('../img/download-icon.svg');
+        }
+    }
+
+    .cw-print{
+        &::before{
+            content: url('../img/print-icon.svg');
+        }
+    }
+
+    .cw-save{
+        &::before{
+            content: url('../img/save-icon.svg');
+        }
+    }
+
+    .cw-save-continue{
+        &::before{
+            content: url('../img/save-continue-icon.svg');
+        }
+    }
+
+    .cw-add{
+        &::before{
+            content: url('../img/add-icon.svg');
+        }
+    }
+
+    .cw-create{
+        &::before{
+            content: url('../img/create-icon.svg');
+        }
+    }
+
+    .cw-reset-fields{
+        &::before{
+            content: url('../img/reset-fields-icon.svg');
+        }
+    }
+
+    .cw-import{
+        &::before{
+            content: url('../img/import-icon.svg');
+        }
+    }
+
+    .cw-export{
+        &::before{
+            content: url('../img/export-icon.svg');
+        }
+    }
 }
 
 .control-buttons.style-glass-sliding{
@@ -1889,6 +1977,291 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
     }
 }
 
+.control-buttons.style-borders{
+    button{
+        padding: 6px 20px;
+        font-size: 1.5em;
+        @include border-radius(3px);
+        outline: none;
+        cursor: pointer;
+        margin-right: 15px;
+        margin-top: 20px;
+        font-family: $font-regular;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        border: 1px solid;
+
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+
+    .cw-save{
+        background: transparent;
+        border: 1px solid #2ecc71;
+        color: #2ecc71;
+
+        &:hover{
+            background: #2ecc71;
+            border: 1px solid #2ecc71;
+            color: #ffffff;
+        }
+    }
+
+    .cw-save-continue{
+        background: transparent;
+        border: 1px solid #27ae60;
+        color: #27ae60;
+
+        &:hover{
+            background: #27ae60;
+            border: 1px solid #27ae60;
+            color: #ffffff;
+        }
+    }
+
+    .cw-close{
+        background: transparent;
+        border: 1px solid #e74c3c;
+        color: #e74c3c;
+
+        &:hover{
+            background: #e74c3c;
+            border: 1px solid #e74c3c;
+            color: #ffffff;
+        }
+    }
+
+    .cw-print{
+        background: transparent;
+        border: 1px solid #be2edd;
+        color: #be2edd;
+
+        &:hover{
+            background: #be2edd;
+            border: 1px solid #be2edd;
+            color: #ffffff;
+        }
+    }
+
+    .cw-view-all{
+        background: transparent;
+        border: 1px solid #0984e3;
+        color: #0984e3;
+
+        &:hover{
+            background: #0984e3;
+            border: 1px solid #0984e3;
+            color: #ffffff;
+        }
+    }
+
+    .cw-import{
+        background: transparent;
+        border: 1px solid #e6bc25;
+        color: #e6bc25;
+
+        &:hover{
+            background: #e6bc25;
+            border: 1px solid #e6bc25;
+            color: #ffffff;
+        }
+    }
+
+    .cw-export{
+        background: transparent;
+        border: 1px solid #f0932b;
+        color: #f0932b;
+
+        &:hover{
+            background: #f0932b;
+            border: 1px solid #f0932b;
+            color: #ffffff;
+        }
+    }
+
+    .cw-create{
+        background: transparent;
+        border: 1px solid #16a085;
+        color: #16a085;
+
+        &:hover{
+            background: #16a085;
+            border: 1px solid #16a085;
+            color: #ffffff;
+        }
+    }
+
+    .cw-add{
+        background: transparent;
+        border: 1px solid #1abc9c;
+        color: #1abc9c;
+
+        &:hover{
+            background: #1abc9c;
+            border: 1px solid #1abc9c;
+            color: #ffffff;
+        }
+    }
+
+    .cw-reset-fields{
+        background: transparent;
+        border: 1px solid #7f8c8d;
+        color: #7f8c8d;
+
+        &:hover{
+            background: #7f8c8d;
+            border: 1px solid #7f8c8d;
+            color: #ffffff;
+        }
+    }
+
+    .cw-download{
+        background: transparent;
+        border: 1px solid #3498db;
+        color: #3498db;
+
+        &:hover{
+            background: #3498db;
+            border: 1px solid #3498db;
+            color: #ffffff;
+        }
+    }
+}
+
+.control-buttons.style-borders{
+    button{
+        &::before{
+            @include whd($width: 15px, $height: 15px, $display: inline-block);
+            margin-right: 7px;
+            position: relative;
+            top: 2px;
+        }
+    }
+
+    .cw-close{
+        &::before{
+            content: url('../img/cancel-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/cancel-icon.svg');
+            }
+        }
+    }
+
+    .cw-view-all{
+        &::before{
+            content: url('../img/view-all-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/view-all-icon.svg');
+            }
+        }
+    }
+
+    .cw-download{
+        &::before{
+            content: url('../img/download-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/download-icon.svg');
+            }
+        }
+    }
+
+    .cw-print{
+        &::before{
+            content: url('../img/print-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/print-icon.svg');
+            }
+        }
+    }
+
+    .cw-save{
+        &::before{
+            content: url('../img/save-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/save-icon.svg');
+            }
+        }
+    }
+
+    .cw-save-continue{
+        &::before{
+            content: url('../img/save-continue-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/save-continue-icon.svg');
+            }
+        }
+    }
+
+    .cw-add{
+        &::before{
+            content: url('../img/add-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/add-icon.svg');
+            }
+        }
+    }
+
+    .cw-create{
+        &::before{
+            content: url('../img/create-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/create-icon.svg');
+            }
+        }
+    }
+
+    .cw-reset-fields{
+        &::before{
+            content: url('../img/reset-fields-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/reset-fields-icon.svg');
+            }
+        }
+    }
+
+    .cw-import{
+        &::before{
+            content: url('../img/import-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/import-icon.svg');
+            }
+        }
+    }
+
+    .cw-export{
+        &::before{
+            content: url('../img/export-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/export-icon.svg');
+            }
+        }
+    }
+}
+
 .control-buttons.style-normal, .control-buttons.style-glass-sliding{
     @include whd($display: inline-block);
 
@@ -1899,6 +2272,7 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         outline: none;
         cursor: pointer;
         margin-right: 15px;
+        margin-top: 20px;
         font-family: $font-regular;
         color: #ffffff;
         position: relative;
@@ -1942,42 +2316,42 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
     }
 
     .cw-print{
-        background: #e67e22;
-        border: 1px solid #e67e22;
+        background: #be2edd;
+        border: 1px solid #be2edd;
 
         &:hover{
-            background: #d35400;
-            border: 1px solid #d35400;
+            background: #8c24a2;
+            border: 1px solid #8c24a2;
         }
     }
 
     .cw-view-all{
-        background: #2c3e50;
-        border: 1px solid #2c3e50;
+        background: #0984e3;
+        border: 1px solid #0984e3;
 
         &:hover{
-            background: #41566b;
-            border: 1px solid #41566b;
+            background: #0b6ab3;
+            border: 1px solid #0b6ab3;
         }
     }
 
     .cw-import{
-        background: #2980b9;
-        border: 1px solid #2980b9;
+        background: #e6bc25;
+        border: 1px solid #e6bc25;
 
         &:hover{
-            background: #1f618c;
-            border: 1px solid #1f618c;
+            background: #d0a91e;
+            border: 1px solid #d0a91e;
         }
     }
 
     .cw-export{
-        background: #3498db;
-        border: 1px solid #3498db;
+        background: #f0932b;
+        border: 1px solid #f0932b;
 
         &:hover{
-            background: #0c80ce;
-            border: 1px solid #0c80ce;
+            background: #d68429;
+            border: 1px solid #d68429;
         }
     }
 
@@ -2012,12 +2386,12 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
     }
 
     .cw-download{
-        background: #34495e;
-        border: 1px solid #34495e;
+        background: #3498db;
+        border: 1px solid #3498db;
 
         &:hover{
-            background: #466380;
-            border: 1px solid #466380;
+            background: #2879af;
+            border: 1px solid #2879af;
         }
     }
 }
