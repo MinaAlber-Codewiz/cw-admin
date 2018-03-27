@@ -945,8 +945,14 @@
    ---------------------------------------------------------------------------------- */
 .form-field{
     @include whd($display: inline-block);
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     position: relative;
+}
+
+[class*='cw-col']{
+    .form-field:last-child{
+        margin-bottom: 0px;
+    }
 }
 
 input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"]{
@@ -1849,6 +1855,10 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
 /* ----------------------------------------------------------------------------------
    ------------------------------------ BUTTONS -------------------------------------
    ---------------------------------------------------------------------------------- */
+.control-buttons-left{
+    text-align: left;
+}
+
 .control-buttons-center{
     text-align: center;
 }
@@ -1880,6 +1890,12 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
             top: 2px;
             @include transition(0.3s);
         }
+    }
+
+    .normal-button{
+        border: 1px solid $primary-color;
+        background: $primary-color;
+        color: $icons-color;
     }
 
     .cw-close{
@@ -2393,5 +2409,41 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
             background: #2879af;
             border: 1px solid #2879af;
         }
+    }
+}
+
+/* ----------------------------------------------------------------------------------
+   ------------------------------------ MODALS --------------------------------------
+   ---------------------------------------------------------------------------------- */
+.remodal{
+    @include border-radius(10px);
+    text-align: left;
+
+    .modal-title-heading{
+        font-size: 2.6em;
+        font-family: $font-semiBold;
+        text-align: left;
+        padding: 15px 20px;
+        background: #f1f1f1;
+        color: $primary-color;
+        -webkit-border-top-left-radius: 10px;
+        -moz-border-top-left-radius: 10px;
+        -ms-border-top-left-radius: 10px;
+        -o-border-top-left-radius: 10px;
+        border-top-left-radius: 10px;
+        -webkit-border-top-right-radius: 10px;
+        -moz-border-top-right-radius: 10px;
+        -ms-border-top-right-radius: 10px;
+        -o-border-top-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .modal-body{
+        @include whd($display: inline-block);
+
+        .control-buttons{
+            padding: 0px 30px 20px 30px;
+        }
+
     }
 }
