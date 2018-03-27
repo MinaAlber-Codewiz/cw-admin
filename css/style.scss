@@ -2440,6 +2440,7 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
 
     .modal-body{
         @include whd($display: inline-block);
+        padding-top: 20px;
 
         .control-buttons{
             padding: 0px 30px 20px 30px;
