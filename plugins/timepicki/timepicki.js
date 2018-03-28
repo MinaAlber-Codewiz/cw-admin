@@ -94,7 +94,7 @@
 			}
 			if(settings.reset){
 				new_ele.append(
-					"<div><a href='#' class='reset_time'>Reset</a></div>");
+					"<div><a class='reset_time'>Reset</a></div>");
 			}
 			// if(settings.nowTime){
 			// 	new_ele.append(
@@ -349,34 +349,35 @@
 			}
 
 			function set_value(event, close) {
-				// use input values to set the time
-				var tim = ele_next.find(".ti_tx input").val();
-				var mini = ele_next.find(".mi_tx input").val();
-				var meri = "";
-				if(settings.show_meridian){
-					meri = ele_next.find(".mer_tx input").val();
-				}
-
-				if (tim.length !== 0 && mini.length !== 0 && (!settings.show_meridian || meri.length !== 0)) {
-					// store the value so we can set the initial value
-					// next time the picker is opened
-					ele.attr('data-timepicki-tim', tim);
-					ele.attr('data-timepicki-mini', mini);
-
+				if (!close) {
+					// use input values to set the time
+					var tim = ele_next.find(".ti_tx input").val();
+					var mini = ele_next.find(".mi_tx input").val();
+					var meri = "";
 					if(settings.show_meridian){
-						ele.attr('data-timepicki-meri', meri);
-						// set the formatted value
-						ele.val(settings.format_output(tim, mini, meri));
-					}else{
-						ele.val(settings.format_output(tim, mini));
+						meri = ele_next.find(".mer_tx input").val();
+					}
+
+					if (tim.length !== 0 && mini.length !== 0 && (!settings.show_meridian || meri.length !== 0)) {
+						// store the value so we can set the initial value
+						// next time the picker is opened
+						ele.attr('data-timepicki-tim', tim);
+						ele.attr('data-timepicki-mini', mini);
+
+						if(settings.show_meridian){
+							ele.attr('data-timepicki-meri', meri);
+							// set the formatted value
+							ele.val(settings.format_output(tim, mini, meri));
+						}else{
+							ele.val(settings.format_output(tim, mini));
+						}
+					}
+
+					//Call user on_change callback function if set
+					if (settings.on_change !== null) {
+						settings.on_change(ele[0]);
 					}
 				}
-
-				//Call user on_change callback function if set
-				if (settings.on_change !== null) {
-					settings.on_change(ele[0]);
-				}
-
 				if (close) {
 					close_timepicki();
 				}
