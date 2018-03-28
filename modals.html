@@ -767,15 +767,52 @@
                         <div class="cw-col-12">
                             <span class="md-heading">Modals</span>
                             <span class="sm-sub-heading">For Modals, the element that is going to open the modal needs to be created first with the Id Target referencing to the modal to open.</span>
-                            <span class="sm-sub-heading">The modal needs to have its Targeted Id for opening it when the element that is going to open the modal is clicked.</span>
+                            <span class="sm-sub-heading">The Modal needs to have its Targeted Id for opening it when the element that is going to open the modal is clicked.</span>
+                            <span class="sm-sub-heading">The Modal must have a reference id with the following attribute <span class="class-indicator">data-remodal-id="ID Name"</span> which will be referenced in the element that is going to open the Modal.</span>
+                            <span class="sm-sub-heading">The Element that is going to open the modal must have the attribute with the modal id that it is going to open like the following <span class="class-indicator">data-remodal-target="Modal ID Name"</span>.</span>
+                            <span class="sm-sub-heading">The Close button for the Modal or any other element that is going to trigger a close event must have the following attribute and value <span class="class-indicator">data-remodal-action="close"</span>.</span>
+                            <span class="sm-sub-heading">There are Multiple Options for the Modal, which is passed to the main Modal div in the attribute <span class="class-indicator">data-remodal-options</span>, each option is separated with a space and takes a boolean value of either false or true.</span>
+                            <span class="sm-sub-heading"><span class="class-indicator">hashTracking</span> Option: Enables/Disables the hash in the address bar for the modal.</span>
+                            <span class="sm-sub-heading"><span class="class-indicator">closeOnOutsideClick</span> Option: Enables/Disables closing the modal if clicked outside of the modal frame.</span>
+                            <span class="sm-sub-heading"><span class="class-indicator">closeOnEscape</span> Option: Enables/Disables closing the modal if the ESC key is pressed.</span>
+                            <span class="sm-sub-heading">The Modal body div with the class <span class="class-indicator">"modal-body"</span> acts the same as a container, so a div for containing the rows and columns is not needed.</span>
 
                             <div class="control-buttons style-normal">
                                 <button class="normal-button" data-remodal-target="modal">Open Modal</button>
                             </div>
+
+<!-- CODE DOCUMENTATION START -->
+<pre style="margin-top: 20px; max-height: 3000px;">
+<button>Copy</button>
+<code data-language="html">
+    <!-- THE ELEMENT THAT IS GOING TO OPEN THE MODAL -->
+    <button class="normal-button" data-remodal-target="Modal ID">Open Modal</button>
+
+    <!-- THE MODAL -->
+    <div class="remodal" data-remodal-id="Modal ID" data-remodal-options="hashTracking: false, closeOnOutsideClick: false, closeOnEscape: false">
+
+        <!-- MODAL CLOSE BUTTON -->
+        <button data-remodal-action="close" class="remodal-close"></button>
+
+        <!-- MODAL TITLE HEADING -->
+        <div class="modal-title-heading">
+            Modal Title Heading
+        </div>
+
+        <!-- MODAL BODY -->
+        <div class="modal-body">
+            <!-- MODAL BODY ROWS AND CLOUMNS AND THEIR CONTENT -->
+        </div>
+
+    </div>
+</code>
+</pre>
+<!-- CODE DOCUMENTATION END -->
+
                         </div>
                     </div>
 
-                    <div class="remodal" data-remodal-id="modal" data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+                    <div class="remodal" data-remodal-id="modal" data-remodal-options="hashTracking: false, closeOnOutsideClick: false, closeOnEscape: false">
                         <button data-remodal-action="close" class="remodal-close"></button>
 
                         <div class="modal-title-heading">
@@ -849,7 +886,7 @@
                                 <div class="cw-col-6">
                                     <div class="form-field style-float-label float-label-legend icon icon-clock timepicker">
                                         <label>Label</label>
-                                        <input type="text" placeholder="Placeholder ...">
+                                        <input type="text">
                                     </div>
                                 </div>
                             </div>

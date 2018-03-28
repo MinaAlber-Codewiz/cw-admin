@@ -161,4 +161,9 @@ $(document).ready(function(){
     $(".timepicker input").attr('readonly', true);
     $(".timepicker input").timepicki({reset: true});
 
+    // ACCORDION
+    $('.accordion').accordion(function(){
+        heightStyle: "content";
+    });
+
 });
