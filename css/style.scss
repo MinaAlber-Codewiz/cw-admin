@@ -1651,7 +1651,7 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
     select{
         border-color: #2ecc71 !important;
         color: #2ecc71 !important;
-        background: url('../img/arrow-down-pass.svg') !important;
+        background: url('../img/arrow-down-pass.svg');
     }
     .checkbox-input{
         input[type="checkbox"]{
@@ -1761,7 +1761,7 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
     select{
         border-color: #c0392b !important;
         color: #c0392b !important;
-        background: url('../img/arrow-down-error.svg') !important;
+        background: url('../img/arrow-down-error.svg');
     }
     .checkbox-input{
         input[type="checkbox"]{
