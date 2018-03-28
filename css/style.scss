@@ -2454,11 +2454,12 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
     .accordion-title{
         text-align: left;
         font-size: 1.8em;
-        font-family: $font-bold;
+        font-family: $font-semiBold;
         outline: none;
         border: 1px solid $primary-color;
         @include border-radius(0px);
         @include transition(0.3s);
+        padding: 20px;
 
         .ui-icon{
             display: none;
@@ -2477,5 +2478,9 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         &::before{
             color: $icons-color;
         }
+    }
+
+    .accordion-body{
+        padding: 0px;
     }
 }

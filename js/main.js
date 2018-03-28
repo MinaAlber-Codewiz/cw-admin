@@ -166,4 +166,7 @@ $(document).ready(function(){
         heightStyle: "content"
     });
 
+    // TOOLTIPS
+    $(document).tooltip();
+
 });
