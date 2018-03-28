@@ -16,6 +16,8 @@ $(document).ready(function(){
     var floatingLabelText = $('.style-float-label input');
     var floatingLabelTextarea = $('.style-float-label textarea');
     var floatingLabelSelect = $('.style-float-label select');
+    var datePickerInput = $('div.datepicker input');
+    var datePickerInDocs = $("pre code .datepicker input");
 
     // FUNCTION TO ADJUST CONTENT CONTAINER WIDTH SIZE
     function adjustContentContainer(){
@@ -99,15 +101,17 @@ $(document).ready(function(){
 
     // IF INPUT TEXT FIELD IS FOCUSED
     floatingLabelText.focus(function(){
-        var label = this.previousElementSibling;
+        let label = this.previousElementSibling;
         label.classList.add('normal-label');
     });
 
     // IF INPUT TEXT FIELD IS NOT FOCUSED
     floatingLabelText.focusout(function(){
-        if(this.value === ''){
-            var label = this.previousElementSibling;
-            label.classList.remove('normal-label');
+        if(!this.parentElement.classList.contains('datepicker')){
+            if(this.value === ''){
+                var label = this.previousElementSibling;
+                label.classList.remove('normal-label');
+            }
         }
     });
 
@@ -146,10 +150,22 @@ $(document).ready(function(){
     new PerfectScrollbar('.quick-settings-sidebar');
 
     // DATEPICKER
-    $("div.datepicker input").attr('readonly', true);
-    $("div.datepicker input").datepicker({dateFormat:"dd-mm-yy", changeMonth: true, changeYear: true, yearRange: "-100:+0", showButtonPanel: true});
-    $("div.datepicker input").datepicker("option", "showAnim", "slideDown");
-    $("pre code .datepicker input").datepicker("destroy").removeAttr("class").removeAttr('id');
+    datePickerInput.attr('readonly', true);
+    datePickerInput.datepicker({dateFormat:"dd-mm-yy", changeMonth: true, changeYear: true, yearRange: "-100:+0", closeText: 'Reset', showButtonPanel: true, showAnim: "slideDown",
+    onClose: function () {
+        var event = arguments.callee.caller.caller.arguments[0];
+            if ($(event.delegateTarget).hasClass('ui-datepicker-close') || this.value==='') {
+            $(this).val('');
+            var label = this.previousElementSibling;
+            label.classList.remove('normal-label');
+        }
+    }})
+    .on("change", function() {
+        var label = this.previousElementSibling;
+        label.classList.add('normal-label');
+    });
+
+    datePickerInDocs.datepicker("destroy").removeAttr("class").removeAttr('id');
     $.datepicker._gotoToday = function(id) {
 			var target = $(id);
 			var inst = this._getInst(target[0]);
