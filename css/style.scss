@@ -2015,133 +2015,133 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
 
     .cw-save{
         background: transparent;
-        border: 1px solid #2ecc71;
-        color: #2ecc71;
+        border: 1px solid #2ecc71 !important;
+        color: #2ecc71 !important;
 
         &:hover{
             background: #2ecc71;
-            border: 1px solid #2ecc71;
-            color: #ffffff;
+            border: 1px solid #2ecc71 !important;
+            color: #ffffff !important;
         }
     }
 
     .cw-save-continue{
         background: transparent;
-        border: 1px solid #27ae60;
-        color: #27ae60;
+        border: 1px solid #27ae60 !important;
+        color: #27ae60 !important;
 
         &:hover{
             background: #27ae60;
-            border: 1px solid #27ae60;
-            color: #ffffff;
+            border: 1px solid #27ae60 !important;
+            color: #ffffff !important;
         }
     }
 
     .cw-close{
         background: transparent;
-        border: 1px solid #e74c3c;
-        color: #e74c3c;
+        border: 1px solid #e74c3c !important;
+        color: #e74c3c !important;
 
         &:hover{
             background: #e74c3c;
-            border: 1px solid #e74c3c;
-            color: #ffffff;
+            border: 1px solid #e74c3c !important;
+            color: #ffffff !important;
         }
     }
 
     .cw-print{
         background: transparent;
-        border: 1px solid #be2edd;
-        color: #be2edd;
+        border: 1px solid #be2edd !important;
+        color: #be2edd !important;
 
         &:hover{
             background: #be2edd;
-            border: 1px solid #be2edd;
-            color: #ffffff;
+            border: 1px solid #be2edd !important;
+            color: #ffffff !important;
         }
     }
 
     .cw-view-all{
         background: transparent;
-        border: 1px solid #0984e3;
-        color: #0984e3;
+        border: 1px solid #0984e3 !important;
+        color: #0984e3 !important;
 
         &:hover{
             background: #0984e3;
-            border: 1px solid #0984e3;
-            color: #ffffff;
+            border: 1px solid #0984e3 !important;
+            color: #ffffff !important;
         }
     }
 
     .cw-import{
         background: transparent;
-        border: 1px solid #e6bc25;
-        color: #e6bc25;
+        border: 1px solid #e6bc25 !important;
+        color: #e6bc25 !important;
 
         &:hover{
             background: #e6bc25;
-            border: 1px solid #e6bc25;
-            color: #ffffff;
+            border: 1px solid #e6bc25 !important;
+            color: #ffffff !important;
         }
     }
 
     .cw-export{
         background: transparent;
-        border: 1px solid #f0932b;
-        color: #f0932b;
+        border: 1px solid #f0932b !important;
+        color: #f0932b !important;
 
         &:hover{
             background: #f0932b;
-            border: 1px solid #f0932b;
-            color: #ffffff;
+            border: 1px solid #f0932b !important;
+            color: #ffffff !important;
         }
     }
 
     .cw-create{
         background: transparent;
-        border: 1px solid #16a085;
-        color: #16a085;
+        border: 1px solid #16a085 !important;
+        color: #16a085 !important;
 
         &:hover{
             background: #16a085;
-            border: 1px solid #16a085;
-            color: #ffffff;
+            border: 1px solid #16a085 !important;
+            color: #ffffff !important;
         }
     }
 
     .cw-add{
         background: transparent;
-        border: 1px solid #1abc9c;
-        color: #1abc9c;
+        border: 1px solid #1abc9c !important;
+        color: #1abc9c !important;
 
         &:hover{
             background: #1abc9c;
-            border: 1px solid #1abc9c;
-            color: #ffffff;
+            border: 1px solid #1abc9c !important;
+            color: #ffffff !important;
         }
     }
 
     .cw-reset-fields{
         background: transparent;
-        border: 1px solid #7f8c8d;
-        color: #7f8c8d;
+        border: 1px solid #7f8c8d !important;
+        color: #7f8c8d !important;
 
         &:hover{
             background: #7f8c8d;
-            border: 1px solid #7f8c8d;
-            color: #ffffff;
+            border: 1px solid #7f8c8d !important;
+            color: #ffffff !important;
         }
     }
 
     .cw-download{
         background: transparent;
-        border: 1px solid #3498db;
-        color: #3498db;
+        border: 1px solid #3498db !important;
+        color: #3498db !important;
 
         &:hover{
             background: #3498db;
-            border: 1px solid #3498db;
-            color: #ffffff;
+            border: 1px solid #3498db !important;
+            color: #ffffff !important;
         }
     }
 }
@@ -2290,7 +2290,7 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         margin-right: 15px;
         margin-top: 20px;
         font-family: $font-regular;
-        color: #ffffff;
+        color: #ffffff !important;
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -2303,111 +2303,111 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
 
     .cw-save{
         background: #2ecc71;
-        border: 1px solid #2ecc71;
+        border: 1px solid #2ecc71 !important;
 
         &:hover{
             background: #208a4d;
-            border: 1px solid #208a4d;
+            border: 1px solid #208a4d !important;
         }
     }
 
     .cw-save-continue{
         background: #27ae60;
-        border: 1px solid #27ae60;
+        border: 1px solid #27ae60 !important;
 
         &:hover{
             background: #1b7b44;
-            border: 1px solid #1b7b44;
+            border: 1px solid #1b7b44 !important;
         }
     }
 
     .cw-close{
         background: #e74c3c;
-        border: 1px solid #e74c3c;
+        border: 1px solid #e74c3c !important;
 
         &:hover{
             background: #c0392b;
-            border: 1px solid #c0392b;
+            border: 1px solid #c0392b !important;
         }
     }
 
     .cw-print{
         background: #be2edd;
-        border: 1px solid #be2edd;
+        border: 1px solid #be2edd !important;
 
         &:hover{
             background: #8c24a2;
-            border: 1px solid #8c24a2;
+            border: 1px solid #8c24a2 !important;
         }
     }
 
     .cw-view-all{
         background: #0984e3;
-        border: 1px solid #0984e3;
+        border: 1px solid #0984e3 !important;
 
         &:hover{
             background: #0b6ab3;
-            border: 1px solid #0b6ab3;
+            border: 1px solid #0b6ab3 !important;
         }
     }
 
     .cw-import{
         background: #e6bc25;
-        border: 1px solid #e6bc25;
+        border: 1px solid #e6bc25 !important;
 
         &:hover{
             background: #d0a91e;
-            border: 1px solid #d0a91e;
+            border: 1px solid #d0a91e !important;
         }
     }
 
     .cw-export{
         background: #f0932b;
-        border: 1px solid #f0932b;
+        border: 1px solid #f0932b !important;
 
         &:hover{
             background: #d68429;
-            border: 1px solid #d68429;
+            border: 1px solid #d68429 !important;
         }
     }
 
     .cw-create{
         background: #16a085;
-        border: 1px solid #16a085;
+        border: 1px solid #16a085 !important;
 
         &:hover{
             background: #127965;
-            border: 1px solid #127965;
+            border: 1px solid #127965 !important;
         }
     }
 
     .cw-add{
         background: #1abc9c;
-        border: 1px solid #1abc9c;
+        border: 1px solid #1abc9c !important;
 
         &:hover{
             background: #199e84;
-            border: 1px solid #199e84;
+            border: 1px solid #199e84 !important;
         }
     }
 
     .cw-reset-fields{
         background: #7f8c8d;
-        border: 1px solid #7f8c8d;
+        border: 1px solid #7f8c8d !important;
 
         &:hover{
             background: #717777;
-            border: 1px solid #717777;
+            border: 1px solid #717777 !important;
         }
     }
 
     .cw-download{
         background: #3498db;
-        border: 1px solid #3498db;
+        border: 1px solid #3498db !important;
 
         &:hover{
             background: #2879af;
-            border: 1px solid #2879af;
+            border: 1px solid #2879af !important;
         }
     }
 }
@@ -2440,11 +2440,42 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
 
     .modal-body{
         @include whd($display: inline-block);
-        padding-top: 20px;
+        padding: 20px 0px;
+    }
+}
 
-        .control-buttons{
-            padding: 0px 30px 20px 30px;
+/* ----------------------------------------------------------------------------------
+   ---------------------------------- ACCORDIONS ------------------------------------
+   ---------------------------------------------------------------------------------- */
+.accordion{
+    @include whd;
+    @include transition(0.3s);
+
+    .accordion-title{
+        text-align: left;
+        font-size: 1.8em;
+        font-family: $font-bold;
+        outline: none;
+        border: 1px solid $primary-color;
+        @include border-radius(0px);
+        @include transition(0.3s);
+
+        .ui-icon{
+            display: none;
         }
+    }
 
+    .accordion-title.icon{
+        &::before{
+            top: 3px;
+            margin-right: 10px;
+            color: $primary-color;
+        }
+    }
+
+    .accordion-title.ui-state-hover, .accordion-title.ui-state-active{
+        &::before{
+            color: $icons-color;
+        }
     }
 }

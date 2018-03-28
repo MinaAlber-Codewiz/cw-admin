@@ -162,8 +162,8 @@ $(document).ready(function(){
     $(".timepicker input").timepicki({reset: true});
 
     // ACCORDION
-    $('.accordion').accordion(function(){
-        heightStyle: "content";
+    $('.accordion').accordion({
+        heightStyle: "content"
     });
 
 });
