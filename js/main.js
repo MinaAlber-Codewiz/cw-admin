@@ -193,6 +193,7 @@ $(document).ready(function(){
 
     // ACCORDION
     $('.accordion').accordion({
+        collapsible: true,
         heightStyle: "content"
     });
 

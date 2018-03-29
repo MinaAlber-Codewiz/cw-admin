@@ -2474,7 +2474,7 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         }
     }
 
-    .accordion-title.ui-state-hover, .accordion-title.ui-state-active{
+    .accordion-title.ui-state-hover, .accordion-title.ui-state-active, .accordion-title.ui-state-focus{
         &::before{
             color: $icons-color;
         }
