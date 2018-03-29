@@ -1,6 +1,35 @@
 @import 'base';
 
 /* ----------------------------------------------------------------------------------
+   ----------------------------------- LOGIN PAGE -----------------------------------
+   ---------------------------------------------------------------------------------- */
+.admin-login{
+    width: 100%;
+    height: 100vh;
+    display: block;
+    padding: 0px 25px;
+    background: $primary-color;
+}
+
+.admin_login_form_container{
+    @include whd;
+    max-width: 450px;
+    background: #ffffff;
+    padding: 40px 30px;
+    margin: auto;
+    @include box-shadow;
+}
+
+.admin-login-img{
+    @include whd($width: 200px, $height: 60px);
+    margin: 0px auto 40px auto;
+}
+
+.admin-login-img img{
+    @include whd($width: 200px, $height: 60px);
+}
+
+/* ----------------------------------------------------------------------------------
    ------------------------------------- NAVBAR -------------------------------------
    ---------------------------------------------------------------------------------- */
 .navbar{
