@@ -8,7 +8,7 @@ $(document).ready(function(){
     var modulesSidebar = $('.modules-sidebar');
     var moduleBox = $('.module-box:not(.module-box-dropdown)');
     var moduleBoxDropdown = $('.module-box-dropdown .module-box-head');
-    var moduleBoxHead = $('.module-box-head');
+    var moduleBoxHead = $('.module--head');
     var subModuleBox = $('.sub-module-box');
     var quickSettingsSidebar = $('.quick-settings-sidebar');
     var contentContainer = $('.content-container');
@@ -198,6 +198,10 @@ $(document).ready(function(){
     });
 
     // TOOLTIPS
-    $(document).tooltip();
+    $(document).ready(function(){
+        Tipped.create('.tooltip', {
+            position: 'bottomleft'
+        });
+    });
 
 });

@@ -2484,3 +2484,19 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         padding: 0px;
     }
 }
+
+/* ----------------------------------------------------------------------------------
+   ----------------------------------- TOOLTIPS -------------------------------------
+   ---------------------------------------------------------------------------------- */
+.tpd-content{
+    font-family: $font-extraLight !important;
+    font-size: 1.4em !important;
+    color: $icons-color !important;
+    background: $primary-color !important;
+    padding: 15px !important;
+    @include border-radius(5px);
+}
+
+.tpd-stem-triangle{
+    border-bottom: 9.41421px solid $primary-color !important;
+}
