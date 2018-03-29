@@ -101,19 +101,33 @@ $(document).ready(function(){
 
     // IF INPUT TEXT FIELD IS FOCUSED
     floatingLabelText.focus(function(){
-        let label = this.previousElementSibling;
-        label.classList.add('normal-label');
+        if(this.parentElement.classList.contains('time_pick')){
+            var label = this.parentElement.previousElementSibling;
+            label.classList.add('normal-label');
+        } else{
+            var label = this.previousElementSibling;
+            label.classList.add('normal-label');
+        }
     });
 
     // IF INPUT TEXT FIELD IS NOT FOCUSED
     floatingLabelText.focusout(function(){
-        if(!this.parentElement.classList.contains('datepicker')){
-            if(this.value === ''){
-                var label = this.previousElementSibling;
-                label.classList.remove('normal-label');
+        if(this.parentElement && !this.parentElement.classList.contains('datepicker')){
+            if(this.value === ''&& this.previousElementSibling){
+                this.previousElementSibling.classList.remove('normal-label');
             }
         }
     });
+
+    function timepickiCheck(TimePickipopup){
+        if (this.isOpened && this.value === "") {
+            this.parentElement.previousElementSibling.classList.add('normal-label');
+        } else if(!this.isOpened && this.value === "") {
+            this.parentElement.previousElementSibling.classList.remove('normal-label');
+        } else if(!this.isOpened && this.value !== ""){
+            this.parentElement.previousElementSibling.classList.add('normal-label');
+        }
+    }
 
     // IF INPUT TEXTAREA FIELD IS FOCUSED
     floatingLabelTextarea.focus(function(){
@@ -175,7 +189,7 @@ $(document).ready(function(){
 
     // TIMEPICKER
     $(".timepicker input").attr('readonly', true);
-    $(".timepicker input").timepicki({reset: true});
+    $(".timepicker input").timepicki({reset: true,on_open: timepickiCheck , on_close: timepickiCheck});
 
     // ACCORDION
     $('.accordion').accordion({

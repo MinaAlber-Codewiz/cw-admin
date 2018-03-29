@@ -50,7 +50,9 @@
 			disable_keyboard_mobile: false,
 			reset: false,
 			on_change: null,
-      			input_writable: false
+			on_open:null,
+			on_close:null,
+      		input_writable: false
 		};
 
 		var settings = $.extend({}, defaults, options);
@@ -63,6 +65,8 @@
 			$(ele).wrap("<div class='time_pick'>");
 			var ele_par = $(this).parents(".time_pick");
 
+			ele[0].on_open=settings.on_open;
+			ele[0].on_close=settings.on_close;
 			// developer can specify which arrow makes the numbers go up or down
 			var top_arrow_button = (settings.increase_direction === 'down') ?
 				"<div class='prev action-prev'></div>" :
@@ -384,6 +388,9 @@
 			}
 
 			function open_timepicki() {
+				var isOpenedChanged=ele[0].isOpened!=true;
+				ele[0].isOpened=true;
+				ele_next[0].isOpened=true;
 				set_date(settings.start_time);
 				ele_next.slideDown();
 				if(!settings.input_writable) {
@@ -403,10 +410,19 @@
 					}
 				};
 				first_input.on('keydown', first_input_exit_handler);
+				if (isOpenedChanged && ele[0].on_open) {
+					ele[0].on_open(ele_next[0]);
+				}
 			}
 
 			function close_timepicki() {
+				var isOpenedChanged=ele[0].isOpened!=false;
+				ele[0].isOpened=false;
+				ele_next[0].isOpened=false;
 				ele_next.fadeOut();
+				if (isOpenedChanged && ele[0].on_close) {
+					ele[0].on_close(ele_next[0]);
+				}
 			}
 
 			function set_date(start_time) {
