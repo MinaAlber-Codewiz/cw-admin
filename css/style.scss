@@ -9,24 +9,54 @@
     display: block;
     padding: 0px 25px;
     background: $primary-color;
-}
 
-.admin_login_form_container{
-    @include whd;
-    max-width: 450px;
-    background: #ffffff;
-    padding: 40px 30px;
-    margin: auto;
-    @include box-shadow;
-}
+    .admin_login_form_container{
+        @include whd;
+        max-width: 400px;
+        background: #ffffff;
+        padding: 40px 30px;
+        margin: auto;
+        @include box-shadow;
 
-.admin-login-img{
-    @include whd($width: 200px, $height: 60px);
-    margin: 0px auto 40px auto;
-}
+        .admin-login-img{
+            @include whd($width: 200px, $height: auto);
+            margin: 0px auto 50px auto;
+        }
 
-.admin-login-img img{
-    @include whd($width: 200px, $height: 60px);
+        .admin-login-img img{
+            @include whd($width: 200px, $height: auto);
+        }
+
+        .login-misc{
+            @include whd($display: inline-block);
+
+            .form-field{
+                width: 150px;
+                margin-bottom: 0px;
+                float: left;
+
+                .checkbox-input{
+                    margin-top: 0px;
+                }
+            }
+
+            a{
+                @include whd($width: auto, $display: inline-block);
+                float: right;
+                font-size: 1.5em;
+                text-decoration: underline;
+                color: $primary-color;
+                font-family: $font-light;
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        .control-buttons button{
+            margin-top: 30px;
+            padding: 10px 20px;
+        }
+    }
 }
 
 /* ----------------------------------------------------------------------------------
@@ -984,7 +1014,7 @@
     }
 }
 
-input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"]{
+input[type="text"], input[type="password"], textarea, select, input[type="checkbox"], input[type="radio"]{
     @include appearance;
     resize: none;
 }
@@ -1105,7 +1135,8 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
        font-size: 1.8em;
    }
 
-   input[type="text"]{
+   input[type="text"],
+   input[type="password"]{
        @include whd;
        @include form-input-text;
        @include placeholder($primary-color);
@@ -1147,7 +1178,8 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         padding-top: 6px;
     }
 
-    input[type="text"]{
+    input[type="text"],
+    input[type="password"]{
         padding-left: 55px;
     }
 
@@ -1192,7 +1224,8 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
        font-size: 1.8em;
    }
 
-   input[type="text"]{
+   input[type="text"],
+   input[type="password"]{
        @include whd;
        @include form-input-text;
        @include placeholder($primary-color);
@@ -1236,7 +1269,8 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         padding-top: 6px;
     }
 
-    input[type="text"]{
+    input[type="text"],
+    input[type="password"]{
         padding-left: 55px;
     }
 
@@ -1284,7 +1318,8 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
        line-height: 53px;
    }
 
-   input[type="text"]{
+   input[type="text"],
+   input[type="password"]{
        @include whd($width: calc(100% - 200px), $display: inline-block);
        float: left;
        @include form-input-text;
@@ -1331,7 +1366,8 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         padding-top: 6px;
     }
 
-    input[type="text"]{
+    input[type="text"],
+    input[type="password"]{
         padding-left: 55px;
     }
 
@@ -1385,7 +1421,8 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         @include transition(0.3s);
     }
 
-    input[type="text"]{
+    input[type="text"],
+    input[type="password"]{
         @include whd;
         @include form-input-text;
         @include placeholder($primary-color);
@@ -1441,7 +1478,8 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         padding-top: 6px;
     }
 
-    input[type="text"]{
+    input[type="text"],
+    input[type="password"]{
         padding-left: 50px;
     }
 
@@ -1566,7 +1604,8 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         text-indent: 0px;
     }
 
-    input[type="text"]{
+    input[type="text"],
+    input[type="password"]{
         border: none;
         border-bottom: 1px solid $primary-color;
         padding: 10px 0px 10px 0px;
@@ -1619,7 +1658,8 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
         padding-top: 6px;
     }
 
-    input[type="text"]{
+    input[type="text"],
+    input[type="password"]{
         padding-left: 50px;
     }
 }
@@ -1669,7 +1709,8 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
     label{
         color: #2ecc71 !important;
     }
-    input[type="text"]{
+    input[type="text"],
+    input[type="password"]{
         border-color: #2ecc71 !important;
         color: #2ecc71 !important;
     }
@@ -1779,7 +1820,8 @@ input[type="text"], textarea, select, input[type="checkbox"], input[type="radio"
     label{
         color: #c0392b !important;
     }
-    input[type="text"]{
+    input[type="text"],
+    input[type="password"]{
         border-color: #c0392b !important;
         color: #c0392b !important;
     }
