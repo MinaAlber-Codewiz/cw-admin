@@ -5,7 +5,9 @@
    ---------------------------------------------------------------------------------- */
 @media only screen and (max-width: 450px){
     .admin-login{
-        .admin_login_form_container{
+        .admin-login-form-container{
+            padding: 40px 20px;
+
             .login-misc{
                 .form-field{
                     .checkbox-input input[type="checkbox"]{
