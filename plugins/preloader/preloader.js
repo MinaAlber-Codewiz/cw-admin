@@ -1,20 +1,11 @@
 // WHILE PAGE IS LOADING
-window.onload = function(){
+jQuery(window).on('load', function(){
 
-    function fadeOutEffect() {
-    var preloader = document.getElementsByClassName('preloader')[0];
-    var fadeEffect = setInterval(function () {
-            if (!preloader.style.opacity) {
-                preloader.style.opacity = 1;
-            }
-            if (preloader.style.opacity < 0.1) {
-                clearInterval(fadeEffect);
-            } else {
-                preloader.style.opacity -= 0.1;
-            }
-        }, 100);
-    }
+    // CACHE DOM ELEMENTS
+    var preloader = jQuery('.preloader');
 
-    fadeOutEffect();
+    setTimeout(function(){
+        preloader.fadeOut(1000);
+    },1000);
 
-};
+});
