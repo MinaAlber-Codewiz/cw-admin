@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
             <!-- TITLE -->
-            <title>CW Admin | Input Date Field</title>
+            <title>CW Admin | Create User Account</title>
 
             <!-- SEO DESCRIPTION META TAG -->
             <meta name="description" content=""/>
@@ -674,7 +674,7 @@
                         </li>
 
                         <!-- MODULE -->
-                        <li class="module-box module-box-dropdown module-box-dropdown-expanded module-box-active">
+                        <li class="module-box module-box-dropdown">
                             <a class="module-box-head">
                                 <span class="icon-small icon-puzzle"></span>
                                 <p>Forms</p>
@@ -717,7 +717,7 @@
                                         <p>File Input Field</p>
                                     </a>
                                 </li>
-                                <li class="sub-module-box sub-module-active">
+                                <li class="sub-module-box">
                                     <a href="date-input-field.html">
                                         <span class="module-box-line"></span>
                                         <p>Date Input Field</p>
@@ -771,7 +771,7 @@
                         </li>
 
                         <!-- MODULE -->
-                        <li class="module-box module-box-dropdown">
+                        <li class="module-box module-box-dropdown module-box-dropdown-expanded module-box-active">
                             <a class="module-box-head">
                                 <span class="icon-small icon-puzzle"></span>
                                 <p>Pages</p>
@@ -813,7 +813,7 @@
                                     </a>
                                 </li>
 
-                                <li class="sub-module-box">
+                                <li class="sub-module-box sub-module-active">
                                     <a href="create-new-user.html">
                                         <span class="module-box-line"></span>
                                         <p>Create New User Account</p>
@@ -842,410 +842,68 @@
 
                     <div class="cw-row">
                         <div class="cw-col-12">
-                            <span class="md-heading">Date Input Fields</span>
-                            <span class="sm-sub-heading">Date Input Fields has different styles to choose from, check the below examples.</span>
-                            <span class="sm-sub-heading">Date Input Fields must be wrapped inside a div with the class <span class="class-indicator">"form-field"</span> followed by the helper class for the style of the input date field needed.</span>
-                            <span class="sm-sub-heading">The Input Field must be a Text Type Input in addition to having the class <span class="class-indicator">"datepicker"</span>.</span>
+                            <span class="md-heading">Create New User Account</span>
+                            <span class="sm-sub-heading">Fill the fields below to create a new user account.</span>
+                            <span class="sm-sub-heading">An E-mail will be sent for confirmation and activation of the new user account.</span>
+                        </div>
+                    </div>
 
-                            <div class="form-field style-block datepicker" style="margin-top: 30px">
-                                <label>Label</label>
-                                <input type="text" placeholder="Placeholder ..." />
+                    <form>
+                        <div class="cw-row">
+                            <div class="cw-col-6">
+                                <div class="form-field style-float-label float-label-legend icon icon-user">
+                                    <label>Full Name</label>
+                                    <input type="text" />
+                                </div>
                             </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre>
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-block datepicker">
-        <label>Label</label>
-        <input type="text" placeholder="Placeholder ..." />
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-                        </div>
-                    </div>
-
-                    <div class="cw-row">
-                        <div class="cw-col-6">
-                            <span class="md-heading">Block Level Style</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block"</span> in addition to the class <span class="class-indicator">"datepicker"</span> to create Block Level Style Date Input Fields.</span>
-                            <div class="form-field style-block datepicker">
-                                <label>Label</label>
-                                <input type="text" placeholder="Placeholder ..." />
+                            <div class="cw-col-6">
+                                <div class="form-field style-float-label float-label-legend icon icon-mail">
+                                    <label>E-mail Address</label>
+                                    <input type="text" />
+                                </div>
                             </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-block datepicker">
-        <label>Label</label>
-        <input type="text" placeholder="Placeholder ..." />
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
                         </div>
 
-                        <div class="cw-col-6">
-                            <span class="md-heading">Block Level Style with Icon</span>
-                            <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block"</span> in addition to the class <span class="class-indicator">"datepicker"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-calendar"</span> for Icons.</span>
-                            <div class="form-field style-block datepicker icon icon-calendar">
-                                <label>Label</label>
-                                <input type="text" placeholder="Placeholder ..." />
+                        <div class="cw-row">
+                            <div class="cw-col-6">
+                                <div class="form-field style-float-label float-label-legend icon icon-password">
+                                    <label>Password</label>
+                                    <input type="password" />
+                                </div>
                             </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-block icon icon-puzzle datepicker">
-        <label>Label</label>
-        <input type="text" placeholder="Placeholder ..." />
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="cw-row">
-                    <div class="cw-col-6">
-                        <span class="md-heading">Block Level Border Bottom Style</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block-border-bottom"</span> in addition to the class <span class="class-indicator">"datepicker"</span> to create Block Level Border Bottom Style Date Input Fields.</span>
-                        <div class="form-field style-block-border-bottom datepicker">
-                            <label>Label</label>
-                            <input type="text" placeholder="Placeholder ..." />
+                            <div class="cw-col-6">
+                                <div class="form-field style-float-label float-label-legend icon icon-password">
+                                    <label>Confirm Password</label>
+                                    <input type="password" />
+                                </div>
+                            </div>
                         </div>
 
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-block-border-bottom datepicker">
-        <label>Label</label>
-        <input type="text" placeholder="Placeholder ..." />
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
-
-                    <div class="cw-col-6">
-                        <span class="md-heading">Block Level Border Bottom Style with Icon</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-block-border-bottom"</span> in addition to the class <span class="class-indicator">"datepicker"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-calendar"</span> for Icons.</span>
-                        <div class="form-field style-block-border-bottom icon icon-calendar datepicker">
-                            <label>Label</label>
-                            <input type="text" placeholder="Placeholder ..." />
+                        <div class="cw-row">
+                            <div class="cw-col-6">
+                                <div class="form-field style-float-label float-label-legend icon icon-mobile-phone">
+                                    <label>Mobile Number</label>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="cw-col-6">
+                                <div class="form-field style-float-label float-label-legend icon icon-puzzle">
+                                    <label>Position</label>
+                                    <input type="text" />
+                                </div>
+                            </div>
                         </div>
 
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-block-border-bottom icon icon-calendar datepicker">
-        <label>Label</label>
-        <input type="text" placeholder="Placeholder ..." />
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
-                </div>
-
-                <div class="cw-row">
-                    <div class="cw-col-12">
-                        <span class="md-heading">Inline Block Level Style</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-inline-block"</span> in addition to the class <span class="class-indicator">"datepicker"</span> to create Inline Block Level Date Input Fields.</span>
-                        <div class="form-field style-inline-block datepicker">
-                            <label>Label</label>
-                            <input type="text" placeholder="Placeholder ..." />
+                        <div class="cw-row">
+                            <div class="cw-col-12">
+                                <div class="control-buttons style-normal">
+                                    <button class="cw-create">Create User</button>
+                                    <button class="cw-reset-fields">Reset Fields</button>
+                                </div>
+                            </div>
                         </div>
+                    </form>
 
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-inline-block datepicker">
-        <label>Label</label>
-        <input type="text" placeholder="Placeholder ..." />
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
-
-                    <div class="cw-col-12">
-                        <span class="md-heading">Inline Block Level Style with Icon</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-inline-block"</span> in addition to the class <span class="class-indicator">"datepicker"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-calendar"</span> for Icons.</span>
-                        <div class="form-field style-inline-block icon icon-calendar datepicker">
-                            <label>Label</label>
-                            <input type="text" placeholder="Placeholder ..." />
-                        </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-inline-block icon icon-calendar datepicker">
-        <label>Label</label>
-        <input type="text" placeholder="Placeholder ..." />
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
-                </div>
-
-                <div class="cw-row">
-                    <div class="cw-col-6">
-                        <span class="md-heading">Floating Label Style</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-float-label"</span> in addition to the class <span class="class-indicator">"datepicker"</span> to create Floating Label Date Input Fields.</span>
-                        <div class="form-field style-float-label datepicker">
-                            <label>Label</label>
-                            <input type="text" />
-                        </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-float-label datepicker">
-        <label>Label</label>
-        <input type="text" />
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
-
-                    <div class="cw-col-6">
-                        <span class="md-heading">Floating Label Style with Icon</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-float-label"</span> in addition to the class <span class="class-indicator">"datepicker"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-calendar"</span> for Icons.</span>
-                        <div class="form-field style-float-label icon icon-calendar datepicker">
-                            <label>Label</label>
-                            <input type="text" />
-                        </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-float-label icon icon-calendar datepicker">
-        <label>Label</label>
-        <input type="text" />
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
-                </div>
-
-                <div class="cw-row">
-                    <div class="cw-col-6">
-                        <span class="md-heading">Floating Label Legend Style</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-float-label"</span> in addition to class <span class="class-indicator">"float-label-legend"</span>, and class <span class="class-indicator">"datepicker"</span> to create Floating Label Legend Date Input Fields.</span>
-                        <div class="form-field style-float-label float-label-legend datepicker">
-                            <label>Label</label>
-                            <input type="text" />
-                        </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-float-label float-label-legend datepicker">
-        <label>Label</label>
-        <input type="text" />
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
-
-                    <div class="cw-col-6">
-                        <span class="md-heading">Floating Label Legend Style with Icon</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"style-float-label"</span> in addition to class <span class="class-indicator">"float-label-legend"</span>, and class <span class="class-indicator">"datepicker"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-calendar"</span> for Icons.</span>
-                        <div class="form-field style-float-label float-label-legend icon icon-calendar datepicker">
-                            <label>Label</label>
-                            <input type="text" />
-                        </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-float-label float-label-legend icon icon-calendar datepicker">
-        <label>Label</label>
-        <input type="text" />
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
-                </div>
-
-                <div class="cw-row">
-                    <div class="cw-col-6">
-                        <span class="md-heading">Floating Label Border Bottom Style</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"float-label-border-bottom"</span> in addition to class <span class="class-indicator">"style-float-label"</span>, and class <span class="class-indicator">"datepicker"</span> to create Floating Label Border Bottom Date Input Fields.</span>
-                        <div class="form-field style-float-label float-label-border-bottom datepicker">
-                            <label>Label</label>
-                            <input type="text" />
-                        </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-float-label float-label-border-bottom datepicker">
-        <label>Label</label>
-        <input type="text" />
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
-
-                    <div class="cw-col-6">
-                        <span class="md-heading">Floating Label Border Bottom Style with Icon</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">Use the following class <span class="class-indicator">"float-label-border-bottom"</span> in addition to class <span class="class-indicator">"style-float-label"</span>, and class <span class="class-indicator">"datepicker"</span> followed by the following classes <span class="class-indicator">"icon"</span> and <span class="class-indicator">"icon-calendar"</span> for Icons.</span>
-                        <div class="form-field style-float-label float-label-border-bottom icon icon-calendar datepicker">
-                            <label>Label</label>
-                            <input type="text" />
-                        </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-float-label float-label-border-bottom icon icon-calendar datepicker">
-        <label>Label</label>
-        <input type="text" />
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
-                </div>
-
-                <div class="cw-row">
-                    <div class="cw-col-6">
-                        <span class="md-heading">Date Input Passed Validation</span>
-                        <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-pass"</span> with the form-field div to change label and input fields to color green.</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-success-msg"</span> to show the Success Message if needed.</span>
-                        <div class="form-field style-block datepicker field-pass">
-                            <label>Label</label>
-                            <input type="text" />
-                            <div class="input-success">Success Message if needed!</div>
-                        </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-block datepicker field-pass">
-        <label>Label</label>
-        <input type="text" />
-        <div class="input-success">Success Message if needed!</div>
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
-
-                    <div class="cw-col-6">
-                        <span class="md-heading">Date Input Failed Validation</span>
-                        <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-error"</span> with the form-field div to change label and input fields to color red.</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-error"</span> to show the Validation Error.</span>
-                        <div class="form-field style-block datepicker field-error">
-                            <label>Label</label>
-                            <input type="text" />
-                            <div class="input-error">Error with validation message!</div>
-                        </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-block datepicker field-error">
-        <label>Label</label>
-        <input type="text" />
-        <div class="input-error">Error Message!</div>
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
-                </div>
-
-                <div class="cw-row">
-                    <div class="cw-col-6">
-                        <span class="md-heading">Date Input Passed Validation with Icon</span>
-                        <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-pass"</span> in addition to <span class="class-indicator">"fix-icon"</span> class with the form-field div to change label and input fields with icon to color green with fixing icon overflow.</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-success-msg"</span> to show the Success Message if needed.</span>
-                        <div class="form-field style-block icon icon-calendar datepicker field-pass fix-icon">
-                            <label>Label</label>
-                            <input type="text" />
-                            <div class="input-success">Success Message if needed!</div>
-                        </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-block icon icon-calendar datepicker field-pass fix-icon">
-        <label>Label</label>
-        <input type="text" />
-        <div class="input-success">Success Message if needed!</div>
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
-
-                    <div class="cw-col-6">
-                        <span class="md-heading">Date Input Failed Validation with Icon</span>
-                        <span class="sm-sub-heading">Use the following class <span class="class-indicator">"field-error"</span> with the form-field div to change label and input fields to color red.</span>
-                        <span class="sm-sub-heading" style="margin-bottom: 50px;">In addition to adding a div with a class <span class="class-indicator">"input-error"</span> to show the Validation Error.</span>
-                        <div class="form-field style-block icon icon-calendar datepicker field-error">
-                            <label>Label</label>
-                            <input type="text" />
-                            <div class="input-error">Error with validation message!</div>
-                        </div>
-
-<!-- CODE DOCUMENTATION START -->
-<pre style="margin-top: 20px;">
-<button>Copy</button>
-<code data-language="html">
-    <div class="form-field style-block icon icon-calendar datepicker field-error">
-        <label>Label</label>
-        <input type="text" />
-        <div class="input-error">Error Message!</div>
-    </div>
-</code>
-</pre>
-<!-- CODE DOCUMENTATION END -->
-
-                    </div>
                 </div>
 
             </div>
