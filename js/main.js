@@ -99,6 +99,19 @@ $(document).ready(function(){
         };
     });
 
+    // IF INPUT TEXT HAS VALUE
+    if (floatingLabelText && floatingLabelText.length > 0) {
+        for (var i = 0; i < floatingLabelText.length; i++) {
+            if(floatingLabelText[i].value !== ''){
+                var label = floatingLabelText[i].previousElementSibling;
+                label.classList.add('normal-label');
+            } else{
+                var label = floatingLabelText[i].previousElementSibling;
+                label.classList.remove('normal-label');
+            }
+        }
+    }
+
     // IF INPUT TEXT FIELD IS FOCUSED
     floatingLabelText.focus(function(){
         if(this.parentElement.classList.contains('time_pick')){
@@ -129,6 +142,19 @@ $(document).ready(function(){
         }
     }
 
+    // IF INPUT TEXTAREA HAS VALUE
+    if (floatingLabelTextarea && floatingLabelTextarea.length > 0) {
+        for (var i = 0; i < floatingLabelTextarea.length; i++) {
+            if(floatingLabelTextarea[i].value !== ''){
+                var label = floatingLabelTextarea[i].previousElementSibling;
+                label.classList.add('normal-label');
+            } else{
+                var label = floatingLabelTextarea[i].previousElementSibling;
+                label.classList.remove('normal-label');
+            }
+        }
+    }
+
     // IF INPUT TEXTAREA FIELD IS FOCUSED
     floatingLabelTextarea.focus(function(){
         var label = this.previousElementSibling;
@@ -142,6 +168,19 @@ $(document).ready(function(){
             label.classList.remove('normal-label');
         }
     });
+
+    // IF INPUT SELECT HAS VALUE
+    if (floatingLabelSelect && floatingLabelSelect.length > 0) {
+        for (var i = 0; i < floatingLabelSelect.length; i++) {
+            if(floatingLabelSelect[i].value !== ''){
+                var label = floatingLabelSelect[i].previousElementSibling;
+                label.classList.add('normal-label');
+            } else{
+                var label = floatingLabelSelect[i].previousElementSibling;
+                label.classList.remove('normal-label');
+            }
+        }
+    }
 
     // IF INPUT SELECT FIELD IS FOCUSED
     floatingLabelSelect.focus(function(){

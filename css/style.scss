@@ -113,6 +113,59 @@
 }
 
 /* ----------------------------------------------------------------------------------
+   ------------------------------- EDIT PROFILE PAGE --------------------------------
+   ---------------------------------------------------------------------------------- */
+.edit-profile-avatar{
+    @include whd($width: 200px, $display:inline-block);
+
+    .profile-avatar-container{
+        @include whd($height: 200px);
+        position: relative;
+        @include border-radius(50%);
+        overflow: hidden;
+        @include box-shadow;
+
+        img{
+            @include whd($width: 200px);
+            margin: auto;
+        }
+
+        .fake-file-upload{
+            @include whd($height: 50px);
+            position: absolute;
+            bottom: 0px;
+            background: rgba(0,0,0,0.4);
+            color: #ffffff;
+            text-align: center;
+
+            span{
+                font-family: $font-light;
+                font-size: 1.4em;
+                position: relative;
+                top: 15px;
+            }
+        }
+
+        input[type="file"]{
+            @include whd($height: 100%);
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            opacity: 0;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.edit-profile-details{
+    @include whd($width: calc(100% - 225px), $display:inline-block);
+    float: right;
+}
+
+/* ----------------------------------------------------------------------------------
    ------------------------------------- NAVBAR -------------------------------------
    ---------------------------------------------------------------------------------- */
 .navbar{
