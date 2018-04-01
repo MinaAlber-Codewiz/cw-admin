@@ -217,7 +217,6 @@ $(document).ready(function(){
         var label = this.previousElementSibling;
         label.classList.add('normal-label');
     });
-
     datePickerInDocs.datepicker("destroy").removeAttr("class").removeAttr('id');
     $.datepicker._gotoToday = function(id) {
 			var target = $(id);
