@@ -5,7 +5,6 @@ html, body{
     font-family: $font-regular;
     font-size: 10px;
     color: $primary-color;
-    position: relative;
     overflow: auto;
 }
 
@@ -86,6 +85,22 @@ pre{
 
     .comment{
         color: #737373;
+    }
+
+    .type{
+        color: #c678dd;
+    }
+
+    .operator{
+        color: #50adbd;
+    }
+
+    .function{
+        color: #61afef;
+    }
+
+    .string{
+        color: #fef129;
     }
 
 }

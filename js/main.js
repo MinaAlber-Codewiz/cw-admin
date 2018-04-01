@@ -204,4 +204,8 @@ $(document).ready(function(){
         });
     });
 
+    // WYSIWYG EDITOR
+    CKEDITOR.replaceClass = 'ckeditor';
+    CKEDITOR.config.height = 300;
+
 });
