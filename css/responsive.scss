@@ -95,14 +95,17 @@
 }
 
 @media only screen and (max-width: 490px){
-    .navbar-user-avatar{
+    .navbar-user-avatar .navbar-avatar-name{
         display: none;
     }
 }
 
-@media only screen and (max-width: 380px){
+@media only screen and (max-width: 430px){
     .navbar-notifications .notifications-popup-box{
         left: -63px;
+    }
+    .navbar-user-avatar .avatar-popup-box{
+        left: -124px;
     }
 }
 
@@ -292,10 +295,13 @@
        }
    }
 
-   @media only screen and (max-width: 380px){
+   @media only screen and (max-width: 4300px){
        .rtl{
            .navbar-notifications .notifications-popup-box{
                right: -63px;
+           }
+           .navbar-user-avatar .avatar-popup-box{
+               right: -128px;
            }
        }
    }
