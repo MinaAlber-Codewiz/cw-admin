@@ -329,7 +329,7 @@
         font-size: 1.5em;
         color: $icons-color;
         padding-left: 15px;
-        display: inline-block;
+        display: none;
     }
 
     .avatar-popup-box{
@@ -1021,8 +1021,8 @@
 
     &::after{
         content: '';
-        @include whd($height: 100%, $display: none);
-        position: absolute;
+        @include whd($height: 100vh, $display: none);
+        position: fixed;
         top: 0px;
         bottom: 0px;
         left: 0px;
