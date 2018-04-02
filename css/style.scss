@@ -2743,8 +2743,15 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
     .navbar-mail-notifications, .navbar-notifications, .navbar-user-avatar{
         float: right;
     }
+    .navbar-user-avatar .navbar-avatar-name{
+        padding-left: 0px;
+        padding-right: 15px;
+    }
     .navbar-mail-notifications .email-notifications-popup-box,
-    .navbar-notifications .notifications-popup-box,
+    .navbar-notifications .notifications-popup-box{
+        right: 0;
+        left: auto;
+    }
     .navbar-user-avatar .avatar-popup-box{
         right: auto;
         left: 0;
