@@ -205,8 +205,13 @@
     width: 0px;
 }
 
+.settings-help-btns{
+    display: inline-block;
+    float: right;
+}
+
 .navbar-hamburger-menu, .navbar-settings-btn, .navbar-help-btn{
-    @include whd(auto, auto, inline-block);
+    @include whd(auto, 62px, inline-block);
     float: left;
     padding: 0px 22px;
     border-right: 1.5px solid rgba(255,255,255,0.1);
@@ -324,7 +329,7 @@
         font-size: 1.5em;
         color: $icons-color;
         padding-left: 15px;
-        display: none;
+        display: inline-block;
     }
 
     .avatar-popup-box{
@@ -333,7 +338,7 @@
         overflow: hidden;
         position: absolute;
         right: 0;
-        top: 62px;
+        top: 60px;
         background: $divider-color;
         line-height: normal;
         @include box-shadow;
@@ -477,7 +482,7 @@
         overflow: hidden;
         position: absolute;
         right: 0;
-        top: 62px;
+        top: 60px;
         background: $divider-color;
         line-height: normal;
         @include box-shadow;
@@ -603,7 +608,7 @@
         overflow: hidden;
         position: absolute;
         right: 0;
-        top: 62px;
+        top: 60px;
         background: $divider-color;
         line-height: normal;
         @include box-shadow;
@@ -1012,6 +1017,19 @@
     padding: 60px 30px 30px 30px;
     margin-left: 300px;
     @include transition(0.5s);
+    position: relative;
+
+    &::after{
+        content: '';
+        @include whd($height: 100%, $display: none);
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: rgba(0,0,0,0.5);
+        z-index: 97;
+    }
 }
 
 .content-container-condition-1{
@@ -2688,4 +2706,11 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
     .cke_button__save, .cke_button__smiley, .cke_button__specialchar, .cke_button__anchor{
         display: none;
     }
+}
+
+/* ----------------------------------------------------------------------------------
+   --------------------------------------- RTL --------------------------------------
+   ---------------------------------------------------------------------------------- */
+.rtl{
+
 }

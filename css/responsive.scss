@@ -47,12 +47,169 @@
 }
 
 /* ----------------------------------------------------------------------------------
+   ------------------------------------- NAVBAR -------------------------------------
+   ---------------------------------------------------------------------------------- */
+@media only screen and (max-width: 1150px){
+    .navbar-logo{
+        width: 150px;
+    }
+    .close-navbar-logo{
+        @include translateX(0px);
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 980px){
+    .navbar-search-form{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 700px){
+    .navbar .navbar-left{
+        width: 100%;
+        float: left;
+        clear: both;
+        border-bottom: 1.5px solid rgba(255,255,255,0.1);
+    }
+    .navbar .navbar-right{
+        width: 100%;
+        float: left;
+        clear: both;
+    }
+    .navbar-logo{
+        width: calc(100% - 70px);
+        float: left;
+    }
+    .navbar-hamburger-menu{
+        float: left;
+        border-right: 0px;
+    }
+    .navbar-mail-notifications .email-notifications-popup-box,
+    .navbar-notifications .notifications-popup-box,
+    .navbar-user-avatar .avatar-popup-box{
+        left: 0px;
+        right: auto;
+    }
+}
+
+@media only screen and (max-width: 490px){
+    .navbar-user-avatar{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .navbar-notifications .notifications-popup-box{
+        left: -63px;
+    }
+}
+
+/* ----------------------------------------------------------------------------------
+   -------------------------------- MODULES SIDEBAR ---------------------------------
+   ---------------------------------------------------------------------------------- */
+@media only screen and (max-width: 1150px){
+    .modules-sidebar{
+        @include translateX(-320px);
+        @include transition(0.5s);
+    }
+    .close-siderbar-modules{
+        width: 300px;
+        @include translateX(0px);
+    }
+    .close-siderbar-modules .module-box a p{
+        -webkit-animation: showModuleLinks 0.5s forwards;
+        -moz-animation: showModuleLinks 0.5s forwards;
+        -ms-animation: showModuleLinks 0.5s forwards;
+        -o-animation: showModuleLinks 0.5s forwards;
+        animation: showModuleLinks 0.5s forwards;
+    }
+    .module-box-dropdown .module-box-head::after{
+        display: block !important;
+    }
+    .close-siderbar-modules .module-box a{
+        padding: 10px 20px 10px 20px;
+    }
+    .close-siderbar-modules .module-box-dropdown ul{
+        display: block;
+    }
+    .navbar-mail-notifications .email-notifications-popup-box .email-notifications-popup-box-container{
+        max-height: 293px;
+    }
+    .navbar-notifications .notifications-popup-box .notifications-popup-box-container{
+        max-height: 247.5px;
+    }
+}
+
+@media only screen and (max-width: 980px){
+    .modules-sidebar{
+        top: 62px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .modules-sidebar{
+        top: 124px;
+    }
+    .close-siderbar-modules{
+        height: calc(100% - 124px);
+
+        &:hover{
+            height: calc(100% - 124px);
+        }
+    }
+}
+
+/* ----------------------------------------------------------------------------------
+   ---------------------------- QUICK SETTINGS SIDEBAR ------------------------------
+   ---------------------------------------------------------------------------------- */
+   @media only screen and (max-width: 980px){
+       .quick-settings-sidebar{
+           top: 62px;
+       }
+   }
+   @media only screen and (max-width: 700px){
+       .quick-settings-sidebar{
+           height: calc(100% - 124px);
+           top: 124px;
+       }
+   }
+
+/* ----------------------------------------------------------------------------------
+   ------------------------------- CONTENT CONTAINER --------------------------------
+   ---------------------------------------------------------------------------------- */
+@media only screen and (max-width: 1150px){
+    .content-container{
+        width: 100%;
+        margin-left: 0px;
+        padding: 60px 0px 30px 0px;
+    }
+    .content-container-condition-1, .content-container-condition-3{
+        &::after{
+            display: block;
+        }
+    }
+}
+
+@media only screen and (max-width: 980px){
+    .content-container{
+        padding: 126px 0px 30px 0px;
+    }
+}
+
+/* ----------------------------------------------------------------------------------
    ---------------------------------- GRID SYSTEM -----------------------------------
    ---------------------------------------------------------------------------------- */
 @media only screen and (max-width: 1300px){
     .cw-col-4,
     .cw-col-6{
         @include whd($width: 100%);
+    }
+    .cw-col-4,
+    .cw-col-6,
+    .cw-col-12{
+        padding: 20px 5px;
     }
 }
 
