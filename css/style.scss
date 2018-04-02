@@ -503,7 +503,6 @@
             padding: 10px 20px 10px 20px;
             font-size: 1.4em;
             color: $helper-color;
-            text-align: left;
         }
 
         .email-notifications-popup-box-container{
@@ -629,7 +628,6 @@
             padding: 10px 20px 10px 20px;
             font-size: 1.4em;
             color: $helper-color;
-            text-align: left;
         }
 
         .notifications-popup-box-container{
@@ -2712,5 +2710,114 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
    --------------------------------------- RTL --------------------------------------
    ---------------------------------------------------------------------------------- */
 .rtl{
+    direction: rtl;
+
+    /* -------------------------------------------
+       ----------------- NAVBAR ------------------
+       ------------------------------------------- */
+    .navbar .navbar-left, .navbar-logo, .navbar-hamburger-menu{
+        float: right;
+    }
+    .close-navbar-logo{
+        @include translateX(320px);
+    }
+    .navbar-search-form{
+        float: right;
+        padding-right: 25px;
+        padding-left: 0px;
+    }
+    .navbar-search-form .search-submit-btn{
+        left: auto;
+        right: -3px;
+    }
+    .navbar .navbar-right{
+        float: left;
+    }
+    .settings-help-btns{
+        float: left;
+    }
+    .navbar-settings-btn{
+        float: right;
+        border-left: 0px;
+    }
+    .navbar-mail-notifications, .navbar-notifications, .navbar-user-avatar{
+        float: right;
+    }
+    .navbar-mail-notifications .email-notifications-popup-box,
+    .navbar-notifications .notifications-popup-box,
+    .navbar-user-avatar .avatar-popup-box{
+        right: auto;
+        left: 0;
+    }
+    .navbar-mail-notifications .email-notifications-popup-box .email-notifications-popup-box-container .email-notification-popup-box .email-notification-popup-box-avatar,
+    .navbar-notifications .notifications-popup-box .notifications-popup-box-container .notification-popup-box .notification-popup-box-avatar{
+        float: right;
+    }
+    .navbar-mail-notifications .email-notifications-popup-box .email-notifications-popup-box-container .email-notification-popup-box .email-notification-popup-box-message,
+    .navbar-notifications .notifications-popup-box .notifications-popup-box-container .notification-popup-box .notification-popup-box-message{
+        float: left;
+    }
+    .navbar-mail-notifications .email-notifications-popup-box .email-notifications-popup-box-container .email-notification-popup-box .email-notification-popup-box-message div span:nth-child(1),
+    .navbar-notifications .notifications-popup-box .notifications-popup-box-container .notification-popup-box .notification-popup-box-message div span:nth-child(1){
+        float: right;
+    }
+    .navbar-mail-notifications .email-notifications-popup-box .email-notifications-popup-box-container .email-notification-popup-box .email-notification-popup-box-message div span:nth-child(2),
+    .navbar-notifications .notifications-popup-box .notifications-popup-box-container .notification-popup-box .notification-popup-box-message div span:nth-child(2){
+        float: left;
+    }
+    .navbar-user-avatar .avatar-popup-box .avatar-popup-box-links a span:nth-child(2){
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+
+    /* -------------------------------------------
+       ------------ MODULES SIDEBAR --------------
+       ------------------------------------------- */
+    .modules-sidebar{
+        left: auto;
+        right: 0px;
+    }
+    .close-siderbar-modules .module-box a{
+        padding: 10px 13px 10px 15px;
+    }
+    .module-box-dropdown .module-box-head::after{
+        right: auto;
+        left: 20px;
+    }
+    .modules-sidebar .module-box-dropdown-expanded .module-box-head::after{
+        right: auto;
+        left: 26px;
+    }
+
+    /* -------------------------------------------
+       --------- QUICK SETTINGS SIDEBAR ----------
+       ------------------------------------------- */
+    .quick-settings-sidebar{
+        right: auto;
+        left: -320px;
+    }
+    .close-quick-settings-modules{
+        @include translateX(320px);
+    }
+
+    /* ----------------------------------------------------------------------------------
+       ------------------------------- CONTENT CONTAINER --------------------------------
+       ---------------------------------------------------------------------------------- */
+    .content-container{
+        margin-left: 0px;
+        margin-right: 300px;
+    }
+
+    .content-container-condition-1{
+        margin-left: 0px;
+        margin-right: 70px;
+    }
+
+    /* ----------------------------------------------------------------------------------
+       ---------------------------------- CODE BLOCKS -----------------------------------
+       ---------------------------------------------------------------------------------- */
+    pre{
+        direction: ltr;
+    }
 
 }
