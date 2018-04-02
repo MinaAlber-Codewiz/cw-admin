@@ -2800,9 +2800,9 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         @include translateX(320px);
     }
 
-    /* ----------------------------------------------------------------------------------
-       ------------------------------- CONTENT CONTAINER --------------------------------
-       ---------------------------------------------------------------------------------- */
+    /* -------------------------------------------
+       ----------- CONTENT CONTAINER -------------
+       ------------------------------------------- */
     .content-container{
         margin-left: 0px;
         margin-right: 300px;
@@ -2813,11 +2813,70 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         margin-right: 70px;
     }
 
-    /* ----------------------------------------------------------------------------------
-       ---------------------------------- CODE BLOCKS -----------------------------------
-       ---------------------------------------------------------------------------------- */
+    /* -------------------------------------------
+       --------------- GRID SYSTEM ---------------
+       ------------------------------------------- */
+    [class*='cw-col']{
+        float: right;
+    }
+
+    /* -------------------------------------------
+       --------------- CODE BLOCKS ---------------
+       ------------------------------------------- */
     pre{
         direction: ltr;
+    }
+
+    /* -------------------------------------------
+       ---------------- FORM INPUTS --------------
+       ------------------------------------------- */
+    .style-block.icon::before, .style-block-border-bottom.icon::before,
+    .style-float-label.icon::before{
+        left: auto;
+        right: 0px;
+    }
+
+    .style-inline-block.icon::before{
+        left: auto;
+        right: 200px;
+    }
+
+    .style-block-border-bottom.group-icon-dollar::after, .style-block.group-icon-dollar::after,
+    .style-inline-block.group-icon-dollar::after, .style-float-label.group-icon-dollar::after,
+    .style-block-border-bottom.group-icon-percentage::after, .style-block.group-icon-percentage::after,
+    .style-inline-block.group-icon-percentage::after, .style-float-label.group-icon-percentage::after{
+        left: 0px;
+        right: auto;
+    }
+
+    .style-block.icon input[type="text"], .style-block.icon input[type="password"],
+    .style-inline-block.icon input[type="text"], .style-inline-block.icon input[type="password"],
+    .style-float-label.icon input[type="text"], .style-float-label.icon input[type="password"]{
+        padding-left: 20px;
+        padding-right: 55px;
+    }
+
+    .style-block-border-bottom.icon input[type="text"], .style-block-border-bottom.icon input[type="password"]{
+        padding-left: 20px;
+        padding-right: 55px;
+    }
+
+    .style-inline-block label, .style-inline-block input[type="text"], .style-inline-block input[type="password"]{
+        float: right;
+    }
+
+    .float-label-legend label{
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+
+    .float-label-legend.icon label{
+        margin-left: 0px;
+        margin-right: 40px;
+    }
+
+    .float-label-border-bottom.icon input[type="text"], .float-label-border-bottom.icon input[type="password"]{
+        padding-left: 0px;
     }
 
 }
