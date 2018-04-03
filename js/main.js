@@ -263,4 +263,36 @@ $(document).ready(function(){
     });
     checkLanguage();
 
+    // TOUR WIZARD
+    var tourWizard = {
+        id: "tour_wizard",
+        steps: [
+            {
+                target: "tour-step-1",
+                title: "Title Heading for this Step",
+                content: "Content Description for this Step.",
+                placement: "top"
+            },
+            {
+                target: "tour-step-2",
+                title: "Title Heading for this Step",
+                content: "Content Description for this Step.",
+                placement: "bottom"
+            },
+            {
+                target: "tour-step-3",
+                title: "Title Heading for this Step",
+                content: "Content Description for this Step.",
+                placement: "top"
+            },
+            {
+                target: "tour-step-4",
+                title: "Title Heading for this Step",
+                content: "Content Description for this Step.",
+                placement: "bottom"
+            }
+        ]
+    };
+    hopscotch.startTour(tourWizard);
+
 });
