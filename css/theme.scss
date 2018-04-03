@@ -274,3 +274,15 @@ a.reset_time:hover{
     background: $primary-color;
     color: #ffffff;
 }
+
+.icon-documentation{
+    font-size: 2em;
+
+    &::before{
+        position: relative;
+        top: 5px;
+        font-size: 1.2em;
+        color: $primary-color;
+        margin-right: 15px;
+    }
+}
