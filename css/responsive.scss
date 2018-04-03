@@ -327,3 +327,33 @@
            }
        }
    }
+
+   /* -------------------------------------------
+      -------------- FORM INPUTS ----------------
+      ------------------------------------------- */
+   @media only screen and (max-width: 1300px){
+       .rtl{
+           .style-inline-block.icon::before{
+               right: 0px;
+           }
+       }
+   }
+
+   /* -------------------------------------------
+      -------------- LOGIN PAGE -----------------
+      ------------------------------------------- */
+   @media only screen and (max-width: 450px){
+       .rtl .admin-login .admin-login-form-container .login-misc .form-field .checkbox-input span{
+           margin-right: -20px;
+           margin-left: 0px;
+       }
+   }
+
+   /* -------------------------------------------
+      ----------- EDIT PROFILE PAGE -------------
+      ------------------------------------------- */
+   @media only screen and (max-width: 1200px){
+       .rtl .edit-profile-avatar{
+           float: none;
+       }
+   }

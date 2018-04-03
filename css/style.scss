@@ -1001,6 +1001,163 @@
     padding: 20px 20px;
     @include transition(0.5s);
     line-height: normal;
+
+    .quick-settings-heading{
+        @include whd;
+        font-family: $font-semiBold;
+        font-size: 1.6em;
+        color: $helper-color;
+    }
+
+    .quick-settings-section{
+        @include whd;
+        margin-top: 30px;
+
+        .quick-settings-section-heading{
+            font-family: $font-regular;
+            font-size: 1.5em;
+            color: $icons-color;
+            margin-bottom: 15px;
+        }
+
+        .quick-settings-toggle-checkbox{
+            @include whd;
+
+            span{
+                font-family: $font-extraLight;
+                font-size: 1.5em;
+                color: $icons-color;
+                position: relative;
+                top: -10px;
+            }
+
+            .quick-settings-checkbox{
+                @include whd($width: 60px, $display: inline-block);
+                margin: 0px 15px;
+
+                label{
+                    position: relative;
+                    display: inline-block;
+                    width: 60px;
+                    height: 30px;
+                    background-color: $helper-color;
+                    @include border-radius(6px);
+                    -webkit-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                    cursor: pointer;
+                    -webkit-box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.1);
+                    box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.1);
+                    -webkit-tap-highlight-color: transparent;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 3px;
+                        left: 3px;
+                        height: 24px;
+                        width: 25px;
+                        background-color: #fff;
+                        @include border-radius(6px);
+                        -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+                        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+                        -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+                        transition: -webkit-box-shadow 0.3s ease-in-out;
+                        transition: box-shadow 0.3s ease-in-out;
+                        transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+                        -webkit-animation: moveLeft 0.3s ease-in-out;
+                        animation: moveLeft 0.3s ease-in-out;
+                    }
+                }
+
+                input[type="checkbox"]{
+                    display: none;
+                }
+
+                input[type="checkbox"]:checked + label{
+                    background-color: $helper-color;
+                }
+
+                input[type="checkbox"]:checked + label::before {
+                    -webkit-transform: translateX(28px);
+                    transform: translateX(28px);
+                    -webkit-box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.1);
+                    box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.1);
+                    -webkit-animation: moveRight 0.3s ease-in-out;
+                    animation: moveRight 0.3s ease-in-out;
+                }
+
+                @-webkit-keyframes moveRight {
+                    0% {
+                        width: 25px;
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    45% {
+                        width: 30px;
+                    }
+                    100% {
+                        width: 25px;
+                        -webkit-transform: translateX(28px);
+                        transform: translateX(28px);
+                     }
+                }
+
+                @keyframes moveRight {
+                    0% {
+                        width: 25px;
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    45% {
+                        width: 30px;
+                    }
+                    100% {
+                        width: 25px;
+                        -webkit-transform: translateX(28px);
+                        transform: translateX(28px);
+                    }
+                }
+
+                @-webkit-keyframes moveLeft {
+                    0% {
+                        width: 25px;
+                        -webkit-transform: translateX(28px);
+                        transform: translateX(28px);
+                    }
+                    45% {
+                        width: 30px;
+                    }
+                    100% {
+                        width: 25px;
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                }
+
+                @keyframes moveLeft {
+                    0% {
+                        width: 25px;
+                        -webkit-transform: translateX(28px);
+                        transform: translateX(28px);
+                    }
+                    45% {
+                        width: 30px;
+                    }
+                    100% {
+                        width: 25px;
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                }
+            }
+
+            .on-off{
+                input[type="checkbox"]:checked + label{
+                    background-color: rgba(241, 241, 241, 0.5);
+                }
+            }
+        }
+    }
 }
 
 .close-quick-settings-modules{
@@ -1163,6 +1320,10 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
     span{
         @include whd($width: calc(100% - 33px), $display: inline-block);
     }
+}
+
+[class*='group-icon'] input[type="text"], [class*='group-icon'] input[type="password"]{
+    padding-right: 55px !important;
 }
 
 .radio-circle-animation{
@@ -2633,7 +2794,7 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
 
     .modal-body{
         @include whd($display: inline-block);
-        padding: 20px 0px;
+        padding: 20px 20px;
     }
 }
 
@@ -2856,19 +3017,28 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         right: auto;
     }
 
+    .style-block-border-bottom.icon textarea, .float-label-border-bottom.icon textarea{
+        padding-right: 55px;
+        padding-left: 0px !important;
+    }
+
+    [class*='group-icon'] input[type="text"], [class*='group-icon'] input[type="password"]{
+        padding-left: 55px !important;
+    }
+
     .style-block.icon input[type="text"], .style-block.icon input[type="password"],
     .style-inline-block.icon input[type="text"], .style-inline-block.icon input[type="password"],
-    .style-float-label.icon input[type="text"], .style-float-label.icon input[type="password"]{
+    .style-float-label.icon input[type="text"], .style-float-label.icon input[type="password"],
+    .style-block.icon textarea, .style-inline-block.icon textarea, .style-float-label.icon textarea,
+    .style-block-border-bottom.icon input[type="text"], .style-block-border-bottom.icon input[type="password"],
+    .style-block.icon select, .style-block-border-bottom.icon select, .style-inline-block.icon select,
+    .style-float-label.icon select{
         padding-left: 20px;
         padding-right: 55px;
     }
 
-    .style-block-border-bottom.icon input[type="text"], .style-block-border-bottom.icon input[type="password"]{
-        padding-left: 20px;
-        padding-right: 55px;
-    }
-
-    .style-inline-block label, .style-inline-block input[type="text"], .style-inline-block input[type="password"]{
+    .style-inline-block label, .style-inline-block input[type="text"], .style-inline-block input[type="password"],
+    .style-inline-block .checkbox-input, .style-inline-block .radio-input{
         float: right;
     }
 
@@ -2884,6 +3054,113 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
 
     .float-label-border-bottom.icon input[type="text"], .float-label-border-bottom.icon input[type="password"]{
         padding-left: 0px;
+    }
+
+    .style-block select, .style-inline-block select, .style-float-label select{
+        background-position: calc(0px + 20px) center !important;
+    }
+
+    .style-block-border-bottom select, .float-label-border-bottom select{
+        background-position: 0px center !important;
+    }
+
+    .checkbox-input input[type="checkbox"], .radio-input input[type="radio"]{
+        float: right;
+        margin-right: 0px;
+        margin-left: 10px;
+    }
+
+    .checkbox-input input[type="checkbox"]::before{
+        left: -7px;
+    }
+
+    .radio-input input[type="radio"]::before,
+    .radio-input input[type="radio"]::after{
+        left: -5px;
+    }
+
+    .ui-datepicker{
+        right: auto;
+        left: 0%;
+    }
+
+    .style-inline-block .timepicker_wrap{
+        left: 0px !important;
+    }
+
+    .timepicker_wrap .ti_tx, .timepicker_wrap .mi_tx, .timepicker_wrap .mer_tx{
+        left: -9px;
+    }
+
+    /* -------------------------------------------
+       ------------------ BUTTONS ----------------
+       ------------------------------------------- */
+    .control-buttons.style-normal button, .control-buttons.style-glass-sliding button,
+    .control-buttons.style-borders button{
+        margin-right: 0px;
+        margin-left: 15px;
+    }
+
+    .control-buttons.style-normal button:last-child, .control-buttons.style-glass-sliding button:last-child,
+    .control-buttons.style-borders button:last-child{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .control-buttons button::before{
+        margin-right: 0px;
+        margin-left: 7px;
+    }
+
+    /* -------------------------------------------
+       ------------------- MODALS ----------------
+       ------------------------------------------- */
+    .remodal, .remodal .modal-title-heading{
+        text-align: right;
+    }
+
+    .remodal{
+        margin-left: -30px;
+    }
+
+    .remodal-close{
+        right: auto;
+        left: 0px;
+    }
+
+    /* -------------------------------------------
+       ----------------- ACCORDIONS --------------
+       ------------------------------------------- */
+    .accordion .accordion-title.icon::before{
+        margin-right: 0px;
+        margin-left: 10px;
+        float: right;
+    }
+
+    .accordion .accordion-title{
+        text-align: right;
+    }
+
+    /* -------------------------------------------
+       -------------- LOGIN PAGE -----------------
+       ------------------------------------------- */
+    .admin-login .admin-login-form-container .login-misc .form-field{
+        float: right;
+    }
+
+    .admin-login .admin-login-form-container .login-misc .form-field .checkbox-input input{
+        margin-left: 0px;
+    }
+
+    .admin-login .admin-login-form-container .login-misc a{
+        float: left;
+    }
+
+    /* -------------------------------------------
+       ----------- EDIT PROFILE PAGE -------------
+       ------------------------------------------- */
+    .edit-profile-avatar{
+        float: right;
     }
 
 }

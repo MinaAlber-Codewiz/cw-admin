@@ -238,6 +238,7 @@ $(document).ready(function(){
     // TOOLTIPS
     $(document).ready(function(){
         Tipped.create('.tooltip', {
+            // position: 'bottomright'
             position: 'bottomleft'
         });
     });
@@ -245,5 +246,6 @@ $(document).ready(function(){
     // WYSIWYG EDITOR
     CKEDITOR.replaceClass = 'ckeditor';
     CKEDITOR.config.height = 300;
+    // CKEDITOR.config.contentsLangDirection = 'rtl';
 
 });
