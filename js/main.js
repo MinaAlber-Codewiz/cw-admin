@@ -2,6 +2,7 @@
 $(document).ready(function(){
 
     // CACHE DOM ELEMENTS
+    var body = $('body');
     var navbarLogo = $('.navbar-logo');
     var navbarHamburgerMenu = $('.navbar-hamburger-menu');
     var navbarSettingsBtn = $('.navbar-settings-btn');
@@ -18,6 +19,7 @@ $(document).ready(function(){
     var floatingLabelSelect = $('.style-float-label select');
     var datePickerInput = $('div.datepicker input');
     var datePickerInDocs = $("pre code .datepicker input");
+    var languagePicker = $('#toggle_language');
 
     // FUNCTION TO ADJUST CONTENT CONTAINER WIDTH SIZE
     function adjustContentContainer(){
@@ -247,5 +249,18 @@ $(document).ready(function(){
     CKEDITOR.replaceClass = 'ckeditor';
     CKEDITOR.config.height = 300;
     // CKEDITOR.config.contentsLangDirection = 'rtl';
+
+    // LANGUAGE SWITCHER
+    function checkLanguage(){
+        if(languagePicker.is(":checked")){
+            body.addClass('rtl');
+        } else{
+            body.removeClass('rtl');
+        }
+    }
+    languagePicker.change(function(){
+        checkLanguage();
+    });
+    checkLanguage()
 
 });
