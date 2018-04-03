@@ -261,6 +261,6 @@ $(document).ready(function(){
     languagePicker.change(function(){
         checkLanguage();
     });
-    checkLanguage()
+    checkLanguage();
 
 });
