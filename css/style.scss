@@ -107,7 +107,7 @@
             color: $primary-color;
             font-family: $font-light;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 15px;
         }
     }
 }
@@ -275,6 +275,66 @@
 
 .navbar-help-btn{
     border-left: 0px;
+    position: relative;
+
+    &:hover{
+
+        .help-popup-box{
+            max-height: 2000px;
+            @include whd(200px, auto, block);
+            @include transition(1s);
+        }
+
+    }
+
+    .help-popup-box{
+        @include whd(200px, auto, block);
+        max-height: 0px;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background: $divider-color;
+        line-height: normal;
+        @include box-shadow;
+        cursor: default;
+
+        &::before{
+            content: '';
+            @include whd($height: 2px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            background: $helper-color;
+        }
+
+        a{
+            @include whd;
+            padding: 10px 30px;
+            border-top: 1.5px solid rgba(255,255,255,0.1);
+            @include transition(0.3s);
+
+            span:nth-child(1){
+                position: relative;
+                top: -5px;
+            }
+
+            span:nth-child(2){
+                font-family: $font-light;
+                font-size: 1.4em;
+                color: $icons-color;
+                margin-left: 15px;
+                position: relative;
+                top: -2px;
+            }
+
+            &:hover{
+                background: $helper-color;
+            }
+
+        }
+    }
 }
 
 .navbar-mail-notifications, .navbar-notifications, .navbar-user-avatar{
@@ -2770,8 +2830,13 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
    ------------------------------------ MODALS --------------------------------------
    ---------------------------------------------------------------------------------- */
 .remodal{
-    @include border-radius(10px);
     text-align: left;
+
+    .remodal-close{
+        &::before{
+            font-size: 30px;
+        }
+    }
 
     .modal-title-heading{
         font-size: 2.6em;
