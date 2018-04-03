@@ -2934,6 +2934,42 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
 }
 
 /* ----------------------------------------------------------------------------------
+   ---------------------------------- TOUR WIZARD -----------------------------------
+   ---------------------------------------------------------------------------------- */
+div.hopscotch-bubble h3{
+    font-family: $font-bold;
+}
+
+div.hopscotch-bubble .hopscotch-content{
+    font-family: $font-light;
+}
+
+div.hopscotch-bubble{
+    border: 1px solid rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    -ms-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    -o-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.up .hopscotch-bubble-arrow{
+    top: -16px;
+}
+
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.up .hopscotch-bubble-arrow-border{
+    border-bottom: 17px solid rgba(0,0,0,0.2);
+}
+
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.up{
+    top: -17px;
+}
+
+div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-arrow-border{
+    border-left: 17px solid rgba(0,0,0,0.1);
+}
+
+/* ----------------------------------------------------------------------------------
    --------------------------------------- RTL --------------------------------------
    ---------------------------------------------------------------------------------- */
 .rtl{

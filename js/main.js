@@ -9,7 +9,6 @@ $(document).ready(function(){
     var modulesSidebar = $('.modules-sidebar');
     var moduleBox = $('.module-box:not(.module-box-dropdown)');
     var moduleBoxDropdown = $('.module-box-dropdown .module-box-head');
-    var moduleBoxHead = $('.module--head');
     var subModuleBox = $('.sub-module-box');
     var quickSettingsSidebar = $('.quick-settings-sidebar');
     var contentContainer = $('.content-container');
@@ -20,6 +19,7 @@ $(document).ready(function(){
     var datePickerInput = $('div.datepicker input');
     var datePickerInDocs = $("pre code .datepicker input");
     var languagePicker = $('#toggle_language');
+    var startTourWizardBtn = $('.start-tour-btn');
 
     // FUNCTION TO ADJUST CONTENT CONTAINER WIDTH SIZE
     function adjustContentContainer(){
@@ -264,35 +264,76 @@ $(document).ready(function(){
     checkLanguage();
 
     // TOUR WIZARD
+    startTourWizardBtn.click(function(){
+        hopscotch.startTour(tourWizard);
+    });
     var tourWizard = {
         id: "tour_wizard",
         steps: [
             {
                 target: "tour-step-1",
-                title: "Title Heading for this Step",
-                content: "Content Description for this Step.",
-                placement: "top"
+                title: "Navigation Bar",
+                content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                placement: 'bottom',
+                xOffset: 'center',
+                arrowOffset: 'center',
+                zindex: 999
             },
             {
                 target: "tour-step-2",
-                title: "Title Heading for this Step",
-                content: "Content Description for this Step.",
-                placement: "bottom"
+                title: "Main Menu",
+                content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                placement: 'bottom',
+                xOffset: 'center',
+                arrowOffset: 'center',
+                zindex: 999
             },
             {
                 target: "tour-step-3",
-                title: "Title Heading for this Step",
-                content: "Content Description for this Step.",
-                placement: "top"
+                title: "Global Search Bar",
+                content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                placement: 'bottom',
+                xOffset: 'center',
+                arrowOffset: 'center',
+                zindex: 999
             },
             {
                 target: "tour-step-4",
-                title: "Title Heading for this Step",
-                content: "Content Description for this Step.",
-                placement: "bottom"
+                title: "E-mail Notifications",
+                content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                placement: 'bottom',
+                xOffset: 'center',
+                arrowOffset: 'center',
+                zindex: 999
+            },
+            {
+                target: "tour-step-5",
+                title: "System Notifications",
+                content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                placement: 'bottom',
+                xOffset: 'center',
+                arrowOffset: 'center',
+                zindex: 999
+            },
+            {
+                target: "tour-step-6",
+                title: "Quick Settings Menu",
+                content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                placement: 'left',
+                xOffset: 20,
+                arrowOffset: 'right',
+                zindex: 999
+            },
+            {
+                target: "tour-step-7",
+                title: "Help & Documentation",
+                content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                placement: 'left',
+                xOffset: 20,
+                arrowOffset: 'right',
+                zindex: 999
             }
         ]
     };
-    hopscotch.startTour(tourWizard);
 
 });

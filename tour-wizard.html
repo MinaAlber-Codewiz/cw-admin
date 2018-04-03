@@ -98,7 +98,7 @@
         <body>
 
             <!-- START NAVBAR -->
-            <div class="navbar">
+            <div class="navbar" id="tour-step-1">
 
                 <!-- START LEFT NAVBAR -->
                 <div class="navbar-left">
@@ -109,7 +109,7 @@
                     </div>
 
                     <!-- HAMBURGER MENU -->
-                    <div class="navbar-hamburger-menu">
+                    <div class="navbar-hamburger-menu" id="tour-step-2">
                         <span class="icon-small icon-hamburger-menu"></span>
                     </div>
 
@@ -117,7 +117,7 @@
                 <!-- END LEFT NAVBAR -->
 
                 <!-- START SEARCH BAR -->
-                <div class="navbar-search-form">
+                <div class="navbar-search-form" id="tour-step-3">
                     <form>
                         <input type="text" placeholder="Search ..." />
                         <span class="search-submit-btn icon icon-search">
@@ -131,7 +131,7 @@
                 <div class="navbar-right">
 
                     <!-- START EMAIL NOTIFICATIONS -->
-                    <div class="navbar-mail-notifications">
+                    <div class="navbar-mail-notifications" id="tour-step-4">
 
                         <!-- ICON -->
                         <span class="icon-small icon-mail new-notifications"></span>
@@ -354,7 +354,7 @@
                     <!-- END EMAIL NOTIFICATIONS -->
 
                     <!-- START NOTIFICATIONS -->
-                    <div class="navbar-notifications">
+                    <div class="navbar-notifications" id="tour-step-5">
 
                         <!-- ICON -->
                         <span class="icon-small icon-bell-notifications new-notifications"></span>
@@ -622,18 +622,18 @@
                     <div class="settings-help-btns">
 
                         <!-- SETTINGS -->
-                        <div class="navbar-settings-btn">
+                        <div class="navbar-settings-btn" id="tour-step-6">
                             <span class="icon-small icon-gearbox"></span>
                         </div>
 
                         <!-- HELP -->
-                        <div class="navbar-help-btn">
+                        <div class="navbar-help-btn" id="tour-step-7">
                             <span class="icon-small icon-help"></span>
 
                             <!-- START HELP POPUP BOX -->
                             <div class="help-popup-box">
                                 <a href="#"><span class="icon-small icon-documents"></span><span>Documentation</span></a>
-                                <a href="#"><span class="icon-small icon-play"></span><span>Tutorial Wizard</span></a>
+                                <a href="tour-wizard.html"><span class="icon-small icon-play"></span><span>Tutorial Wizard</span></a>
                                 <a href="#"><span class="icon-small icon-info"></span><span>About</span></a>
                             </div>
                             <!-- END HELP POPUP BOX -->
@@ -908,37 +908,9 @@
                         <div class="cw-col-12">
                             <span class="md-heading">Tour Wizard</span>
                             <span class="sm-sub-heading">Use a tour wizard to guide your users and give them instructions on how to use the Admin Panel.</span>
-                        </div>
-                    </div>
 
-                    <div class="cw-row">
-                        <div class="cw-col-12">
-                            <div id="tour-step-1">
-                                <span class="lg-heading">Tour Wizard Step 1</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cw-row">
-                        <div class="cw-col-12">
-                            <div id="tour-step-2">
-                                <span class="lg-heading">Tour Wizard Step 2</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cw-row">
-                        <div class="cw-col-12">
-                            <div id="tour-step-3">
-                                <span class="lg-heading">Tour Wizard Step 3</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cw-row">
-                        <div class="cw-col-12">
-                            <div id="tour-step-4">
-                                <span class="lg-heading">Tour Wizard Step 4</span>
+                            <div class="control-buttons style-normal">
+                                <button class="normal-button icon icon-play start-tour-btn">Start Tour</button>
                             </div>
                         </div>
                     </div>
