@@ -276,6 +276,7 @@
 .navbar-help-btn{
     border-left: 0px;
     position: relative;
+    z-index: 99;
 
     &:hover{
 
@@ -2965,6 +2966,14 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
     .navbar-settings-btn{
         float: right;
         border-left: 0px;
+    }
+    .navbar-help-btn .help-popup-box{
+        right: auto;
+        left: 0;
+    }
+    .navbar-help-btn .help-popup-box a span:nth-child(2){
+        margin-left: 0px;
+        margin-right: 15px;
     }
     .navbar-mail-notifications, .navbar-notifications, .navbar-user-avatar{
         float: right;
