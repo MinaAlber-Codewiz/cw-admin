@@ -364,4 +364,12 @@ $(document).ready(function(){
         ]
     };
 
+    // ALERTIFY
+    $('.notify-success').click(function(){
+        var notification = alertify.success('This is a Success Sample Message!', 'success');
+    });
+    $('.notify-error').click(function(){
+        var notification = alertify.error('This is an Error Sample Message!', 'error');
+    });
+
 });
