@@ -916,10 +916,61 @@
                         <div class="cw-col-12">
                             <span class="md-heading">Tour Wizard</span>
                             <span class="sm-sub-heading">Use a tour wizard to guide your users and give them instructions on how to use the Admin Panel.</span>
+                            <span class="sm-sub-heading">To create a Tour Wizard, give IDs to the elements you want the tour wizard to attach itself to.</span>
+                            <span class="sm-sub-heading">To start the Tour Wizard, add the javascript referring to that specific tour with a name for it to differenate between other tour guides.</span>
 
                             <div class="control-buttons style-normal">
                                 <button class="normal-button icon icon-play start-tour-btn">Start Tour</button>
                             </div>
+
+<!-- CODE DOCUMENTATION START -->
+<pre style="margin-top: 40px; max-height: 3000px;">
+<button>Copy</button>
+<code data-language="html">
+    <div id="tour-wizard-step-1"></div>
+    <div id="tour-wizard-step-2"></div>
+    <div id="tour-wizard-step-3"></div>
+</code>
+</pre>
+<!-- CODE DOCUMENTATION END -->
+
+<!-- CODE DOCUMENTATION START -->
+<pre style="margin-top: 40px; max-height: 3000px;">
+<button>Copy</button>
+<code data-language="javascript">
+    var tour_name = {
+        id: "Tour Name",
+        steps: [
+            {
+                target: "tour-wizard-step-1",
+                title: "A heading title for Step 1",
+                content: "Content Description for Step 1",
+                placement: "bottom",
+                showPrevButton: true
+            },
+            {
+                target: "tour-wizard-step-2",
+                title: "A heading title for Step 2",
+                content: "Content Description for Step 2",
+                placement: "top",
+                showPrevButton: true
+            },
+            {
+                target: "tour-wizard-step-3",
+                title: "A heading title for Step 3",
+                content: "Content Description for Step 3",
+                placement: "left",
+                showPrevButton: true
+            }
+        ]
+    }
+
+    // START THE TOUR
+    hopscotch.startTour(tourWizard);
+</code>
+</pre>
+<!-- CODE DOCUMENTATION END -->
+
                         </div>
                     </div>
 

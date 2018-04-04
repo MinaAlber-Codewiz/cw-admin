@@ -7,6 +7,8 @@ $(document).ready(function(){
     var navbarHamburgerMenu = $('.navbar-hamburger-menu');
     var navbarSettingsBtn = $('.navbar-settings-btn');
     var modulesSidebar = $('.modules-sidebar');
+    var emailNotifications = $('.email-notifications-popup-box');
+    var systemNotifications = $('.notifications-popup-box');
     var moduleBox = $('.module-box:not(.module-box-dropdown)');
     var moduleBoxDropdown = $('.module-box-dropdown .module-box-head');
     var subModuleBox = $('.sub-module-box');
@@ -277,7 +279,8 @@ $(document).ready(function(){
                 placement: 'bottom',
                 xOffset: 'center',
                 arrowOffset: 'center',
-                zindex: 999
+                zindex: 999,
+                showPrevButton: true
             },
             {
                 target: "tour-step-2",
@@ -286,7 +289,8 @@ $(document).ready(function(){
                 placement: 'bottom',
                 xOffset: 'center',
                 arrowOffset: 'center',
-                zindex: 999
+                zindex: 999,
+                showPrevButton: true
             },
             {
                 target: "tour-step-3",
@@ -295,7 +299,8 @@ $(document).ready(function(){
                 placement: 'bottom',
                 xOffset: 'center',
                 arrowOffset: 'center',
-                zindex: 999
+                zindex: 999,
+                showPrevButton: true
             },
             {
                 target: "tour-step-4",
@@ -304,7 +309,14 @@ $(document).ready(function(){
                 placement: 'bottom',
                 xOffset: 'center',
                 arrowOffset: 'center',
-                zindex: 999
+                zindex: 999,
+                showPrevButton: true,
+                onShow: function(){
+                    emailNotifications.css('max-height','3000px');
+                },
+                onNext: function(){
+                    emailNotifications.removeAttr('style');
+                }
             },
             {
                 target: "tour-step-5",
@@ -313,7 +325,14 @@ $(document).ready(function(){
                 placement: 'bottom',
                 xOffset: 'center',
                 arrowOffset: 'center',
-                zindex: 999
+                zindex: 999,
+                showPrevButton: true,
+                onShow: function(){
+                    systemNotifications.css('max-height','3000px');
+                },
+                onNext: function(){
+                    systemNotifications.removeAttr('style');
+                }
             },
             {
                 target: "tour-step-6",
@@ -322,7 +341,15 @@ $(document).ready(function(){
                 placement: 'left',
                 xOffset: 20,
                 arrowOffset: 'right',
-                zindex: 999
+                zindex: 999,
+                showPrevButton: true,
+                showCTAButton: true,
+                onShow: function(){
+                    navbarSettingsBtn.trigger( "click" );
+                },
+                onNext: function(){
+                    navbarSettingsBtn.trigger( "click" );
+                }
             },
             {
                 target: "tour-step-7",
@@ -331,7 +358,8 @@ $(document).ready(function(){
                 placement: 'left',
                 xOffset: 20,
                 arrowOffset: 'right',
-                zindex: 999
+                zindex: 999,
+                showPrevButton: true
             }
         ]
     };
