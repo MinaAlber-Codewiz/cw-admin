@@ -366,10 +366,42 @@ $(document).ready(function(){
 
     // ALERTIFY
     $('.notify-success').click(function(){
-        var notification = alertify.success('This is a Success Sample Message!', 'success');
+        alertify.notify('This is a Success Sample Message!', 'success');
     });
     $('.notify-error').click(function(){
-        var notification = alertify.error('This is an Error Sample Message!', 'error');
+        alertify.notify('This is an Error Sample Message!', 'error');
+    });
+    $('.basic-alert').click(function(){
+        alertify.alert('Alert Title Heading', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s!');
+    });
+    $('.confirm-alert').click(function(){
+        alertify.confirm().setting({
+            'labels': {ok: 'Yes', cancel: 'Cancel'},
+            'title': 'Some kind of Action',
+            'message': 'Are your sure you want to perform this kind of Action?',
+            onok: function(){
+                        alertify.success('Confirmed');
+                    },
+            oncancel: function(){
+                        alertify.error('Canceled');
+                    },
+            closable: false
+        }).show();
+    });
+    $('.prompt-alert').click(function(){
+        alertify.prompt().setting({
+            'labels': {ok: 'Submit', cancel: 'Cancel'},
+            'title': 'Prompt Title Heading',
+            'message': 'Prompt Label Heading',
+            'value': 'Random Value',
+            onok: function(evt, value){
+                        alertify.success('Submitted Value: ' + value);
+                    },
+            oncancel: function(){
+                        alertify.error('Canceled');
+                    },
+            closable: false
+        }).show();
     });
 
 });

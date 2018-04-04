@@ -2972,13 +2972,63 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-a
 /* ----------------------------------------------------------------------------------
    ------------------------------------ ALERTIFY ------------------------------------
    ---------------------------------------------------------------------------------- */
-[class*="alertify-"]{
+[class*="alertify-"], .alertify{
     font-size: 1.6em;
     cursor: default;
 }
 
 .alertify-notifier .ajs-message.ajs-error, .alertify-notifier .ajs-message.ajs-success{
     text-shadow: none;
+}
+
+.alertify .ajs-header{
+    color: $primary-color !important;
+}
+
+.alertify .ajs-body .ajs-content{
+    color: $primary-color;
+    padding: 20px 0px;
+}
+
+.alertify .ajs-footer .ajs-buttons .ajs-button.ajs-ok{
+    font-family: $font-regular;
+    background: #27ae60;
+    color: $icons-color;
+    border: none !important;
+    font-weight: 400;
+    cursor: pointer;
+    @include transition(0.3s);
+    outline: none;
+
+    &:hover{
+        background: #1b7b44;
+    }
+}
+
+.alertify .ajs-footer .ajs-buttons .ajs-button.ajs-cancel{
+    font-family: $font-regular;
+    background: #e74c3c;
+    color: $icons-color;
+    border: none !important;
+    font-weight: 400;
+    cursor: pointer;
+    @include transition(0.3s);
+    outline: none;
+
+    &:hover{
+        background: #c0392b;
+    }
+}
+
+.alertify.ajs-closable .ajs-commands button.ajs-close{
+    display: none;
+}
+
+.alertify .ajs-body .ajs-content .ajs-input{
+    margin: 0px;
+    margin-top: 15px;
+    outline: none;
+    color: $primary-color;
 }
 
 /* ----------------------------------------------------------------------------------
