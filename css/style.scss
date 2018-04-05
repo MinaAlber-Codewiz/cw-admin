@@ -2719,6 +2719,17 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         }
     }
 
+    .cw-export{
+        &::before{
+            content: url('../img/export-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/export-icon.svg');
+            }
+        }
+    }
+
     .cw-edit{
         &::before{
             content: url('../img/edit-icon-colored.svg');
@@ -2729,8 +2740,6 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
             }
         }
     }
-
-
 }
 
 .control-buttons.style-normal, .control-buttons.style-glass-sliding{
