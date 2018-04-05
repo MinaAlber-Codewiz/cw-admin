@@ -2978,7 +2978,10 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-a
 }
 
 .alertify-notifier .ajs-message.ajs-error, .alertify-notifier .ajs-message.ajs-success{
-    text-shadow: none;
+}
+
+.alertify-notifier .ajs-message{
+    border: 0px;
 }
 
 .alertify .ajs-header{

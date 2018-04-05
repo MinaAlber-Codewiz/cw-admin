@@ -925,6 +925,7 @@
                             <span class="md-heading">Alerts</span>
                             <span class="sm-sub-heading">Alerts have 4 different styles for each surving a purpose.</span>
                             <span class="sm-sub-heading">Kinds of Alerts include notification alerts, basic alerts, prompt alerts, and confirmation alerts.</span>
+                            <span class="sm-sub-heading">Alerts can show automatically on a page or activated when an element is clicked.</span>
                         </div>
                     </div>
 
@@ -935,12 +936,33 @@
                                 <button class="normal-button notify-success">Success Notifications</button>
                                 <button class="normal-button notify-error">Error Notifications</button>
                             </div>
+
+<!-- CODE DOCUMENTATION START -->
+<pre style="margin-top: 20px;">
+<button>Copy</button>
+<code data-language="javascript">
+    alertify.notify('This is a Success Sample Message!', 'success');
+    alertify.notify('This is an Error Sample Message!', 'error');
+</code>
+</pre>
+<!-- CODE DOCUMENTATION END -->
+
                         </div>
                         <div class="cw-col-6">
                             <span class="md-heading">Basic Alerts</span>
                             <div class="control-buttons style-normal">
                                 <button class="normal-button basic-alert">Basic Alerts</button>
                             </div>
+
+<!-- CODE DOCUMENTATION START -->
+<pre style="margin-top: 20px;">
+<button>Copy</button>
+<code data-language="javascript">
+    alertify.alert('Alert Title Heading', 'Alert Content Description');
+</code>
+</pre>
+<!-- CODE DOCUMENTATION END -->
+
                         </div>
                     </div>
 
@@ -950,12 +972,55 @@
                             <div class="control-buttons style-normal">
                                 <button class="normal-button confirm-alert">Confirmation Alerts</button>
                             </div>
+
+<!-- CODE DOCUMENTATION START -->
+<pre style="margin-top: 20px;">
+<button>Copy</button>
+<code data-language="javascript">
+    alertify.confirm().setting({
+        'labels': {ok: 'Yes', cancel: 'Cancel'},
+        'title': 'Some kind of Action',
+        'message': 'Are your sure you want to perform this kind of Action?',
+        onok: function(){
+                    alertify.success('Confirmed');
+                },
+        oncancel: function(){
+                    alertify.error('Canceled');
+                },
+        closable: false
+    }).show();
+</code>
+</pre>
+<!-- CODE DOCUMENTATION END -->
+
                         </div>
                         <div class="cw-col-6">
                             <span class="md-heading">Prompt Alerts</span>
                             <div class="control-buttons style-normal">
                                 <button class="normal-button prompt-alert">Prompt Alerts</button>
                             </div>
+
+<!-- CODE DOCUMENTATION START -->
+<pre style="margin-top: 20px;">
+<button>Copy</button>
+<code data-language="javascript">
+    alertify.prompt().setting({
+        'labels': {ok: 'Submit', cancel: 'Cancel'},
+        'title': 'Prompt Title Heading',
+        'message': 'Prompt Label Heading',
+        'value': 'Random Value',
+        onok: function(evt, value){
+                    alertify.success('Submitted Value: ' + value);
+                },
+        oncancel: function(){
+                    alertify.error('Canceled');
+                },
+        closable: false
+    }).show();
+</code>
+</pre>
+<!-- CODE DOCUMENTATION END -->
+
                         </div>
                     </div>
 
