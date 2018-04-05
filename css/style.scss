@@ -2378,6 +2378,12 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
             content: url('../img/export-icon.svg');
         }
     }
+
+    .cw-edit{
+        &::before{
+            content: url('../img/edit-icon.svg');
+        }
+    }
 }
 
 .control-buttons.style-glass-sliding{
@@ -2559,6 +2565,18 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
             color: #ffffff !important;
         }
     }
+
+    .cw-edit{
+        background: transparent;
+        border: 1px solid #6c5ce7 !important;
+        color: #6c5ce7 !important;
+
+        &:hover{
+            background: #4635c1;
+            border: 1px solid #4635c1 !important;
+            color: #ffffff !important;
+        }
+    }
 }
 
 .control-buttons.style-borders{
@@ -2681,16 +2699,18 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         }
     }
 
-    .cw-export{
+    .cw-edit{
         &::before{
-            content: url('../img/export-icon-colored.svg');
+            content: url('../img/edit-icon-colored.svg');
         }
         &:hover{
             &::before{
-                content: url('../img/export-icon.svg');
+                content: url('../img/edit-icon.svg');
             }
         }
     }
+
+
 }
 
 .control-buttons.style-normal, .control-buttons.style-glass-sliding{
@@ -2823,6 +2843,127 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         &:hover{
             background: #2879af;
             border: 1px solid #2879af !important;
+        }
+    }
+
+    .cw-download{
+        background: #3498db;
+        border: 1px solid #3498db !important;
+
+        &:hover{
+            background: #2879af;
+            border: 1px solid #2879af !important;
+        }
+    }
+
+    .cw-edit{
+        background: #6c5ce7;
+        border: 1px solid #6c5ce7 !important;
+
+        &:hover{
+            background: #4635c1;
+            border: 1px solid #4635c1 !important;
+        }
+    }
+}
+
+.control-buttons.style-icons{
+    @include whd($display: inline-block);
+
+    button{
+        font-size: 1.5em;
+        outline: none;
+        cursor: pointer;
+        margin-right: 15px;
+        margin-top: 20px;
+        font-family: $font-regular;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        background: none;
+        border: none;
+
+        &:last-child{
+            margin-right: 0px;
+        }
+
+        &::before{
+            width: 20px;
+            height: 20px;
+            margin-right: 0px;
+        }
+
+    }
+
+    .cw-save{
+        &::before{
+            content: url(../img/save-icon-colored.svg);
+        }
+    }
+
+    .cw-edit{
+        &::before{
+            content: url(../img/edit-icon-colored.svg);
+        }
+    }
+
+    .cw-save-continue{
+        &::before{
+            content: url(../img/save-continue-icon-colored.svg);
+        }
+    }
+
+    .cw-close{
+        &::before{
+            content: url(../img/cancel-icon-colored.svg);
+        }
+    }
+
+    .cw-print{
+        &::before{
+            content: url(../img/print-icon-colored.svg);
+        }
+    }
+
+    .cw-view-all{
+        &::before{
+            content: url(../img/view-all-icon-colored.svg);
+        }
+    }
+
+    .cw-import{
+        &::before{
+            content: url(../img/import-icon-colored.svg);
+        }
+    }
+
+    .cw-export{
+        &::before{
+            content: url(../img/export-icon-colored.svg);
+        }
+    }
+
+    .cw-create{
+        &::before{
+            content: url(../img/create-icon-colored.svg);
+        }
+    }
+
+    .cw-add{
+        &::before{
+            content: url(../img/add-icon-colored.svg);
+        }
+    }
+
+    .cw-reset-fields{
+        &::before{
+            content: url(../img/reset-fields-icon-colored.svg);
+        }
+    }
+
+    .cw-download{
+        &::before{
+            content: url(../img/download-icon-colored.svg);
         }
     }
 }
