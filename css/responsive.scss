@@ -118,7 +118,7 @@
         @include transition(0.5s);
     }
     .close-siderbar-modules{
-        width: 300px;
+        width: 270px;
         @include translateX(0px);
     }
     .close-siderbar-modules .module-box a p{
