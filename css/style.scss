@@ -3208,6 +3208,47 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-a
 }
 
 /* ----------------------------------------------------------------------------------
+   ----------------------------------- HTML TABLES ----------------------------------
+   ---------------------------------------------------------------------------------- */
+.html-table-title{
+    @include whd;
+    background: #f7f7f7;
+    padding: 15px 20px;
+    line-height: 60px;
+
+    span:nth-child(1){
+        &::before{
+            color: $primary-color;
+            position: relative;
+            font-size: 1em;
+            top: 4px;
+            margin-right: 7px;
+        }
+    }
+
+    span:nth-child(1){
+        font-family: $font-bold;
+        font-size: 2.5em;
+        color: $primary-color;
+    }
+
+    .control-buttons{
+        @include whd($width: auto, $display: inline-block);
+        float: right;
+
+        button{
+            margin-top: 0px;
+            position: relative;
+            top: 4px;
+        }
+    }
+
+    p{
+        margin-bottom: 10px;
+    }
+}
+
+/* ----------------------------------------------------------------------------------
    --------------------------------------- RTL --------------------------------------
    ---------------------------------------------------------------------------------- */
 .rtl{
@@ -3509,6 +3550,18 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-a
        ------------------------------------------- */
     .edit-profile-avatar{
         float: right;
+    }
+
+    /* -------------------------------------------
+       --------------- HTML TABLES ---------------
+       ------------------------------------------- */
+    .html-table-title span:nth-child(1)::before{
+        margin-right: 0px;
+        margin-left: 7px;
+    }
+
+    .html-table-title .control-buttons{
+        float: left;
     }
 
 }
