@@ -242,8 +242,8 @@ $(document).ready(function(){
     // TOOLTIPS
     $(document).ready(function(){
         Tipped.create('.tooltip', {
-            // position: 'bottomright'
-            position: 'bottomleft'
+            // position: 'bottom'
+            position: 'bottom'
         });
     });
 

@@ -2335,6 +2335,12 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         color: $icons-color;
     }
 
+    .cw-search{
+        &::before{
+            content: url('../img/search-icon.svg');
+        }
+    }
+
     .cw-close{
         &::before{
             content: url('../img/cancel-icon.svg');
@@ -2453,6 +2459,18 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
 
         &:last-child{
             margin-right: 0px;
+        }
+    }
+
+    .cw-search{
+        background: transparent;
+        border: 1px solid #a55eea !important;
+        color: #a55eea !important;
+
+        &:hover{
+            background: #a55eea;
+            border: 1px solid #a55eea !important;
+            color: #ffffff !important;
         }
     }
 
@@ -2622,6 +2640,17 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         }
     }
 
+    .cw-search{
+        &::before{
+            content: url('../img/search-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/search-icon.svg');
+            }
+        }
+    }
+
     .cw-view-all{
         &::before{
             content: url('../img/view-all-icon-colored.svg');
@@ -2765,6 +2794,16 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
             margin-right: 0px;
         }
 
+    }
+
+    .cw-search{
+        background: #a55eea;
+        border: 1px solid #a55eea !important;
+
+        &:hover{
+            background: #8854d0;
+            border: 1px solid #8854d0 !important;
+        }
     }
 
     .cw-save{
@@ -2929,6 +2968,12 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
     .cw-save{
         &::before{
             content: url(../img/save-icon-colored.svg);
+        }
+    }
+
+    .cw-search{
+        &::before{
+            content: url(../img/search-icon-colored.svg);
         }
     }
 
@@ -3212,7 +3257,7 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-a
    ---------------------------------------------------------------------------------- */
 .html-table-title{
     @include whd;
-    background: #f7f7f7;
+    background: #f1f1f1;
     padding: 15px 20px;
     line-height: 60px;
 
