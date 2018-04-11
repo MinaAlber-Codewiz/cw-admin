@@ -2432,6 +2432,59 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
     }
 }
 
+.fixed-control-buttons{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    text-align: right;
+}
+
+.control-buttons.style-icons.fixed-control-buttons{
+    button{
+        @include border-radius(50%);
+        padding: 10px;
+
+        &::before{
+            @include whd($width: 25px, $height: 25px);
+            top: 0px;
+        }
+    }
+
+    .cw-archive{
+        background: #53ace0;
+
+        &::before{
+            content: url('../img/archive-icon.svg');
+        }
+    }
+
+    .cw-unarchive{
+        background: #3dc1d3;
+
+        &::before{
+            content: url('../img/unarchive-icon.svg');
+        }
+    }
+
+    .cw-delete{
+        background: #c44569;
+
+        &::before{
+            content: url('../img/delete-icon.svg');
+        }
+    }
+
+    .cw-close{
+        background: #e74c3c;
+
+        &::before{
+            content: url('../img/cancel-icon.svg');
+        }
+    }
+
+}
+
 .control-buttons.style-glass-sliding{
     button{
         &::after{
