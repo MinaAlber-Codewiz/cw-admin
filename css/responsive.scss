@@ -271,6 +271,21 @@
 /* ----------------------------------------------------------------------------------
    ----------------------------------- HTML TABLES ----------------------------------
    ---------------------------------------------------------------------------------- */
+@media only screen and (max-width: 1300px){
+    .fixed-control-buttons{
+        right: 50px;
+    }
+}
+
+@media only screen and (max-width: 1150px){
+    .fixed-control-buttons{
+        right: 20px;
+    }
+}
+
+/* ----------------------------------------------------------------------------------
+   ----------------------------------- HTML TABLES ----------------------------------
+   ---------------------------------------------------------------------------------- */
 @media only screen and (max-width: 870px){
     .html-table-title{
 
@@ -384,5 +399,20 @@
    @media only screen and (max-width: 1200px){
        .rtl .edit-profile-avatar{
            float: none;
+       }
+   }
+
+   /* -------------------------------------------
+      ------------ CONTROL BUTTONS --------------
+      ------------------------------------------- */
+   @media only screen and (max-width: 1300px){
+       .rtl .control-buttons.style-icons.fixed-control-buttons{
+           left: 50px;
+       }
+   }
+
+   @media only screen and (max-width: 1150px){
+       .rtl .control-buttons.style-icons.fixed-control-buttons{
+           left: 20px;
        }
    }

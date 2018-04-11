@@ -2433,11 +2433,11 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
 }
 
 .fixed-control-buttons{
+    width: auto !important;
     position: fixed;
     bottom: 30px;
-    right: 30px;
-    z-index: 999;
-    text-align: right;
+    right: 75px;
+    text-align: center;
 }
 
 .control-buttons.style-icons.fixed-control-buttons{
@@ -3732,6 +3732,19 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-a
     .control-buttons button::before{
         margin-right: 0px;
         margin-left: 7px;
+    }
+
+    .control-buttons.style-icons.fixed-control-buttons{
+        right: auto;
+        left: 75px;
+    }
+
+    .control-buttons.style-icons.fixed-control-buttons button:last-child{
+        margin-right: 15px;
+    }
+
+    .control-buttons.style-icons.fixed-control-buttons button::before{
+        margin-left: 0px;
     }
 
     /* -------------------------------------------
