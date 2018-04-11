@@ -2335,6 +2335,24 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         color: $icons-color;
     }
 
+    .cw-archive{
+        &::before{
+            content: url('../img/archive-icon.svg');
+        }
+    }
+
+    .cw-unarchive{
+        &::before{
+            content: url('../img/unarchive-icon.svg');
+        }
+    }
+
+    .cw-delete{
+        &::before{
+            content: url('../img/delete-icon.svg');
+        }
+    }
+
     .cw-search{
         &::before{
             content: url('../img/search-icon.svg');
@@ -2459,6 +2477,42 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
 
         &:last-child{
             margin-right: 0px;
+        }
+    }
+
+    .cw-archive{
+        background: transparent;
+        border: 1px solid #63cdda !important;
+        color: #63cdda !important;
+
+        &:hover{
+            background: #63cdda;
+            border: 1px solid #63cdda !important;
+            color: #ffffff !important;
+        }
+    }
+
+    .cw-unarchive{
+        background: transparent;
+        border: 1px solid #3dc1d3 !important;
+        color: #3dc1d3 !important;
+
+        &:hover{
+            background: #3dc1d3;
+            border: 1px solid #3dc1d3 !important;
+            color: #ffffff !important;
+        }
+    }
+
+    .cw-delete{
+        background: transparent;
+        border: 1px solid #c44569 !important;
+        color: #c44569 !important;
+
+        &:hover{
+            background: #c44569;
+            border: 1px solid #c44569 !important;
+            color: #ffffff !important;
         }
     }
 
@@ -2629,6 +2683,39 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         }
     }
 
+    .cw-archive{
+        &::before{
+            content: url('../img/archive-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/archive-icon.svg');
+            }
+        }
+    }
+
+    .cw-unarchive{
+        &::before{
+            content: url('../img/unarchive-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/unarchive-icon.svg');
+            }
+        }
+    }
+
+    .cw-delete{
+        &::before{
+            content: url('../img/delete-icon-colored.svg');
+        }
+        &:hover{
+            &::before{
+                content: url('../img/delete-icon.svg');
+            }
+        }
+    }
+
     .cw-close{
         &::before{
             content: url('../img/cancel-icon-colored.svg');
@@ -2794,6 +2881,36 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
             margin-right: 0px;
         }
 
+    }
+
+    .cw-archive{
+        background: #53ace0;
+        border: 1px solid #53ace0 !important;
+
+        &:hover{
+            background: #4899c7;
+            border: 1px solid #4899c7 !important;
+        }
+    }
+
+    .cw-unarchive{
+        background: #3dc1d3;
+        border: 1px solid #3dc1d3 !important;
+
+        &:hover{
+            background: #39b1c1;
+            border: 1px solid #39b1c1 !important;
+        }
+    }
+
+    .cw-delete{
+        background: #c44569;
+        border: 1px solid #c44569 !important;
+
+        &:hover{
+            background: #a52a4d;
+            border: 1px solid #a52a4d !important;
+        }
     }
 
     .cw-search{
@@ -2963,6 +3080,24 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
             margin-right: 0px;
         }
 
+    }
+
+    .cw-archive{
+        &::before{
+            content: url(../img/archive-icon-colored.svg);
+        }
+    }
+
+    .cw-unarchive{
+        &::before{
+            content: url(../img/unarchive-icon-colored.svg);
+        }
+    }
+
+    .cw-delete{
+        &::before{
+            content: url(../img/delete-icon-colored.svg);
+        }
     }
 
     .cw-save{
