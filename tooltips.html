@@ -648,7 +648,7 @@
                     <ul>
 
                         <!-- MODULE -->
-                        <li class="module-box tooltip">
+                        <li class="module-box">
                             <a href="index.html" class="module-box-head">
                                 <span class="icon-small icon-puzzle"></span>
                                 <p>Dashboard</p>
@@ -940,18 +940,25 @@
                         <div class="cw-col-12">
                             <span class="md-heading">Tooltips</span>
                             <span class="sm-sub-heading">Any element on the page can have a Tooltip, tooltips are displayed once the element is hovered.</span>
-                            <span class="sm-sub-heading">The element that is going to display the tooltip must have the following class <span class="class-indicator">"tooltip"</span>.</span>
+                            <span class="sm-sub-heading">The element that is going to display the tooltip must have the following class <span class="class-indicator">"tooltip-bottom"</span>.</span>
                             <span class="sm-sub-heading">The Tooltip content that is going to be shown must be written in a title attribute as the following <span class="class-indicator">title="tooltip description"</span>.</span>
+                            <span class="sm-sub-heading">Tooltips has 4 Position Styles, Top, Bottom, Left and Right, each has its own class, <span class="class-indicator">"tooltip-top", "tooltip-bottom", "tooltip-left", "tooltip-right"</span>.</span>
 
                             <div class="control-buttons style-normal">
-                                <button class="normal-button tooltip icon icon-info" title="Just a random tooltip box">Hover Me!</button>
+                                <button class="normal-button tooltip-top icon icon-info" title="Top">Top Position Tooltip</button>
+                                <button class="normal-button tooltip-left icon icon-info" title="Left">Left Position Tooltip</button>
+                                <button class="normal-button tooltip-right icon icon-info" title="Right">Right Position Tooltip</button>
+                                <button class="normal-button tooltip-bottom icon icon-info" title="Bottom">Bottom Position Tooltip</button>
                             </div>
 
 <!-- CODE DOCUMENTATION START -->
 <pre style="margin-top: 40px;">
 <button>Copy</button>
 <code data-language="html">
-    <span class="tooltip" title="Tooltip Description Goes Here">Random Element</span>
+    <button class="normal-button tooltip-top icon icon-info" title="Top">Top Position Tooltip</button>
+    <button class="normal-button tooltip-left icon icon-info" title="Left">Left Position Tooltip</button>
+    <button class="normal-button tooltip-right icon icon-info" title="Right">Right Position Tooltip</button>
+    <button class="normal-button tooltip-bottom icon icon-info" title="Bottom">Bottom Position Tooltip</button>
 </code>
 </pre>
 <!-- CODE DOCUMENTATION END -->

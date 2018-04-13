@@ -3314,16 +3314,17 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
    ----------------------------------- TOOLTIPS -------------------------------------
    ---------------------------------------------------------------------------------- */
 .tpd-content{
-    font-family: $font-extraLight !important;
+    font-family: $font-regular !important;
     font-size: 1.4em !important;
-    color: $icons-color !important;
-    background: $primary-color !important;
-    padding: 15px !important;
+    color: #777777 !important;
+    background: #ffffff !important;
+    padding: 10px !important;
     @include border-radius(5px);
+    @include box-shadow;
 }
 
-.tpd-stem-triangle{
-    border-bottom: 9.41421px solid $primary-color !important;
+.tpd-frames{
+    display: none !important;
 }
 
 /* ----------------------------------------------------------------------------------

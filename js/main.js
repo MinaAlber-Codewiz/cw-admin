@@ -241,9 +241,17 @@ $(document).ready(function(){
 
     // TOOLTIPS
     $(document).ready(function(){
-        Tipped.create('.tooltip', {
-            // position: 'bottom'
+        Tipped.create('.tooltip-bottom', {
             position: 'bottom'
+        });
+        Tipped.create('.tooltip-top', {
+            position: 'top'
+        });
+        Tipped.create('.tooltip-right', {
+            position: 'right'
+        });
+        Tipped.create('.tooltip-left', {
+            position: 'left'
         });
     });
 
