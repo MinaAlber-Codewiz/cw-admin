@@ -275,6 +275,12 @@
     .fixed-control-buttons{
         right: 50px;
     }
+
+    .cw-search.search-popup-box .advanced-search-popup .advanced-search-form .style-inline-block input[type="text"],
+    .cw-search.search-popup-box .advanced-search-popup .advanced-search-form .style-inline-block input[type="password"],
+    .cw-search.search-popup-box .advanced-search-popup .advanced-search-form .style-inline-block select{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 1150px){

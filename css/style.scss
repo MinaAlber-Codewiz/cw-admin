@@ -3232,6 +3232,116 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
     }
 }
 
+.cw-search.search-popup-box{
+    position: relative;
+    overflow: visible !important;
+
+    &:hover{
+        overflow: visible !important;
+
+        .advanced-search-popup{
+            max-height: 2000px;
+            @include transition(1s);
+        }
+
+    }
+
+    .advanced-search-popup{
+        position: absolute;
+        @include whd($width: 400px, $height: auto);
+        max-height: 0px;
+        top: 42px;
+        right: 0px;
+        @include box-shadow;
+        background: #ffffff;
+        @include transition(0.7s);
+        color: $primary-color;
+        overflow: auto;
+
+        .advanced-search-popup-title{
+            font-family: $font-regular;
+            text-align: left;
+            background: #f1f1f1;
+            padding: 15px 20px;
+            cursor: default;
+        }
+
+        .advanced-search-form{
+            padding: 20px;
+
+            .form-field{
+                margin-bottom: 10px;
+            }
+
+            .style-inline-block label{
+                width: 120px;
+                font-size: 1em;
+                text-align: left;
+                line-height: 39px;
+            }
+
+            .style-inline-block input[type="text"], .style-inline-block input[type="password"],
+            .style-inline-block select{
+                width: calc(100% - 135px);
+                font-size: 0.9em;
+                padding: 5px 10px;
+            }
+
+            .style-inline-block select{
+                background-position: calc(100% - 10px) center !important;
+                background-size: 15px !important;
+            }
+
+            .style-inline-block.timepicker{
+                .timepicker_wrap{
+                    width: 280px;
+                    left: auto !important;
+                    right: 16px !important;
+                    top: 40px !important;
+
+                    a.reset_time{
+                        font-size: 0.9em;
+                        padding: 5px 15px;
+                    }
+                }
+            }
+
+            .form-field.style-control-buttons{
+                @include whd;
+                text-align: center;
+                margin-top: 20px;
+
+                input{
+                    padding: 10px 20px;
+                    margin: 0px 10px;
+                    color: $icons-color;
+                    border: 0px;
+                    @include transition(0.3s);
+                    outline: none;
+                    cursor: pointer;
+                }
+
+                input:nth-child(1){
+                    background: #53ace0;
+
+                    &:hover{
+                        background: #4899c7;
+                    }
+                }
+
+                input:nth-child(2){
+                    background: #7f8c8d;
+
+                    &:hover{
+                        background: #717777;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
 /* ----------------------------------------------------------------------------------
    ------------------------------------ MODALS --------------------------------------
    ---------------------------------------------------------------------------------- */
@@ -3809,6 +3919,34 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-a
 
     .html-table-title .control-buttons{
         float: left;
+    }
+
+    .cw-search.search-popup-box .advanced-search-popup{
+        right: auto;
+        left: 0px;
+    }
+
+    .cw-search.search-popup-box .advanced-search-popup .advanced-search-popup-title{
+        text-align: right;
+    }
+
+    .cw-search.search-popup-box .advanced-search-popup .advanced-search-form .style-inline-block label{
+        text-align: right;
+    }
+
+    .cw-search.search-popup-box .advanced-search-popup .advanced-search-form .style-inline-block input[type="text"],
+    .cw-search.search-popup-box .advanced-search-popup .advanced-search-form .style-inline-block input[type="password"],
+    .cw-search.search-popup-box .advanced-search-popup .advanced-search-form .style-inline-block select{
+        float: left;
+    }
+
+    .cw-search.search-popup-box .advanced-search-popup .advanced-search-form .style-inline-block.timepicker .timepicker_wrap{
+        left: 1px !important;
+        right: auto !important;
+    }
+
+    .cw-search.search-popup-box .advanced-search-popup .advanced-search-form .style-inline-block select{
+        background-position: calc(0% + 10px) center !important;
     }
 
 }
