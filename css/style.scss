@@ -3262,18 +3262,47 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         top: 42px;
         right: 0px;
         background: #ffffff;
-        @include transition(0.5s);
+        @include transition(0.1s);
         color: $primary-color;
         overflow: hidden;
 
         .advanced-search-popup-title{
             @include whd;
-            font-family: $font-regular;
+            font-family: $font-semiBold;
+            font-size: 1.4em;
             text-align: left;
             background: #f1f1f1;
             padding: 15px 20px;
             cursor: default;
             position: relative;
+
+            span{
+                font: 99% arial,helvetica,clean,sans-serif;
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                overflow: visible;
+                width: 35px;
+                height: 35px;
+                margin: 0;
+                padding: 0;
+                cursor: pointer;
+                color: #95979c;
+
+                &::after{
+                    font-family: Arial,"Helvetica CY","Nimbus Sans L",sans-serif!important;
+                    font-size: 25px;
+                    line-height: 35px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 35px;
+                    content: "\00d7";
+                    text-align: center;
+                }
+            }
         }
 
         .advanced-search-form{
