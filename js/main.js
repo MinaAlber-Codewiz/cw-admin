@@ -22,6 +22,9 @@ $(document).ready(function(){
     var datePickerInDocs = $("pre code .datepicker input");
     var languagePicker = $('#toggle_language');
     var startTourWizardBtn = $('.start-tour-btn');
+    var advancedSearchBtn = $('.fake-advanced-search-close-btn');
+    var advancedSearchBox = $('.advanced-search-popup');
+    var closeAdvancedSearchBoxBtn = $('.close-advanced-search-popup-box');
 
     // FUNCTION TO ADJUST CONTENT CONTAINER WIDTH SIZE
     function adjustContentContainer(){
@@ -410,6 +413,14 @@ $(document).ready(function(){
                     },
             closable: false
         }).show();
+    });
+
+    // ADVANCED SEARCH
+    advancedSearchBtn.click(function(){
+        advancedSearchBox.addClass('advanced-search-popup-open');
+    });
+    closeAdvancedSearchBoxBtn.click(function(e){
+        advancedSearchBox.removeClass('advanced-search-popup-open');
     });
 
 });
