@@ -3281,6 +3281,7 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
 
             .form-field{
                 margin-bottom: 10px;
+                position: static;
             }
 
             .style-inline-block label{
