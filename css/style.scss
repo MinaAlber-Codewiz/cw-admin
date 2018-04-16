@@ -3252,6 +3252,7 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         -o-transition: 0.5s linear !important;
         transition: 0.5s linear !important;
         overflow: visible !important;
+        @include box-shadow;
     }
 
     .advanced-search-popup{
@@ -3260,7 +3261,6 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         max-height: 0px;
         top: 42px;
         right: 0px;
-        @include box-shadow;
         background: #ffffff;
         @include transition(0.5s);
         color: $primary-color;

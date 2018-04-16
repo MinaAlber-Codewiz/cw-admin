@@ -211,7 +211,7 @@ $(document).ready(function(){
 
     // DATEPICKER
     datePickerInput.attr('readonly', true);
-    datePickerInput.datepicker({dateFormat:"dd-mm-yy", changeMonth: true, changeYear: true, yearRange: "-100:+0", closeText: 'Reset', showButtonPanel: true, showAnim: "slideDown",
+    datePickerInput.datepicker({dateFormat:"dd-mm-yy", changeMonth: true, changeYear: true, yearRange: "-100:+20", closeText: 'Reset', showButtonPanel: true, showAnim: "slideDown",
     onClose: function () {
         var event = arguments.callee.caller.caller.arguments[0];
             if ($(event.delegateTarget).hasClass('ui-datepicker-close') || this.value==='') {
