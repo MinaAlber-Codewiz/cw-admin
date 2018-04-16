@@ -3306,7 +3306,6 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         }
 
         .advanced-search-form{
-            padding: 20px;
 
             .form-field{
                 margin-bottom: 10px;
@@ -3994,6 +3993,11 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-a
 
     .cw-search.search-popup-box .advanced-search-popup .advanced-search-form .style-inline-block select{
         background-position: calc(0% + 10px) center !important;
+    }
+
+    .cw-search.search-popup-box .advanced-search-popup .advanced-search-popup-title span{
+        right: auto;
+        left: 0px;
     }
 
 }
