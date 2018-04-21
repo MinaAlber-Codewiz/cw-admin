@@ -3306,6 +3306,8 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         }
 
         .advanced-search-form{
+            @include whd($display: inline-block);
+            padding: 10px 0px;
 
             .form-field{
                 margin-bottom: 10px;
