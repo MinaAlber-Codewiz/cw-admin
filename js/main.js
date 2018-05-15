@@ -20,6 +20,8 @@ $(document).ready(function(){
     var floatingLabelSelect = $('.style-float-label select');
     var datePickerInput = $('div.datepicker input');
     var datePickerInDocs = $("pre code .datepicker input");
+    var uploadBox = $('.file-upload-input');
+    var uploadBoxInputField = uploadBox.find('input[type="file"]');
     var languagePicker = $('#toggle_language');
     var startTourWizardBtn = $('.start-tour-btn');
     var advancedSearchBtn = $('.fake-advanced-search-close-btn');
@@ -104,6 +106,24 @@ $(document).ready(function(){
         else if(document.selection){
             document.selection.empty()
         };
+    });
+
+    // IF INPUT FILE HAS VALUE
+    uploadBoxInputField.on('change', function(){
+        if(this.files.length == 0){
+            this.previousElementSibling.innerHTML = "Choose File to Upload ...";
+            this.nextElementSibling.querySelectorAll("img")[0].setAttribute('src', 'img/default-image-upload.png');
+        } else if(this.files.length !== 0){
+            var filePath = this.value;
+            var fileName = filePath.split(/(\\|\/)/g).pop();
+            var previewImage = this.nextElementSibling.querySelectorAll("img")[0];
+            var fileReader = new FileReader();
+            this.previousElementSibling.innerHTML = fileName;
+            fileReader.onload = function(e){
+                previewImage.setAttribute('src', e.target.result);
+            }
+            fileReader.readAsDataURL(this.files[0]);
+        }
     });
 
     // IF INPUT TEXT HAS VALUE
