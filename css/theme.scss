@@ -104,6 +104,11 @@ pre{
 
 }
 
+input.ar-value{
+    direction: rtl;
+    text-align: left;
+}
+
 .ui-datepicker{
     font-size: 1.6em;
     color: $primary-color;

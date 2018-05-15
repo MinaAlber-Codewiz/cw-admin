@@ -14,13 +14,13 @@
         @include whd;
         max-width: 400px;
         background: #ffffff;
-        padding: 40px 30px;
+        padding: 30px;
         margin: auto;
         @include box-shadow;
 
         .admin-login-img{
             @include whd($width: 200px, $height: auto);
-            margin: 0px auto 50px auto;
+            margin: 0px auto 20px auto;
 
             img{
                 @include whd($width: 200px, $height: auto);
@@ -1381,6 +1381,10 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
     resize: none;
 }
 
+textarea.expand-textarea{
+    height: 350px !important;
+}
+
 .radio-input{
     line-height: 23px;
     font-size: 1.6em;
@@ -1492,6 +1496,49 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
 
         }
 
+    }
+}
+
+.file-upload-input{
+    .fake-upload-file{
+        @include form-input-file;
+    }
+
+    input[type='file']{
+        @include whd($height: 52px);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        opacity: 0;
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    .image-preview{
+        @include whd($width: 100%, $height: auto);
+        float: left;
+        margin-top: 30px;
+
+        img{
+            @include whd($width: 130px, $height: 130px);
+            border: 1px dashed $primary-color;
+            padding: 20px;
+            float: left;
+        }
+
+        .img-rules{
+            @include whd($width: calc(100% - 155px));
+            float: left;
+            margin-left: 20px;
+
+            li{
+                font-family: $font-regular;
+                font-size: 1.4em;
+                line-height: 22px;
+            }
+        }
     }
 }
 
@@ -1682,6 +1729,10 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
        font-size: 1.8em;
        float: left;
        line-height: 53px;
+   }
+
+   label.fix-line-height{
+       line-height: 25px;
    }
 
    input[type="text"],
@@ -2061,6 +2112,16 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
 }
 
 .field-pass{
+
+    .fake-upload-file{
+        color: #2ecc71 !important;
+        border: 1px solid #2ecc71 !important;
+
+        &::before{
+            background: #2ecc71 !important;
+        }
+    }
+
     .input-success{
         @include whd($display: inline-block);
         margin-top: 15px;
@@ -2172,6 +2233,17 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
 }
 
 .field-error{
+    @include transition(0.3s);
+
+    .fake-upload-file{
+        color: #c0392b !important;
+        border: 1px solid #c0392b !important;
+
+        &::before{
+            background: #c0392b !important;
+        }
+    }
+
     .input-error{
         @include whd($display: inline-block);
         margin-top: 15px;
@@ -2182,6 +2254,7 @@ input[type="text"], input[type="password"], textarea, select, input[type="checkb
         overflow: hidden;
         padding: 15px;
         background: rgba(192, 57, 43, 0.2);
+        @include transition(0.3s);
     }
     label{
         color: #c0392b !important;
@@ -3779,6 +3852,39 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-a
     /* -------------------------------------------
        ---------------- FORM INPUTS --------------
        ------------------------------------------- */
+    input.ar-value{
+        text-align: right;
+    }
+
+    input.en-value{
+        direction: ltr;
+        text-align: right;
+    }
+
+    .file-upload-input .fake-upload-file{
+        padding-left: 20px;
+        padding-right: 55px;
+    }
+
+    .file-upload-input .fake-upload-file::before{
+        left: auto;
+        right: 0;
+    }
+
+    .file-upload-input .image-preview{
+        float: right;
+    }
+
+    .file-upload-input .image-preview img{
+        float: right;
+    }
+
+    .file-upload-input .image-preview .img-rules{
+        float: right;
+        margin-left: 0px;
+        margin-right: 20px;
+    }
+
     .style-block.icon::before, .style-block-border-bottom.icon::before,
     .style-float-label.icon::before{
         left: auto;

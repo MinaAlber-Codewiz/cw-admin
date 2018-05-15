@@ -168,6 +168,40 @@ $notification-color: #ee2323;
 }
 
 /* FORM FIELDS MIXIN */
+@mixin form-input-file{
+    height: 52px;
+    line-height: 31px;
+    padding: 10px 20px 10px 55px;
+    font-size: 1.6em;
+    font-family: $font-regular;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    outline: none;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+        content: '\0072';
+        background: $primary-color;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        font-size: 1.4em;
+        padding: 15px 10px 10px 10px;
+        display: inline-block;
+        font-family: 'Icons';
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: $icons-color;
+    }
+}
+
+/* FORM FIELDS MIXIN */
 @mixin form-input-select{
     padding: 10px 20px;
     font-size: 1.6em;
