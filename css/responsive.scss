@@ -281,6 +281,10 @@
     .cw-search.search-popup-box .advanced-search-popup .advanced-search-form .style-inline-block select{
         width: 100%;
     }
+
+    .cw-search.search-popup-box .advanced-search-popup .advanced-search-form{
+        padding: 10px 20px;
+    }
 }
 
 @media only screen and (max-width: 1150px){
@@ -393,7 +397,7 @@
        .file-upload-input .image-preview img{
            float: none;
        }
-       
+
        .file-upload-input .image-preview .img-rules{
            width: 100%;
            float: none;
